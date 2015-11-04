@@ -47,10 +47,28 @@ names.removeRange(names.endIndex.advancedBy(-2)..&lt;names.endIndex)
 print(names) // prints &quot;mike, sue, bob, tom\n&quot;  Note, got rid of &quot;, &quot;
 
 
+let nameSort = testResults.sort({$0.0 &lt; $1.0})
+nameSort  // Names or keys sort
+
+let scoreSort = testResults.sort({$0.1 &gt; $1.1})
+scoreSort  // Value sort
+
+
+
+
 // Want lengths?
 names.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) // 19
 names.endIndex   // 19
 (names as NSString).length // 19
+
+// Sorting
+let r4 = testResults.sort( { $0.0 &gt; $1.0 })
+print(r4) // [(&quot;tom&quot;, 90), (&quot;sue&quot;, 10), (&quot;mike&quot;, 65), (&quot;bob&quot;, 20)]
+
+// Filter
+print(testResults.filter({ $0.1 &lt; 50 }).filter( { $0.1 &gt; 10 }))
+// [(&quot;bob&quot;, 20)]
+
 
 </code></pre><div class='cell markdown-cell'><p>For more about strings, see:<br><a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html#//apple_ref/doc/uid/TP40014097-CH7-ID285">Swift Programming Language</a></p>
 </div><div class='cell markdown-cell'><p>Swift only has 3 collection types:</p>
