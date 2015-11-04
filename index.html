@@ -38,6 +38,15 @@
   <div id="titlearea">
     <h2>mchirico.github.io</h2>
   </div>
-  <div id="contentarea"><div class='cell text-cell'><div>Creating multiple tableViews in one ViewController<br></div><div><br></div><div>&nbsp;<a href="https://gist.github.com/mchirico/50cdb07d20b1b0f73d7c">https://gist.github.com/mchirico/50cdb07d20b1b0f73d7c</a></div><div><br></div><div>Creating maps</div><div><br></div><div>&nbsp;&nbsp;<a href="https://gist.github.com/mchirico/fac2650e4e312898b2ce">https://gist.github.com/mchirico/fac2650e4e312898b2ce</a></div><div><br></div><div>Parsing in JSON in swift</div><div><br></div><div>&nbsp;&nbsp;<a href="https://gist.github.com/mchirico/f802719dc433740884e9">https://gist.github.com/mchirico/f802719dc433740884e9</a></div><div><br></div><div><br></div></div></div>
+  <div id="contentarea"><div class='cell text-cell'>This is kinda cool…mimicking the python “, “.join operator? Hmm…a little rough<div></div></div><div class='cell text-cell'></div><pre class='cell code-cell'><code>var testResults = [&quot;bob&quot;:20,&quot;sue&quot;:10,&quot;tom&quot;: 90, &quot;mike&quot;: 65]
+
+// Following will just print the names
+var names = testResults.reduce(&quot;&quot;,combine: {$0 + &quot;\($1.0), &quot;})
+print(names) // prints &quot;mike, sue, bob, tom, \n&quot;
+names.removeRange(names.endIndex.advancedBy(-2)..&lt;names.endIndex)
+print(names) // prints &quot;mike, sue, bob, tom\n&quot;  Note, got rid of &quot;, &quot;
+
+
+</code></pre><div class='cell text-cell'></div><div class='cell text-cell'><div><br></div><div><br></div><div><br></div><div>Creating multiple tableViews in one ViewController<br></div><div><br></div><div>&nbsp;<a href="https://gist.github.com/mchirico/50cdb07d20b1b0f73d7c">https://gist.github.com/mchirico/50cdb07d20b1b0f73d7c</a></div><div><br></div><div>Creating maps</div><div><br></div><div>&nbsp;&nbsp;<a href="https://gist.github.com/mchirico/fac2650e4e312898b2ce">https://gist.github.com/mchirico/fac2650e4e312898b2ce</a></div><div><br></div><div>Parsing in JSON in swift</div><div><br></div><div>&nbsp;&nbsp;<a href="https://gist.github.com/mchirico/f802719dc433740884e9">https://gist.github.com/mchirico/f802719dc433740884e9</a></div><div><br></div><div><br></div></div></div>
 </body>
 </html>
