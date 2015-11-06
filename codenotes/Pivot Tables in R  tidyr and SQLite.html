@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- common.css -->
+  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px 2%;color:#333;word-wrap:break-word}img{max-width:100%!important}code{margin:0;padding:.2em 0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre{margin:0}pre>code{margin:0;padding:0;font-size:100%;word-break:normal;background:0 0;border:0}blockquote{margin:0;padding:0 15px;color:#777;border-left:4px solid #ddd}hr{background-color:#ddd;border:0;height:1px;margin:15px 0}ol{list-style-type:decimal}ol ol,ul ol{list-style-type:lower-latin}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-roman}table{border-spacing:0;border-collapse:collapse;margin-top:0;margin-bottom:16px}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(even){background-color:#f8f8f8}input[type=checkbox]{cursor:default;margin-right:.5em}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{float:left;margin:.3em 1em .25em -1.6em;vertical-align:middle}</style>
+  <!-- exported.css -->
+  <style>
+    #nav{margin:5px 10px 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    #contentarea{font-size:15px;margin:16px 0}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
+    .code-cell{font-size:13px}
+    .latex-cell{white-space:pre-wrap;}
+  </style>
+  <!-- User CSS -->
+  <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        processClass: 'latex-cell'
+      },
+      "HTML-CSS": {
+        preferredFont: "STIX"
+      }
+    };
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="tex2jax_ignore">
+  <div id="nav"><div>Next: <a href='R Tips.html'>R Tips</a>, Previous: <a href='OS X iMessages Saved in SQLite.html'>OS X iMessages Saved in SQLite </a>, Up: <a href='index.html'>Index</a></div></div>
+  <div id="titlearea">
+    <h2>Pivot Tables in R: tidyr and SQLite </h2>
+  </div>
+  <div id="contentarea"><pre class='cell code-cell'><code>
+require(RSQLite)
+library(dplyr)
+library(tidyr)
+
+conn    &lt;- dbDriver(&quot;SQLite&quot;)
+db &lt;- dbConnect(conn,&quot;hr.db&quot;)
+dbSendQuery(db, &quot;DROP TABLE IF EXISTS hr;&quot;)
+
+dbSendQuery(db, &quot;CREATE TABLE hr (date Date,name varchar(10),hb int);&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:01&#39;,&#39;Mike Chirico&#39;,55)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:02&#39;,&#39;Mike Chirico&#39;,56)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:03&#39;,&#39;Mike Chirico&#39;,57)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:01&#39;,&#39;Lisa Anderson&#39;,80)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:02&#39;,&#39;Lisa Anderson&#39;,79)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:03&#39;,&#39;Lisa Anderson&#39;,78)&quot;)
+
+d &lt;- dbReadTable(db, &quot;hr&quot;) 
+d &lt;- tbl_df(d)
+str(d)
+
+# ***************************************************
+# Create pivot
+# ***************************************************
+
+pivot = d %&gt;%  spread(name,hb)
+pivot
+
+# Here&#39;s what it looks like in R
+&gt; pivot
+                 date Lisa Anderson Mike Chirico
+1 2015-08-05 13:21:01            80           55
+2 2015-08-05 13:21:02            79           56
+3 2015-08-05 13:21:03            78           57
+
+pivot= as.data.frame(pivot)
+dbWriteTable(db,&quot;pivot&quot;,pivot,overwrite=TRUE)
+</code></pre><div class='cell text-cell'>Note that the above SQLite table will look like the following:</div><pre class='cell code-cell'><code>sqlite&gt; .tables
+hr     pivot
+sqlite&gt; .schema pivot
+CREATE TABLE pivot
+( &quot;date&quot; TEXT,
+	&quot;Lisa Anderson&quot; INTEGER,
+	&quot;Mike Chirico&quot; INTEGER
+);
+
+sqlite&gt; select * from pivot;
+2015-08-05 13:21:01|80|55
+2015-08-05 13:21:02|79|56
+2015-08-05 13:21:03|78|57</code></pre><div class='cell text-cell'>Okay, so that’s all and good. But problems can arise. &nbsp;For example, suppose you have duplic entries. Below, I’m duplicating the time entry.</div><pre class='cell code-cell'><code>
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:03&#39;,&#39;Mike Chirico&#39;,72)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:03&#39;,&#39;Mike Chirico&#39;,75)&quot;)
+d &lt;- dbReadTable(db, &quot;hr&quot;) 
+
+pivot = d %&gt;%  spread(name,hb)
+# Error: Duplicate identifiers for rows (3, 7, 8)
+
+# You have to get unique values.  Below is how you can fix this.
+
+pivot=dbGetQuery(db, 
+&quot;select date,name,max(hb) as hb from hr group by date,name&quot;) %&gt;%
+  spread(name,hb)
+
+# </code></pre><div class='cell text-cell'>You can run through the tutorial for these packages with the following:&nbsp;</div><pre class='cell code-cell'><code>browseVignettes(package = c(&quot;dplyr&quot;, &quot;tidy&quot;))</code></pre><div class='cell text-cell'><div><br></div><b>Creating functions to operate on your data frame&nbsp;</b></div><div class='cell text-cell'><b></b><div>Note below we’re returning the value to “df[]”…note the brackets.</div></div><pre class='cell code-cell'><code># This is kind cool
+set.seed(1014)
+df &lt;- data.frame( replicate( 6, sample( c ( 1:10, - 99, -2), 6, rep = TRUE)))
+names(df) &lt;- letters[ 1:6]
+df
+
+</code></pre><pre class='cell code-cell'><code>    a   b c  d  e f
+1   1   6 1  5 -2 1
+2 -99   4 4 -2  9 3
+3   8   9 5  4  1 4
+4   2  10 3  9  7 8
+5   1 -99 5  9  9 6
+6   6   3 1  3  9 6</code></pre><pre class='cell code-cell'><code>
+
+fix_missing &lt;- function(x) {
+x[x == -99] &lt;- NA
+x[x == -2] &lt;- 0
+x
+}
+# You don&#39;t want this, because it will return a list
+#df &lt;- lapply(df, fix_missing)
+
+# Instead, return the results to d[]
+df[] &lt;- lapply(df, fix_missing)
+
+# Or this could be applied to specific columns
+df[ 1:5 ] &lt;- lapply(df[ 1:5 ], fix_missing)
+
+
+</code></pre><div class='cell text-cell'>&nbsp;Reference:&nbsp;Wickham, Hadley (2014-09-25). Advanced R (Chapman &amp; Hall/CRC The R Series) (Page 178). CRC Press. Kindle Edition.&nbsp;</div><div class='cell text-cell'>Let’s create a new data frame, then, get statistics on it.</div><pre class='cell code-cell'><code># First Create new data
+set.seed(10)
+df &lt;- data.frame( replicate( 6, sample( c ( 1:10, - 9, -2), 6, rep = TRUE)))
+names(df) &lt;- letters[ 1:6]
+df
+</code></pre><pre class='cell code-cell'><code>&gt; df
+  a b c  d  e  f
+1 7 4 2  5  5  7
+2 4 4 8 -9  9  2
+3 6 8 5 -9 -9  3
+4 9 6 6  8  3 -9
+5 2 8 1 10 10  6
+6 3 7 4  5  5  9
+</code></pre><pre class='cell code-cell'><code>
+summary2 &lt;- function(y) {
+       funs &lt;- function(x) {
+          c ( mean(x), median(x), sd(x), mad(x), IQR(x),max(x),min(x))
+       }
+       k=lapply(y, funs)
+       # Convert list to data frame
+       k=data.frame(matrix(unlist(k), nrow=length(k), byrow=T),stringsAsFactors=FALSE)
+       # Add colnames
+       colnames(k) &lt;- c(&quot;mean&quot;, &quot;median&quot;,&quot;sd&quot;,&quot;mad&quot;,&quot;IQR&quot;,&quot;max&quot;,&quot;min&quot;)
+       k
+}
+
+k=summary2(df)
+k
+</code></pre><pre class='cell code-cell'><code>&gt; k
+      mean median       sd    mad   IQR max min
+1 5.166667    5.0 2.639444 2.9652  3.50   9   2
+2 6.166667    6.5 1.834848 2.2239  3.25   8   4
+3 4.333333    4.5 2.581989 2.9652  3.25   8   1
+4 1.666667    5.0 8.477421 5.9304 12.75  10  -9
+5 3.833333    5.0 6.823977 4.4478  4.50  10  -9
+6 3.000000    4.5 6.418723 3.7065  4.50   9  -9
+&gt; 
+
+</code></pre><div class='cell text-cell'>If you create a useful function, you can make it accessible every time you load R, by putting it in &nbsp;~/.Rprofile<div><br></div></div><pre class='cell code-cell'><code># Code to show the source of your function
+getAnywhere(summary2)</code></pre><pre class='cell code-cell'><code>&gt; getAnywhere(summary2)
+A single object matching ‘summary2’ was found
+It was found in the following places
+  .GlobalEnv
+with value
+
+function (y) 
+{
+    funs &lt;- function(x) {
+        c(mean(x), median(x), sd(x), mad(x), IQR(x), max(x), 
+            min(x))
+    }
+    k = lapply(y, funs)
+    k = data.frame(matrix(unlist(k), nrow = length(k), byrow = T), 
+        stringsAsFactors = FALSE)
+    colnames(k) &lt;- c(&quot;mean&quot;, &quot;median&quot;, &quot;sd&quot;, &quot;mad&quot;, &quot;IQR&quot;, &quot;max&quot;, 
+        &quot;min&quot;)
+    k
+}
+&gt;</code></pre></div>
+</body>
+</html>
