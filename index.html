@@ -38,7 +38,39 @@
   <div id="titlearea">
     <h2>mchirico.github.io</h2>
   </div>
-  <div id="contentarea"><div class='cell text-cell'><div></div></div><div class='cell text-cell'><span style="color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 16.9px; widows: 1; background-color: rgb(255, 255, 255);">OSX - Control-Command-space bar brings up emoji menu</span></div><div class='cell text-cell'><div><br></div>Finding Cats! &nbsp;Oh…maybe they’re pigs….whatever<div></div></div><pre class='cell code-cell'><code>func findAndNext(s0: String, s1: String,
+  <div id="contentarea"><div class='cell text-cell'></div><pre class='cell code-cell'><code>extension String {
+  
+  func exec (str: String) -&gt; [String] {
+    do {
+      let regex = try NSRegularExpression(pattern: self, options: NSRegularExpressionOptions(rawValue: 0))
+      let nsstr = str as NSString
+      let all = NSRange(location: 0, length: str.utf16.count)
+      var matches : [String] = [String]()
+      regex.enumerateMatchesInString(str, options: NSMatchingOptions(rawValue: 0), range: all) {
+        (result : NSTextCheckingResult?, _, _) in
+        
+        print(&quot;a:&quot;,result!.range.location,&quot; b:&quot;,result!.range.length)
+      let beg = result!.range.location
+      let len = result!.range.length
+      print(&quot;beg&quot;,beg,&quot; len:&quot;,len)
+        
+        if let r = result {
+          let result = nsstr.substringWithRange(r.range) as String
+          matches.append(result)
+        }
+        
+     // let result = nsstr.substringWithRange(result!.range) as String
+
+     //   matches.append(result)
+        
+      }
+      return matches
+    } catch {
+      return [String]()
+    }
+  }
+}
+</code></pre><div class='cell text-cell'><div></div></div><div class='cell text-cell'><span style="color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 16.9px; widows: 1; background-color: rgb(255, 255, 255);">OSX - Control-Command-space bar brings up emoji menu</span></div><div class='cell text-cell'><div><br></div>Finding Cats! &nbsp;Oh…maybe they’re pigs….whatever<div></div></div><pre class='cell code-cell'><code>func findAndNext(s0: String, s1: String,
   var mr:Range&lt;String.CharacterView.Index&gt;? = nil) -&gt; [Range&lt;String.CharacterView.Index&gt;?] {
     var aar:[Range&lt;String.CharacterView.Index&gt;?] = []
     
