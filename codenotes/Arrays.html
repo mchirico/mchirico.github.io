@@ -34,29 +34,29 @@
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class="tex2jax_ignore">
-  <div id="nav"><div>Next: <a href='Calling URL.html'>Calling URL</a>, Previous: <a href='Arrays.html'>Arrays</a>, Up: <a href='index.html'>Index</a></div></div>
+  <div id="nav"><div>Next: <a href='C and Swift from the command line (OS X).html'>C and Swift from the command line (OS X)</a>, Up: <a href='index.html'>Index</a></div></div>
   <div id="titlearea">
-    <h2>C and Swift from the command line (OS X)</h2>
+    <h2>Arrays</h2>
   </div>
-  <div id="contentarea"><div class='cell text-cell'>You can combine C and swift from the command line</div><div class='cell text-cell'>The C files</div><pre class='cell code-cell'><code>// h.h
-#ifndef h_h
-#define h_h
+  <div id="contentarea"><pre class='cell code-cell'><code>extension Array {
+  
+  mutating func ins(v: Element, idx: Int) {
+    if self.isEmpty {
+      return
+    }
+    
+    if self.count &gt;= idx {
+      self.insert(v, atIndex: idx)
+    } else {
+      self += [v]
+    }
 
-#include &lt;stdio.h&gt;
-void pr();
-#endif /* h_h */</code></pre><pre class='cell code-cell'><code>// h.c
-#include &quot;h.h&quot;
-void pr() {
-  printf(&quot;This is a test from c\n&quot;);
-}</code></pre><div class='cell text-cell'>The Swift file</div><pre class='cell code-cell'><code>// Hello.swift
-print(&quot;Hello... in swift&quot;)
-pr()</code></pre><div class='cell text-cell'>The Bridge file</div><pre class='cell code-cell'><code>// Bridge.h
-#include &quot;h.h&quot;</code></pre><div class='cell text-cell'><b>Commands to compile and link everything together.</b></div><pre class='cell code-cell'><code>
-xcrun clang h.c -o h.o -c
-xcrun swiftc -c Hello.swift -import-objc-header Bridge.h -F /System/Library/Frameworks -I/usr/include
-xcrun swiftc -o hello Hello.o h.o
-</code></pre><div class='cell text-cell'>Now just run it...</div><pre class='cell code-cell'><code>./Hello
-Hello... in swift
-This is a test from c</code></pre></div>
+  }
+}
+
+var a=[1,3,4,5,19,5]
+a.ins(34,idx: 10000)
+
+</code></pre></div>
 </body>
 </html>
