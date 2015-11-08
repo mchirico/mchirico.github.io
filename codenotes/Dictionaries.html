@@ -56,6 +56,17 @@ var t=&quot;one&quot;
 sDict[t] = (sDict[t] ?? 0) + 1  // [&quot;one&quot;:1]
 sDict[t] = (sDict[t] ?? 0) + 1  // [&quot;one&quot;:2]
 
+// Quick Note: You can also use NSCountedSet()
+
+let set = NSCountedSet()
+set.addObject(&quot;one&quot;)
+set.addObject(&quot;one&quot;)
+set.countForObject(&quot;one&quot;) // 2
+set.count // Total number of objects ... 1
+//  End Quck Note
+
+
+
 // Note above the use of the &#39;Nil Coalescing Operator. If a
 // key does not exist in the dictionary, it&#39;s added with a value
 // of (0) + 1, or 1.  This &#39;Nil Coalescing Operator is pretty handy.
