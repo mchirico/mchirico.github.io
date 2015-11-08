@@ -46,7 +46,14 @@ var s3=&quot;one two\n&quot;
 s3.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
 
 
-</code></pre><div class='cell text-cell'><div><br></div></div><div class='cell text-cell'>Replace spaces with ‘:’, or whatever character you want.</div><pre class='cell code-cell'><code>// You want to change &quot;a b c&quot; to &quot;a:b:c&quot;
+</code></pre><div class='cell text-cell'><div>Walk through each character in a string. Note, it’s really a sequence. And it’s really&nbsp;</div><div>walking through each position.</div></div><pre class='cell code-cell'><code>let ss = &quot;⚽️⛷a&quot;
+
+for i in ss.startIndex..&lt;ss.endIndex {
+  print(i,ss[i])
+}
+
+// Note
+ss[ss.startIndex.advancedBy(1)] // ⛷</code></pre><div class='cell text-cell'><div><br></div></div><div class='cell text-cell'>Replace spaces with ‘:’, or whatever character you want.</div><pre class='cell code-cell'><code>// You want to change &quot;a b c&quot; to &quot;a:b:c&quot;
 
 var s:String = &quot;a b c&quot;
 while let r = s.rangeOfString(&quot; &quot;) {
