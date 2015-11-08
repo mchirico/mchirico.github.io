@@ -45,6 +45,16 @@ while let r = s.rangeOfString(&quot; &quot;) {
   s.replaceRange(r, with: &quot;:&quot;)
 }
 
+// Or, maybe more elegant
+var s=&quot;a b c&quot;
+s.componentsSeparatedByString(&quot; &quot;).joinWithSeparator(&quot;:&quot;)
+
+// Or, maybe more direct
+var s=&quot;a b c&quot;
+s.stringByReplacingOccurrencesOfString(&quot; &quot;, withString: &quot;:&quot;)
+
+
+
 </code></pre><div class='cell text-cell'><div>Quick summary of ranges and substrings</div></div><pre class='cell code-cell'><code>let t = &quot;mchirico@gmail.com bob@gmail.com tmust@gmail.com&quot;
 
 t.substringToIndex(t.startIndex.advancedBy(3)) // &quot;muc&quot;
