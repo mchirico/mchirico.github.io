@@ -62,7 +62,12 @@ for i in ss.characters {
 }
 
 
+// Other ways to walk
 
+var a = &quot;This is my sentence&quot;.characters.split(&quot; &quot;)
+  .map() {
+    String($0.last!).uppercaseString
+}
 
 
 </code></pre><div class='cell text-cell'><div><br></div></div><div class='cell text-cell'>Replace spaces with ‘:’, or whatever character you want.</div><pre class='cell code-cell'><code>// You want to change &quot;a b c&quot; to &quot;a:b:c&quot;
