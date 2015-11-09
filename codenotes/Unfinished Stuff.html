@@ -66,20 +66,16 @@ let stuff = NSCharacterSet(charactersInString: &quot;🏈&quot;)
 var count=0
 
 
-//NSCharacterSet.nonBaseCharacterSet()
-
 extension NSScanner {
   
-  
   func scanEmoji(s: String,inout intoStringArray:[String]) {
-    for i in s.characters  {
-      if let range = self.string.rangeOfString(&quot;\(i)&quot;) {
-        intoStringArray.append(self.string[range])
-        
+    let emojiSet = Set(s.characters)
+    for i in self.string.characters  {
+      if emojiSet.contains(i) {
+        intoStringArray.append(String(i))
       }
     }
   }
-  
   
 }
 
