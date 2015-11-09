@@ -39,7 +39,95 @@
     <h2>mchirico.github.io</h2>
   </div>
   <div id="contentarea"><div class='cell markdown-cell'><p><a href="http://mchirico.github.io/codenotes/index.html">Code Notes</a></p>
-</div><div class='cell text-cell'><div><br></div><div></div></div><div class='cell text-cell'>Looking for Big-O times for collections in swift. Need something up-to-date<div><a href="http://www.raywenderlich.com/79850/collection-data-structures-swift">http://www.raywenderlich.com/79850/collection-data-structures-swift</a><br></div></div><div class='cell text-cell'><div><br></div><div>Finally got this regular expression for emoji characters</div></div><pre class='cell code-cell'><code>
+</div><div class='cell text-cell'><div>Messing around with scanning….incomplete</div><div></div></div><pre class='cell code-cell'><code>//: Playground - noun: a place where people can play
+
+import UIKit
+
+var str = &quot;Hello, playground&quot;
+
+let hours
+= &quot; 🏈                 Mon-Thurs:    8:03 - 18:00\n&quot; +
+  &quot;🏈🌤                 Sun:         18:00 - 19:00\n&quot; +
+  &quot;⚽️🏈🌤⛅️🌥🌦☁️🌧   Sun:         18:00 - 19:00\n&quot; +
+  &quot;⚽️🌤                 Fri:      7:00 - 17:00\n&quot; +
+  &quot;🍰🌲                 Sun:         18:00 - 19:00\n&quot; +
+&quot;⛷                     Sat-Sun   10:00 - 15:00\n&quot;
+
+
+let skippedCharacters = NSMutableCharacterSet.punctuationCharacterSet()
+skippedCharacters.formUnionWithCharacterSet(NSCharacterSet.whitespaceCharacterSet())
+
+let weather=&quot;🌤☀️⛅️🌥🌦☁️🌧⛈🌩⚡️🌪&quot;
+let weatherSet = NSCharacterSet(charactersInString: weather)
+
+let activitySet = NSCharacterSet(charactersInString: &quot;⚽️🏈&quot;)
+
+let stuff = NSCharacterSet(charactersInString: &quot;🏈&quot;)
+
+var count=0
+
+
+//NSCharacterSet.nonBaseCharacterSet()
+
+extension NSScanner {
+  
+  
+  func scanEmoji(s: String,inout intoStringArray:[String]) {
+    for i in s.characters  {
+      if let range = self.string.rangeOfString(&quot;\(i)&quot;) {
+        intoStringArray.append(self.string[range])
+        
+      }
+    }
+  }
+  
+  
+}
+
+
+
+hours.enumerateLines { (line, _) in
+  
+  
+  let scanner = NSScanner(string: line)
+  scanner.charactersToBeSkipped = skippedCharacters
+  
+  var startDay, endDay,event, weather: NSString?
+  var event2: [String] = []
+  var weather2:[String]=[]
+  var startHour: Int = 0
+  var startMinute: Int = 0
+  var endHour: Int = 0
+  var endMinute: Int = 0
+  count++
+  
+  scanner.scanEmoji(&quot;🏈⚽️⛷&quot;,intoStringArray: &amp;event2)
+  scanner.scanEmoji(&quot;🌤☀️⛅️🌥🌦☁️🌧⛈🌩⚡️🌪&quot;, intoStringArray: &amp;weather2)
+  
+  
+  
+  
+  scanner.scanCharactersFromSet(NSCharacterSet.symbolCharacterSet(), intoString: &amp;weather)
+  
+  scanner.scanCharactersFromSet(NSCharacterSet.letterCharacterSet(), intoString: &amp;startDay)
+  scanner.scanCharactersFromSet(NSCharacterSet.letterCharacterSet(), intoString: &amp;endDay)
+  
+  
+  
+  
+  scanner.scanInteger(&amp;startHour)
+  scanner.scanInteger(&amp;startMinute)
+  scanner.scanInteger(&amp;endHour)
+  scanner.scanInteger(&amp;endMinute)
+  
+  // print(count,startDay,endDay,event,weather,startHour,startMinute)
+  print(&quot;Event2&quot;,count,event2,weather2)
+  
+  // Will need to put in array or do something here
+  
+}
+
+</code></pre><div class='cell text-cell'><div><br></div><div></div></div><div class='cell text-cell'>Looking for Big-O times for collections in swift. Need something up-to-date<div><a href="http://www.raywenderlich.com/79850/collection-data-structures-swift">http://www.raywenderlich.com/79850/collection-data-structures-swift</a><br></div></div><div class='cell text-cell'><div><br></div><div>Finally got this regular expression for emoji characters</div></div><pre class='cell code-cell'><code>
 extension String {
   
   func regex (pattern: String) -&gt; [String] {
