@@ -46,7 +46,7 @@ import UIKit
 var str = &quot;Hello, playground&quot;
 
 let hours
-= &quot; 🏈                 Mon-Thurs:    8:03 - 18:00\n&quot; +
+= &quot; ⚡️🏈                 Mon-Thurs:    8:03 - 18:00\n&quot; +
   &quot;🏈🌤                 Sun:         18:00 - 19:00\n&quot; +
   &quot;⚽️🏈 🌤⛅️🌥🌦☁️🌧   Sun:         18:00 - 19:00\n&quot; +
   &quot;⚽️ 🌤                 Fri:      7:00 - 17:00\n&quot; +
@@ -105,9 +105,37 @@ extension NSScanner {
       }
     }
   }
+  //Set&lt;_Element&gt;
+  
+  func scanSet(s: String,inout intoSet:Set&lt;Character&gt;?) {
+    if intoSet == nil {
+      intoSet = Set&lt;Character&gt;()
+    }
+    let emojiSet = Set(s.characters)
+    for i in self.string.characters  {
+      if emojiSet.contains(i) {
+        intoSet?.insert(i)
+      }
+    }
+  }
   
   
 }
+
+var mset2:Set&lt;Character&gt;?
+
+if mset2 == nil {
+  mset2 = Set&lt;Character&gt;()
+}
+
+
+
+var mset = Set&lt;Character&gt;()
+var mlist=&quot;one&quot;
+for i in mlist.characters {
+  mset.insert(i)
+}
+mset
 
 
 
@@ -122,6 +150,7 @@ hours.enumerateLines { (line, _) in
   
   var startDay, endDay,event, weather: NSString?
   var event2: [String] = []
+  var mset = Set&lt;Character&gt;?()
   var weather2:[String]=[]
   var startHour: Int = 0
   var startMinute: Int = 0
@@ -136,7 +165,8 @@ hours.enumerateLines { (line, _) in
   scanner.scanEmoji(&quot;🏈⚽️⛷🍰🌲&quot;,intoStringArray: &amp;event2)
   scanner.scanEmoji(&quot;🌤☀️⛅️🌥🌦☁️🌧⛈🌩⚡️🌪&quot;, intoStringArray: &amp;weather2)
   
-  
+  scanner.scanSet(&quot;🏈⚽️⛷🍰🌲&quot;,intoSet: &amp;mset)
+  print(&quot;mset:&quot;,mset)
   
   
   scanner.scanCharactersFromSet(NSCharacterSet.symbolCharacterSet(), intoString: &amp;weather)
@@ -158,6 +188,29 @@ hours.enumerateLines { (line, _) in
   // Will need to put in array or do something here
   
 }
+
+
+
+
+
+var a = &quot;This is my sentence&quot;.characters.split(&quot; &quot;)
+  .map() {
+    String($0.last!).uppercaseString
+}
+a
+
+
+var aa = &quot;one&quot;
+aa.uppercaseString
+
+
+
+
+
+
+
+
+
 
 </code></pre><div class='cell text-cell'><div><br></div><div></div></div><div class='cell text-cell'>Looking for Big-O times for collections in swift. Need something up-to-date<div><a href="http://www.raywenderlich.com/79850/collection-data-structures-swift">http://www.raywenderlich.com/79850/collection-data-structures-swift</a><br></div></div><div class='cell text-cell'><div><br></div><div>Finally got this regular expression for emoji characters</div></div><pre class='cell code-cell'><code>
 extension String {
