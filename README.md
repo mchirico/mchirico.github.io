@@ -1,7 +1,8 @@
 # mchirico.github.io
 
 
-[Code Notes](https://mchirico.github.io/notes)
+[Code Notes](http://mchirico.github.io/codenotes/index.html)
 
-[Blog](http://mchirico.com/)
+[Blog](http://mchirico.github.io/index.htm)
+
 
