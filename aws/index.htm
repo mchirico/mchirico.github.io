@@ -1,0 +1,684 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mike Chirico's Daily Blog</title>
+<!-- quiver BEGIN --->
+<style>
+    #nav{margin:5px 10px 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    #contentarea{font-size:15px;margin:16px 0}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
+    .code-cell{font-size:13px}
+    .latex-cell{white-space:pre-wrap;}
+  </style>
+  <!-- User CSS -->
+  <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        processClass: 'latex-cell'
+      },
+      "HTML-CSS": {
+        preferredFont: "STIX"
+      }
+    };
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+<!--   END of quiver -->
+<link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script src="jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script>
+var __adobewebfontsappname__="dreamweaver"
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+  <!-- User CSS -->
+  <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        processClass: 'latex-cell'
+      },
+      "HTML-CSS": {
+        preferredFont: "STIX"
+      }
+    };
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- Start Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3115153-1', 'auto');
+  ga('send', 'pageview');
+
+</script><!-- End Google Analytics -->
+</head>
+
+<body onLoad="MM_preloadImages('BlogPostAssets/images/llarge.png')">
+<div id="mainwrapper">
+  <header> 
+    <!--**************************************************************************
+    src location: ~/Dropbox/webDev/DreamWeaverMchirico
+    ****************************************************************************-->
+    <div id="logo"><!-- <img src="BlogPostAssets/images/logoImage.png" alt="sample logo"> --><!-- Company Logo text -->mchirico.org</div>
+    <nav>
+    <a href="oldblog.htm" title="Link">oldBlog</a>
+    <a href="http://www.cwxstat.com" title="Link">cwxstat</a>
+    <a href="https://twitter.com/mchirico" title="Link">twitter</a> 
+    </nav>
+  </header>
+  <div id="content">
+    
+    <section id="mainContent"> 
+      <!--************************************************************************
+    Main Blog content starts here
+    ****************************************************************************-->
+      <h1><!-- Blog title -->Mike Chirico's Blog</h1>
+      <h3><!-- Tagline -->STUFF ABOUT MY DAY</h3>
+      
+
+<article>
+<p>
+<!-- Test article -->
+</p>
+</article>
+
+
+<article>
+<p>
+Autolayout with multiple TableViews
+</p>
+<p>
+<iframe src="https://player.vimeo.com/video/144164048" width="500" 
+height="313" frameborder="0" 
+ webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</p>
+</article>
+
+
+
+
+<article>
+<p>
+Getting Docker 1.8 running on CentOS Linux release 7.1.1503
+</p>
+<pre>
+See list of latest packages:
+<a href="http://yum.dockerproject.org/repo/main/centos/7/Packages/">Docker packages</a>
+
+yum install -y http://yum.dockerproject.org/repo/main/centos/7/Packages/docker-engine-1.8.3-1.el7.centos.x86_64.rpm
+
+systemctl start docker
+systemctl status docker
+
+
+
+
+
+</pre>
+
+</article>
+
+
+
+
+
+<article>
+<p>
+Gestures to mutliple tableviews in a single view controller.
+</p>
+
+<p>
+<a href="https://gist.github.com/mchirico/50cdb07d20b1b0f73d7c">
+  <img src="https://cloud.githubusercontent.com/assets/755710/10652727/f133ece0-7826-11e5-8c6d-025fb44831ee.gif" alt="" width="35%" height="35%" id="xcode"> </a>
+
+</p>
+</article>
+
+
+
+
+
+
+<article>
+<p>
+Adding multiple views by embedding in a navigation controller.
+</p>
+
+<p>
+<iframe src="https://player.vimeo.com/video/143171562" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+</p>
+
+
+
+<p>
+Adding multiple views by embedding in a tab bar controller.
+</p>
+
+<p>
+<iframe src="https://player.vimeo.com/video/143167047" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+</p>
+</article>
+
+
+
+
+
+
+
+<article>
+<p>
+<h3>Simple way to write/read in Swift</h3>
+</p>
+<p>
+<script src="https://gist.github.com/mchirico/18d5f9b7d462dbf95e09.js"></script>
+</p>
+</article>
+
+
+
+
+
+
+
+<article>
+<p>
+
+
+  <div id="titlearea">
+    <h2>Dictionaries </h2>
+  </div>
+  <div id="contentarea"><div class='cell text-cell'>These are probably the most useful dictionary functions…and they’re simple to use.<div></div></div><pre class='cell code-cell'><code>var sDict:[String:Int]=[:]   // Define your dictionary
+
+var t=&quot;one&quot;
+sDict[t] = (sDict[t] ?? 0) + 1  // [&quot;one&quot;:1]
+sDict[t] = (sDict[t] ?? 0) + 1  // [&quot;one&quot;:2]
+
+// Note above the use of the &#39;Nil Coalescing Operator. If a
+// key does not exist in the dictionary, it&#39;s added with a value
+// of (0) + 1, or 1.  This &#39;Nil Coalescing Operator is pretty handy.
+
+
+
+let names = [&quot;tom&quot;,&quot;bob&quot;,&quot;sue&quot;,&quot;tom&quot;,&quot;wendy&quot;,&quot;sue&quot;]  // Suppose you want to know how many times
+// each name comes up.
+
+for i in names {
+    sDict[i] = (sDict[i] ?? 0) + 1  // Use &#39;Nil Coalescing Operator&#39;
+}
+
+// [&quot;sue&quot;: 2, &quot;tom&quot;: 2, &quot;one&quot;: 2, &quot;bob&quot;: 1, &quot;wendy&quot;: 1]
+
+
+// Okay, but now you probably want it ordered.
+
+
+for i in sDict.keys.sort(&lt;) {
+    print(i,sDict[i]!)
+}
+
+
+// Suppose you know the value, but not the keys
+
+for i in sDict.values.sort(&lt;) {
+    let keys = (sDict as NSDictionary).allKeysForObject(i)
+    print(keys,i)
+}
+
+/* The above works, you&#39;ll get the output below
+   with duplicates.
+
+[bob, wendy] 1
+[bob, wendy] 1
+[sue, tom, one] 2
+[sue, tom, one] 2
+[sue, tom, one] 2
+
+
+But, you can fix this using Set
+*/
+
+var mSet:Set&lt;String&gt;=[]
+for i in sDict.values.sort(&lt;) {
+    let keys = (sDict as NSDictionary).allKeysForObject(i)
+    mSet.insert(&quot;\(keys),\(i)&quot;)
+}
+print(&quot;\n\n&quot;)
+for i in mSet {
+    print(i)
+}
+
+/*
+
+[sue, tom, one],2
+[bob, wendy],1
+
+*/
+
+</code></pre><div class='cell text-cell'></div><div class='cell text-cell'></div>
+
+
+</p>
+</article>
+
+
+
+
+
+
+<article>
+<p>
+Cool, you can actually create a SQLite database on the Watch, if you're 
+using WatchOS 2.0
+</p>
+<p>
+  <a href="BlogPostAssets/images/xcodeSQLite.png">
+  <img src="BlogPostAssets/images/xcodeSQLite.png" alt="" width="85%" height="85%" id="xcode">
+  </a>
+</p>
+</article>
+
+
+<article>
+<div id="titlearea">
+    <h2>C and Swift from the command line (OS X)</h2>
+  </div>
+  <div id="contentarea"><div class='cell text-cell'>You can combine C and swift from the command line</div><div class='cell text-cell'>The C files</div><pre class='cell code-cell'><code>// h.h
+#ifndef h_h
+#define h_h
+
+#include &lt;stdio.h&gt;
+void pr();
+#endif /* h_h */</code></pre><pre class='cell code-cell'><code>// h.c
+#include &quot;h.h&quot;
+void pr() {
+  printf(&quot;This is a test from c\n&quot;);
+}</code></pre><div class='cell text-cell'>The Swift file</div><pre class='cell code-cell'><code>// Hello.swift
+print(&quot;Hello... in swift&quot;)
+pr()</code></pre><div class='cell text-cell'>The Bridge file</div><pre class='cell code-cell'><code>// Bridge.h
+#include &quot;h.h&quot;</code></pre><div class='cell text-cell'><b>Commands to compile and link everything together.</b></div><pre class='cell code-cell'><code>xcrun clang h.c -o h.o -c
+xcrun swiftc -c Hello.swift -import-objc-header Bridge.h -F /System/Library/Frameworks -I/usr/include
+xcrun swiftc -o hello Hello.o h.o
+</code></pre><div class='cell text-cell'>Now just run it...</div><pre class='cell code-cell'><code>./Hello
+Hello... in swift
+This is a test from c</code></pre></div>
+
+
+<article>
+
+
+
+
+
+
+<article>
+<h2>Runs</h2>
+<p>
+<iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/1004797/latest-rides/a25499a05ccf4074f1b36074b2483a9c66b35178'></iframe>
+</p>
+</article>
+
+
+
+
+
+
+<article>
+<h2>Creating Your Own Blocker Extensions</h2>
+
+<p>
+Good article on webkit about creating your own blocker extensions in iOS 9.
+</p>
+
+<p>
+<a href="https://www.webkit.org/blog/3476/content-blockers-first-look/">
+  <img src="BlogPostAssets/images/webKit.png" alt="" width="82%" height="82%" id="Cheat">
+</a>
+</p>
+<p>
+Here's a simple rule that blocks png images on my site.
+<script src="https://gist.github.com/mchirico/38c2f4647307c7e6afd6.js"></script>
+</p>
+
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+<article>
+
+
+<h2>Digging into Past Conversations</h2>
+
+<p>
+If you use iMessage, all the text is recorded in a sqlite database.
+</p>
+
+<p>
+Take, for example, the following conversation...
+</p>
+
+<p>
+<img src="BlogPostAssets/images/imessage.png" alt="" width="82%" height="82%" id="Cheat">
+</p>
+
+<p>
+You can access the text of the conversation in chat.db, which is
+found under the user's Library directory.
+</p>
+ <div id="contentarea"><pre class="cell code-cell"><code>sqlite3 /Users/$(whoami)/Library/Messages/chat.db
+sqlite&gt; select text from message;
+
+....
+I think it’s for serious felonies…not traffic ticket stuff.
+If they don&#39;t cancel the day before it should be interesting
+Yeah..as long as it’s short…a day or two.
+Why? Because you will miss me😊💕
+You’ll have to pickup the girls…I’ll be on remote assignment..
+Truth or positive thinking?
+positive thinking…
+👍🏽
+GOAL ABBBY!!!!!!!!
+sqlite&gt;</code></pre></div>
+
+
+<p>
+
+</article>
+
+
+<article>
+<p>
+<h2>London Swift Talks - (click on image, then, scroll to the bottom)</h2>
+
+<a href="https://www.swiftsummit.com/">
+<img src="BlogPostAssets/images/swiftTalk.png" alt="" width="82%" height="82%" id="Cheat">
+</a>
+</p>
+</article>
+
+
+
+<article>
+<p>
+Taking a look at Google's API...
+<a href="https://developers.google.com/google-apps/spreadsheets/data">here</a>
+</p>
+<p>
+
+I have a lot of data from iOS, raspberry pi that needs to be made presentable.
+</p>
+</article>
+
+
+
+
+
+<article>
+<p>
+I love this example...
+</p>
+<img src="BlogPostAssets/images/loveProbProblem.png" alt="" width="100%" height="100%" id="Cheat2">
+</article>
+
+
+
+<article>
+<p>
+Analyzing data
+</p>
+<p>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VWBNoIwGEjo" frameborder="0" allowfullscreen></iframe>
+</p>
+</article>
+
+<hr>
+<article>
+<p>
+Spending too much time on these maps. But, it's kinda cool.
+</p>
+<hr>
+<p>
+<a href="https://www.google.com/fusiontables/DataSource?docid=1-QAEs4PsktpwjpdHG-5O4kOOxlnjN4hQqtB7n0Yw">
+Fusion Table Link
+</a>
+
+</p>
+
+
+<p>
+<iframe width="800" height="600" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col12+from+1-QAEs4PsktpwjpdHG-5O4kOOxlnjN4hQqtB7n0Yw&amp;viz=MAP&amp;h=false&amp;lat=40.057154116698385&amp;lng=-75.11997633217771&amp;t=1&amp;z=13&amp;l=col12&amp;y=8&amp;tmplt=10&amp;hml=TWO_COL_LAT_LNG"></iframe>
+
+
+</p>
+
+
+</article>
+
+
+
+
+
+      
+      
+      <article>
+
+  <div id="titlearea">
+    <h2>Pivot Tables in R: tidyr and SQLite </h2>
+  </div>
+  <div id="contentarea"><pre class='cell code-cell'><code>
+require(RSQLite)
+library(dplyr)
+library(tidyr)
+
+conn    &lt;- dbDriver(&quot;SQLite&quot;)
+db &lt;- dbConnect(conn,&quot;hr.db&quot;)
+dbSendQuery(db, &quot;DROP TABLE IF EXISTS hr;&quot;)
+
+dbSendQuery(db, &quot;CREATE TABLE hr (date Date,name varchar(10),hb int);&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:01&#39;,&#39;Mike Chirico&#39;,55)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:02&#39;,&#39;Mike Chirico&#39;,56)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:03&#39;,&#39;Mike Chirico&#39;,57)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:01&#39;,&#39;Lisa Anderson&#39;,80)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:02&#39;,&#39;Lisa Anderson&#39;,79)&quot;)
+dbSendQuery(db, &quot;insert into hr values (&#39;2015-08-05 13:21:03&#39;,&#39;Lisa Anderson&#39;,78)&quot;)
+
+d &lt;- dbReadTable(db, &quot;hr&quot;) 
+d &lt;- tbl_df(d)
+str(d)
+
+# ***************************************************
+# Create pivot
+# ***************************************************
+
+pivot = d %&gt;%  spread(name,hb)
+pivot
+
+&gt; pivot
+                 date Lisa Anderson Mike Chirico
+1 2015-08-05 13:21:01            80           55
+2 2015-08-05 13:21:02            79           56
+3 2015-08-05 13:21:03            78           57
+
+pivot= as.data.frame(pivot)
+dbWriteTable(db,&quot;pivot&quot;,pivot,overwrite=TRUE)
+</code></pre><div class='cell text-cell'>Note that the above SQLite table will look like the following:</div>
+<pre class='cell code-cell'><code>sqlite&gt; .tables
+hr     pivot
+sqlite&gt; .schema pivot
+CREATE TABLE pivot
+( &quot;date&quot; TEXT,
+	&quot;Lisa Anderson&quot; INTEGER,
+	&quot;Mike Chirico&quot; INTEGER
+);
+
+sqlite&gt; select * from pivot;
+2015-08-05 13:21:01|80|55
+2015-08-05 13:21:02|79|56
+2015-08-05 13:21:03|78|57</code></pre><div class='cell text-cell'></div></div>      
+      
+      For the complete article, see the following <a href=http://mchirico.org/Code/Pivot%20Tables%20in%20R%20%20tidyr%20and%20SQLite.html>...</a> 
+      </article>
+      
+      <article>
+      
+      <br>
+      Also the pdf below is a good reference.<br>
+      <a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf" >
+          <img src="BlogPostAssets/images/cheatSheet.png" alt="" width="70%" height="70%" id="Cheat">
+        </a>  
+      </article>
+      
+      
+      
+      <hr>
+      <article>
+        <h2>Crime in Cheltenham</h2>
+        <p>
+        So I've been looking at local crime statistics. Below are the monthly 
+        reports of &quot;Burglary&quot; (in red)  and (in blue) the number of arrests. </p>
+         
+          <a href="BlogPostAssets/images/blarge.png" >
+          <img src="BlogPostAssets/images/bsmall.png" alt="" width="70%" height="70%" id="Theft">
+          </a>
+
+          <p>
+          The number of reported crimes in this category (Burglary), has a mean of 14 (month) and a standard deviation of 5.</p>
+          <p>I would be nice to get crime data, similiar to what's availabe from Philadelphia.</p>
+          
+          
+          <a href="BlogPostAssets/images/crimeMapLarge.png" >
+          <img src="https://raw.githubusercontent.com/mchirico/crime/master/images/cheltenhamPhilly.gif" alt="" width="90%" height="90%" id="Theft">
+          </a>
+          
+          
+          <a href="https://www.opendataphilly.org/dataset/philadelphia-police-part-one-crime-incidents" target="_blank">
+          <img src="BlogPostAssets/images/OpenDataPhilly.png" alt="" width="40%" height="40%" >
+        </a>  
+          
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+        
+        
+        
+      </article>
+      
+      
+      <article>
+      <p>Crime map of center city Philadelphia.
+      </p>
+      <img src="https://raw.githubusercontent.com/mchirico/crime/master/images/crimePhillyCC.gif" alt="" width="100%" height="100%" >
+      
+      </article>
+      
+      <aside id="authorInfo"> 
+        <!-- The author information is contained here -->
+        <h2>Mike Chirico</h2>
+        <p>The best way to reach me ... <a href="mailto:mchirico@gmail.com">mchirico@gmail.com</a></p>
+      </aside>
+    </section>
+    
+    
+    <section id="sidebar"> 
+      <!--************************************************************************
+    Sidebar starts here. It contains a searchbox, sample ad image and 6 links
+    ****************************************************************************-->
+    <div id="adimage"><img src="BlogPostAssets/images/mchirico300x300.png" alt=""/></div>
+      <nav>
+        <ul>
+        
+          <li><a href="Code/index.html" title="Code Notebook">Code Notebook</a></li>
+          <li><a href="phillyCrime.html" title="Philadelphia Crime">Philadelphia Crime</a></li>
+          <li><a href="http://natashatherobot.com" title="Natasha The Robot">Natasha The Robot</a></li>
+	  <li><a href="https://www.hackingwithswift.com" title="Hacking with swift">Hacking with Swift</a></li>
+	  <li><a href="http://iosdevweekly.com/" title="iosdevweekly">iosdevweekly</a></li>
+	  <li><a href="https://developer.apple.com/swift/blog/" title="Apple's Dev Blog">Apple's Dev Blog</a></li>
+	  <li><a href="http://nshipster.com" title="nshipster.com">nshipster.com</a></li>
+	  <li><a href="/runs.html" title="nshipster.com">My Runs</a></li>
+	  <li><a href="https://developer.apple.com/design/tips/" title="nshipster.com">Developer Design Tips</a></li>
+	  <li><a href="https://developer.apple.com/swift/blog/" title="nshipster.com">Swift Blog</a></li>
+
+
+
+
+
+          
+        </ul>
+      </nav>
+    </section>
+    <footer> 
+      <!--************************************************************************
+    Footer starts here
+    ****************************************************************************-->
+      <article>
+        <h3>My Company</h3>
+        <p>I work for <a href="http://www.cwxstat.com">CWXSTAT</a>, a company that does DevOps (Linux), and statistical analysis.</p>
+      </article>
+      
+      <article>
+        <h3>Old Blog</h3>
+        <p>This is a link to my old <a href="oldblog.htm" title="Link">blog</a></p>
+      </article>
+      
+      
+    
+      
+      
+      
+    </footer>
+  </div>
+  <div id="footerbar"><!-- Small footerbar at the bottom --></div>
+</div>
+</body>
+</html>

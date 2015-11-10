@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- common.css -->
+  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px 2%;color:#333;word-wrap:break-word}img{max-width:100%!important}code{margin:0;padding:.2em 0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre{margin:0}pre>code{margin:0;padding:0;font-size:100%;word-break:normal;background:0 0;border:0}blockquote{margin:0;padding:0 15px;color:#777;border-left:4px solid #ddd}hr{background-color:#ddd;border:0;height:1px;margin:15px 0}ol{list-style-type:decimal}ol ol,ul ol{list-style-type:lower-latin}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-roman}table{border-spacing:0;border-collapse:collapse;margin-top:0;margin-bottom:16px}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(even){background-color:#f8f8f8}input[type=checkbox]{cursor:default;margin-right:.5em}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{float:left;margin:.3em 1em .25em -1.6em;vertical-align:middle}</style>
+  <!-- exported.css -->
+  <style>
+    #nav{margin:5px 10px 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    #contentarea{font-size:15px;margin:16px 0}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
+    .code-cell{font-size:13px}
+    .latex-cell{white-space:pre-wrap;}
+  </style>
+  <!-- User CSS -->
+  <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        processClass: 'latex-cell'
+      },
+      "HTML-CSS": {
+        preferredFont: "STIX"
+      }
+    };
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="tex2jax_ignore">
+  <div id="nav"><div>Up: <a href='index.html'>Index</a></div></div>
+  <div id="titlearea">
+    <h2>mchirico.github.io</h2>
+  </div>
+  <div id="contentarea"><div class='cell markdown-cell'><p><a href="http://mchirico.github.io/codenotes/index.html">Code Notes</a></p>
+</div><div class='cell text-cell'><div></div></div><div class='cell text-cell'><img src="resources/40F4EE3B-6A45-462C-8B31-7CE1B0FAD714.png"></div><div class='cell text-cell'><div><br></div><div><br></div><div>Messing around with scanning….incomplete</div><div></div></div><div class='cell text-cell'></div><pre class='cell code-cell'><code>//: Playground - noun: a place where people can play
+
+import UIKit
+
+var str = &quot;Hello, playground&quot;
+
+let hours
+= &quot; ⚡️🏈                 Mon-Thurs:    8:03 - 18:00\n&quot; +
+  &quot;🏈🌤                 Sun:         18:00 - 19:00\n&quot; +
+  &quot;⚽️🏈 🌤⛅️🌥🌦☁️🌧   Sun:         18:00 - 19:00\n&quot; +
+  &quot;⚽️ 🌤                 Fri:      7:00 - 17:00\n&quot; +
+  &quot;🍰🌲 🌤☀️⛅️🌥🌦☁️🌧⛈🌩⚡️🌪       Sun:         18:00 - 19:00\n&quot; +
+&quot;⛷ 🌤⛅️🌥                     Sat-Sun   10:00 - 15:00\n&quot;
+
+
+let skippedCharacters = NSMutableCharacterSet.punctuationCharacterSet()
+skippedCharacters.formUnionWithCharacterSet(NSCharacterSet.whitespaceCharacterSet())
+
+let weather=&quot;🌤☀️⛅️🌥🌦☁️🌧⛈🌩⚡️🌪&quot;
+//let weatherSet = NSCharacterSet(charactersInString: weather)
+
+let weather2=&quot;🌪&quot;
+var weatherSet = Set&lt;Character&gt;()
+
+var w2 = Set(weather.characters)
+
+for i in weather.characters {
+  weatherSet.insert(i)
+}
+
+
+
+let s0=&quot;🌪⚽️ 🌤&quot;
+for i in s0.characters {
+  if w2.contains(i) {
+    print(i)
+  }
+
+}
+
+
+//let s0=&quot;on🌪&quot;
+for i in s0.characters {
+  //weatherSet.characterIsMember(i)
+  
+}
+
+let activitySet = NSCharacterSet(charactersInString: &quot;⚽️🏈&quot;)
+
+let stuff = NSCharacterSet(charactersInString: &quot;🏈&quot;)
+
+var count=0
+
+
+//NSCharacterSet.nonBaseCharacterSet()
+
+extension NSScanner {
+  
+  func scanEmoji(s: String,inout intoStringArray:[String]) {
+    let emojiSet = Set(s.characters)
+    for i in self.string.characters  {
+      if emojiSet.contains(i) {
+        intoStringArray.append(String(i))
+      }
+    }
+  }
+  //Set&lt;_Element&gt;
+  
+  func scanSet(s: String,inout intoSet:Set&lt;Character&gt;?) {
+    if intoSet == nil {
+      intoSet = Set&lt;Character&gt;()
+    }
+    let emojiSet = Set(s.characters)
+    for i in self.string.characters  {
+      if emojiSet.contains(i) {
+        intoSet?.insert(i)
+      }
+    }
+  }
+  
+  
+}
+
+var mset2:Set&lt;Character&gt;?
+
+if mset2 == nil {
+  mset2 = Set&lt;Character&gt;()
+}
+
+
+
+var mset = Set&lt;Character&gt;()
+var mlist=&quot;one&quot;
+for i in mlist.characters {
+  mset.insert(i)
+}
+mset
+
+
+
+hours.enumerateLines { (line, _) in
+  
+  
+  let scanner = NSScanner(string: line)
+  scanner.charactersToBeSkipped = skippedCharacters
+  
+  
+  
+  
+  var startDay, endDay,event, weather: NSString?
+  var event2: [String] = []
+  var mset = Set&lt;Character&gt;?()
+  var weather2:[String]=[]
+  var startHour: Int = 0
+  var startMinute: Int = 0
+  var endHour: Int = 0
+  var endMinute: Int = 0
+  count++
+  
+  
+  
+
+  
+  scanner.scanEmoji(&quot;🏈⚽️⛷🍰🌲&quot;,intoStringArray: &amp;event2)
+  scanner.scanEmoji(&quot;🌤☀️⛅️🌥🌦☁️🌧⛈🌩⚡️🌪&quot;, intoStringArray: &amp;weather2)
+  
+  scanner.scanSet(&quot;🏈⚽️⛷🍰🌲&quot;,intoSet: &amp;mset)
+  print(&quot;mset:&quot;,mset)
+  
+  
+  scanner.scanCharactersFromSet(NSCharacterSet.symbolCharacterSet(), intoString: &amp;weather)
+  
+  scanner.scanCharactersFromSet(NSCharacterSet.letterCharacterSet(), intoString: &amp;startDay)
+  scanner.scanCharactersFromSet(NSCharacterSet.letterCharacterSet(), intoString: &amp;endDay)
+  
+  
+  
+  
+  scanner.scanInteger(&amp;startHour)
+  scanner.scanInteger(&amp;startMinute)
+  scanner.scanInteger(&amp;endHour)
+  scanner.scanInteger(&amp;endMinute)
+  
+  // print(count,startDay,endDay,event,weather,startHour,startMinute)
+  print(&quot;Event2&quot;,count,event2,weather2)
+  
+  // Will need to put in array or do something here
+  
+}
+
+
+
+
+
+var a = &quot;This is my sentence&quot;.characters.split(&quot; &quot;)
+  .map() {
+    String($0.last!).uppercaseString
+}
+a
+
+
+var aa = &quot;one&quot;
+aa.uppercaseString
+
+
+
+
+
+
+
+
+
+
+</code></pre><div class='cell text-cell'><div><br></div><div></div></div><div class='cell text-cell'>Looking for Big-O times for collections in swift. Need something up-to-date<div><a href="http://www.raywenderlich.com/79850/collection-data-structures-swift">http://www.raywenderlich.com/79850/collection-data-structures-swift</a><br></div></div><div class='cell text-cell'><div><br></div><div>Finally got this regular expression for emoji characters</div></div><pre class='cell code-cell'><code>
+extension String {
+  
+  func regex (pattern: String) -&gt; [String] {
+    do {
+      let regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions(rawValue: 0))
+      let nsstr = self as NSString
+      let all = NSRange(location: 0, length: nsstr.length)
+      var matches : [String] = [String]()
+      regex.enumerateMatchesInString(self, options: NSMatchingOptions(rawValue: 0), range: all) {
+        (result : NSTextCheckingResult?, _, _) in
+        
+        if let r = result {
+          let result = nsstr.substringWithRange(r.range) as String
+          matches.append(result)
+        }
+
+      }
+      return matches
+    } catch {
+      return [String]()
+    }
+  }
+  
+}
+/*
+// The following will return [&quot;🏅&quot;, &quot;👿⚽️&quot;, &quot;pig&quot;]
+
+&quot;someText 👿🏅👿⚽️ pig&quot;.regex(&quot;👿⚽️|🏅|pig&quot;)
+
+*/
+
+</code></pre><div class='cell text-cell'><div></div></div><div class='cell text-cell'><span style="color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 16.9px; widows: 1; background-color: rgb(255, 255, 255);">OSX - Control-Command-space bar brings up emoji menu</span></div><div class='cell text-cell'><div><br></div>Finding Cats! &nbsp;Oh…maybe they’re pigs….whatever<div></div></div><pre class='cell code-cell'><code>func findAndNext(s0: String, s1: String,
+  var mr:Range&lt;String.CharacterView.Index&gt;? = nil) -&gt; [Range&lt;String.CharacterView.Index&gt;?] {
+    var aar:[Range&lt;String.CharacterView.Index&gt;?] = []
+    
+    if let t = s0.rangeOfString(s1, range: mr) {
+      aar.append(t)
+      mr = t
+      mr?.startIndex = mr!.startIndex.advancedBy(1)
+      mr?.endIndex = s0.endIndex
+      aar = aar + findAndNext(s0,s1: s1,mr: mr)
+    }
+    
+    return aar
+}
+
+
+
+
+
+
+let r = findAndNext(&quot;aaa👿baabclka👿bc👿aa&quot;,s1: &quot;👿&quot;)
+print(r.count)  // 3
+for i in r {
+  print(i!)
+}
+/*
+
+3..&lt;5
+13..&lt;15
+17..&lt;19
+
+*/
+</code></pre><div class='cell text-cell'><div><br></div>This is kinda cool…mimicking the python “, “.join operator? Hmm…a little rough<div></div></div><div class='cell text-cell'></div><pre class='cell code-cell'><code>var testResults = [&quot;bob&quot;:20,&quot;sue&quot;:10,&quot;tom&quot;: 90, &quot;mike&quot;: 65]
+
+// Following will just print the names
+var names = testResults.reduce(&quot;&quot;,combine: {$0 + &quot;\($1.0), &quot;})
+print(names) // prints &quot;mike, sue, bob, tom, \n&quot;
+names.removeRange(names.endIndex.advancedBy(-2)..&lt;names.endIndex)
+print(names) // prints &quot;mike, sue, bob, tom\n&quot;  Note, got rid of &quot;, &quot;
+
+
+let nameSort = testResults.sort({$0.0 &lt; $1.0})
+nameSort  // Names or keys sort
+
+let scoreSort = testResults.sort({$0.1 &gt; $1.1})
+scoreSort  // Value sort
+
+
+
+
+// Want lengths?
+names.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) // 19
+names.endIndex   // 19
+(names as NSString).length // 19
+
+// Sorting
+let r4 = testResults.sort( { $0.0 &gt; $1.0 })
+print(r4) // [(&quot;tom&quot;, 90), (&quot;sue&quot;, 10), (&quot;mike&quot;, 65), (&quot;bob&quot;, 20)]
+
+// Filter
+print(testResults.filter({ $0.1 &lt; 50 }).filter( { $0.1 &gt; 10 }))
+// [(&quot;bob&quot;, 20)]
+
+
+</code></pre><div class='cell markdown-cell'><p>You can also compare keys and values</p>
+</div><pre class='cell code-cell'><code>var myInD = [20:12, 10:12, 5:70, 76:100]
+
+// Find key  &lt; value
+let lr2 = myInD.filter({$0.1 &lt; $0.0})
+print(lr2) // &quot;[(20, 12)]\n&quot;
+
+// Find key &gt; value + 20
+let lr3 = myInD.filter({$0.1 &gt; $0.0 + 20} )
+print(lr3)  // &quot;[(5, 70), (76, 100)]\n&quot;
+
+
+
+
+</code></pre><div class='cell markdown-cell'><p>For more about strings, see:<br><a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html#//apple_ref/doc/uid/TP40014097-CH7-ID285">Swift Programming Language</a></p>
+</div><div class='cell markdown-cell'><p>Swift only has 3 collection types:</p>
+<p>Array&#39;s<br>Sets<br>Dictionaries</p>
+</div><div class='cell text-cell'></div><div class='cell text-cell'><div><br></div><div><br></div><div><br></div><div>Creating multiple tableViews in one ViewController<br></div><div><br></div><div>&nbsp;<a href="https://gist.github.com/mchirico/50cdb07d20b1b0f73d7c">https://gist.github.com/mchirico/50cdb07d20b1b0f73d7c</a></div><div><br></div><div>Creating maps</div><div><br></div><div>&nbsp;&nbsp;<a href="https://gist.github.com/mchirico/fac2650e4e312898b2ce">https://gist.github.com/mchirico/fac2650e4e312898b2ce</a></div><div><br></div><div>Parsing in JSON in swift</div><div><br></div><div>&nbsp;&nbsp;<a href="https://gist.github.com/mchirico/f802719dc433740884e9">https://gist.github.com/mchirico/f802719dc433740884e9</a></div><div><br></div><div><br></div></div></div>
+</body>
+</html>

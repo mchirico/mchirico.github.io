@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- common.css -->
+  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px 2%;color:#333;word-wrap:break-word}img{max-width:100%!important}code{margin:0;padding:.2em 0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre{margin:0}pre>code{margin:0;padding:0;font-size:100%;word-break:normal;background:0 0;border:0}blockquote{margin:0;padding:0 15px;color:#777;border-left:4px solid #ddd}hr{background-color:#ddd;border:0;height:1px;margin:15px 0}ol{list-style-type:decimal}ol ol,ul ol{list-style-type:lower-latin}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-roman}table{border-spacing:0;border-collapse:collapse;margin-top:0;margin-bottom:16px}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(even){background-color:#f8f8f8}input[type=checkbox]{cursor:default;margin-right:.5em}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{float:left;margin:.3em 1em .25em -1.6em;vertical-align:middle}</style>
+  <!-- exported.css -->
+  <style>
+    #nav{margin:5px 10px 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    #contentarea{font-size:15px;margin:16px 0}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
+    .code-cell{font-size:13px}
+    .latex-cell{white-space:pre-wrap;}
+  </style>
+  <!-- User CSS -->
+  <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        processClass: 'latex-cell'
+      },
+      "HTML-CSS": {
+        preferredFont: "STIX"
+      }
+    };
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="tex2jax_ignore">
+  <div id="nav"><div>Next: <a href='For Loops in Swift  with Where.html'>For Loops in Swift  with Where</a>, Previous: <a href='enums in Swift.html'>enums in Swift</a>, Up: <a href='index.html'>Index</a></div></div>
+  <div id="titlearea">
+    <h2>Files in Swift</h2>
+  </div>
+  <div id="contentarea"><div class='cell text-cell'>Here’s a very simple function for reading and writing data to a file<div><br></div></div><pre class='cell code-cell'><code>    func test (file: String,text: String) {
+        
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent(file)
+        
+        do {
+            try text.writeToURL(fileURL, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch _ {
+            print(&quot;error write&quot;)
+        }
+        
+        do {
+            let text2 = try String(contentsOfURL: fileURL)
+            print(text2)
+        } catch _ {
+            print(&quot;error read&quot;)
+        }
+        
+    }
+</code></pre><div class='cell text-cell'>Okay, so suppose you want to write a dictionary? &nbsp; You can do that too… below the whole class is shown<div><br></div></div><pre class='cell code-cell'><code>class RW {
+    
+    var documentsURL: NSURL?
+    var fileURL:NSURL?
+    
+    func setFileURL(file: String) {
+        documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory,
+            inDomains: .UserDomainMask)[0]
+        fileURL = documentsURL!.URLByAppendingPathComponent(file)
+        
+    }
+  
+    func write(file: String, mDict: [String:String]) {
+        setFileURL(file)
+        let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(mDict)
+        if let fileAssigend = fileURL {
+              data.writeToURL(fileAssigend, atomically: true)
+        }
+    }
+    
+    func read(file: String,inout mDict: [String:String]) {
+        setFileURL(file)
+        
+        var data:NSData?
+        if let url = fileURL {
+             data =  NSData(contentsOfURL: url)
+            if let result = data {
+              mDict = NSKeyedUnarchiver.unarchiveObjectWithData(result) as! [String:String]
+            }
+        }
+        
+    }
+    
+}
+
+/* Example Usage:
+
+let rw = RW()
+var mDict:[String:String] = [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;]
+
+rw.write(&quot;test0&quot;,mDict: mDict)
+mDict[&quot;one&quot;]=&quot;g&quot;  // Note making change here
+
+rw.read(&quot;test0&quot;,mDict: &amp;mDict)
+print(mDict)  // returns [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;]
+
+
+*/
+
+</code></pre><div class='cell text-cell'>But, you may need to do even more…<div><br></div><div><br></div></div><pre class='cell code-cell'><code>import UIKit
+
+/*
+
+Example way to use the class below
+
+let rw = RW()
+var mDict:[String:String] = [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;]
+
+rw.write(&quot;test0&quot;,mDict: mDict)
+mDict[&quot;one&quot;]=&quot;g&quot;
+rw.read(&quot;test0&quot;,mDict: &amp;mDict)
+print(mDict)
+
+
+or
+
+let rw = RW()
+var mDict = [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;,&quot;three&quot;:3,&quot;more&quot;:[&quot;stuff&quot;:3]] as NSObject
+
+rw.write(&quot;test0&quot;,mDict: mDict)
+var r = mDict as! [String:NSObject]
+r[&quot;one&quot;]=&quot;e&quot;
+print(&quot;Change \(r)&quot;)
+
+rw.read(&quot;test0&quot;,mDict: &amp;mDict)
+print(mDict)
+
+
+Actually, you can get much more complicated
+
+*/
+
+//    class A:NSObject, NSCoding {
+//        var s:String=&quot;&quot;
+//        var mDictS:[String:[Int]]=[:]
+//        var mDictN:[String:[NSObject]]=[:]
+//        
+//        override init() {
+//            
+//        }
+//        
+//        @objc required  init(coder aDecoder: NSCoder) {
+//            s = aDecoder.decodeObjectForKey(&quot;s&quot;) as! String
+//            mDictS = aDecoder.decodeObjectForKey(&quot;mDictS&quot;) as! [String:[Int]]
+//            mDictN = aDecoder.decodeObjectForKey(&quot;mDictN&quot;) as! [String:[NSObject]]
+//            
+//        }
+//        
+//        @objc func encodeWithCoder(aCoder: NSCoder) {
+//            aCoder.encodeObject(s, forKey: &quot;s&quot;)
+//            aCoder.encodeObject(mDictS, forKey: &quot;mDictS&quot;)
+//            aCoder.encodeObject(mDictN, forKey: &quot;mDictN&quot;)
+//        }
+//        
+//        func pr() -&gt; String {
+//            return s
+//        }
+//    }
+//
+//
+//    let a = A()
+//    a.s=&quot;more&quot;
+//    print(a.pr())
+//
+//
+//    let rw = RW()
+//    var mDict = [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;,&quot;three&quot;:3,&quot;more&quot;:[&quot;stuff&quot;:3],&quot;a&quot;:a] as NSObject
+//
+//    rw.write(&quot;test0&quot;,mDict: mDict)
+//    var r = mDict as! [String:NSObject]
+//    r[&quot;one&quot;]=&quot;e&quot;
+//    print(&quot;Change \(r)&quot;)
+//
+//    rw.read(&quot;test0&quot;,mDict: &amp;mDict)
+//    print(mDict)
+//    r = mDict as! [String:NSObject]
+//    if let result =  r[&quot;a&quot;] as! A? {
+//        print(result.pr())
+//    }
+//
+//    var tDict = [&quot;one&quot;:&quot;1&quot;]
+//    rw.write(&quot;test2&quot;,mDict: tDict)
+//    tDict[&quot;one&quot;]=&quot;3&quot;
+//    rw.read(&quot;test2&quot;, mDict: &amp;tDict)
+//    print(tDict)
+//
+//
+
+
+
+class RW {
+    
+    
+    var documentsURL: NSURL?
+    var fileURL:NSURL?
+    
+    func setFileURL(file: String) {
+        documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory,
+            inDomains: .UserDomainMask)[0]
+        fileURL = documentsURL!.URLByAppendingPathComponent(file)
+        
+    }
+    
+    func write(file: String, mDict: [String:String]) {
+        setFileURL(file)
+        let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(mDict)
+        if let fileAssigend = fileURL {
+            data.writeToURL(fileAssigend, atomically: true)
+        }
+    }
+    
+    func read(file: String,inout mDict: [String:String]) {
+        setFileURL(file)
+        
+        var data:NSData?
+        if let url = fileURL {
+            data =  NSData(contentsOfURL: url)
+            if let result = data {
+                mDict = NSKeyedUnarchiver.unarchiveObjectWithData(result) as! [String:String]
+            }
+        }
+        
+    }
+    
+    // Below with NSObject
+    func write(file: String, mDict: NSObject) {
+        setFileURL(file)
+        let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(mDict)
+        if let fileAssigend = fileURL {
+            data.writeToURL(fileAssigend, atomically: true)
+        }
+    }
+    
+    func read(file: String,inout mDict: NSObject) {
+        setFileURL(file)
+        
+        var data:NSData?
+        if let url = fileURL {
+            data =  NSData(contentsOfURL: url)
+            if let result = data {
+                mDict = NSKeyedUnarchiver.unarchiveObjectWithData(result) as! NSObject
+            }
+        }
+        
+    }
+    
+}</code></pre></div>
+</body>
+</html>
