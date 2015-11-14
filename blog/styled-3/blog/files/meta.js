@@ -56,7 +56,7 @@
 	};
  
 	// Object containing all website meta info
-	var websiteMeta = {"archive-sep-2014.html":"Archives for Sep 2014","7b06f896794b90648cfdc435afe816d2-2.html":"￼\n\n'Chorus again!' cried the Gryphon, and the Mock Turtle had just begun  to repeat it, when a cry of 'The trial's beginning!' was heard in the  dista","d209e09813d9da21deaca114a509e45f-0.html":"The women and children of a man's retinue may be likened to a military unit for which he is responsible in various ways, as in matters of instruction,","2c59dfc4387dd326cc38c868da1e209e-1.html":"\"The heart began to beat faster and the heat of the body to increase. Then came the scarlet rash, spreading like wildfire over the face and body. Most"};
+	var websiteMeta = {"category-edgar-rice-burroughs.html":"A list of posts in category &ldquo;Edgar Rice Burroughs&rdquo;","category-jack-london.html":"A list of posts in category &ldquo;Jack London&rdquo;","2c59dfc4387dd326cc38c868da1e209e-1.html":"\"The heart began to beat faster and the heat of the body to increase. Then came the scarlet rash, spreading like wildfire over the face and body. Most","7b06f896794b90648cfdc435afe816d2-2.html":"￼\n\n'Chorus again!' cried the Gryphon, and the Mock Turtle had just begun  to repeat it, when a cry of 'The trial's beginning!' was heard in the  dista","archive-sep-2014.html":"Archives for Sep 2014","category-lewis-carroll.html":"A list of posts in category &ldquo;Lewis Carroll&rdquo;","d209e09813d9da21deaca114a509e45f-0.html":"The women and children of a man's retinue may be likened to a military unit for which he is responsible in various ways, as in matters of instruction,"};
  
 	// pageId must match the key in websiteMeta object
 	var url = window.location.pathname;
