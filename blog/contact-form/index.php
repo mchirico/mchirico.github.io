@@ -80,7 +80,7 @@
 		<div id="logo"><a href="https://mchirico.github.io/blog/"><img src="../rw_common/images/circles.png" width="240" height="240" alt="Site logo"/></a></div>
 
 		<nav class="main-nav">
-				<ul><li><a href="../" rel="">Home</a></li><li><a href="../styled-3/" rel="" class="parent">About</a></li><li><a href="../photos/" rel="">Gallery</a></li><li><a href="./" rel="" id="current">Contact</a></li></ul>
+				<ul><li><a href="../" rel="">Home</a></li><li><a href="../styled-3/" rel="" class="parent">Blog</a></li><li><a href="../photos/" rel="">Gallery</a></li><li><a href="./" rel="" id="current">Contact</a></li></ul>
 		</nav> <!-- main-nav -->
 	</header>
 
