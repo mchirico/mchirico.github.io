@@ -46,94 +46,59 @@
 
 </head>
 <body class="tex2jax_ignore">
-  <div id="nav"><div>Next: <a href='ViewController.html'>ViewController</a>, Previous: <a href='Tensor flow.html'>Tensor flow</a>, Up: <a href='index.html'>Index</a></div></div>
+  <div id="nav"><div>Next: <a href='Unfinished Stuff.html'>Unfinished Stuff</a>, Previous: <a href='Switcher - switches label from “yes” to “no” and back again..html'>Switcher - switches label from “yes” to “no” and back again.</a>, Up: <a href='index.html'>Index</a></div></div>
   <div id="titlearea">
-    <h2>Unfinished Stuff</h2>
+    <h2>Tensor flow</h2>
   </div>
-  <div id="contentarea"><div class='cell text-cell'>I was looking at scanning<div></div></div><pre class='cell code-cell'><code>//: Playground - noun: a place where people can play
+  <div id="contentarea"><pre class='cell code-cell'><code>import sklearn
+import tensorflow as tf
+from sklearn import datasets
 
-import UIKit
+iris = datasets.load_iris()
 
-var str = &quot;Hello, playground&quot;
+# Convert targets to one hot
+targets_onehot = [0] * len(iris.target)
+for i,target in enumerate(iris.target):
+    targets_onehot[i] = [0] * 3
+    targets_onehot[i][target] = 1
 
-let hours
-= &quot; 🏈                 Mon-Thurs:    8:03 - 18:00\n&quot; +
-  &quot;🏈🌤                 Sun:         18:00 - 19:00\n&quot; +
-  &quot;⚽️🏈🌤⛅️🌥🌦☁️🌧   Sun:         18:00 - 19:00\n&quot; +
-  &quot;⚽️🌤                 Fri:      7:00 - 17:00\n&quot; +
-  &quot;🍰🌲                 Sun:         18:00 - 19:00\n&quot; +
-&quot;⛷                     Sat-Sun   10:00 - 15:00\n&quot;
+#from sklearn import cross_validation
+from sklearn.model_selection import train_test_split
+data_train, data_test, target_train, target_test = train_test_split(iris.data, targets_onehot)
 
+print &quot;Training: {}\tTesting: {}&quot;.format(len(data_train), len(data_test))
 
-let skippedCharacters = NSMutableCharacterSet.punctuationCharacterSet()
-skippedCharacters.formUnionWithCharacterSet(NSCharacterSet.whitespaceCharacterSet())
+tf_in = tf.placeholder(&quot;float&quot;, [None, 4]) # Four inputs
 
-let weather=&quot;🌤☀️⛅️🌥🌦☁️🌧⛈🌩⚡️🌪&quot;
-let weatherSet = NSCharacterSet(charactersInString: weather)
+# Weight and bias variables
+tf_weight = tf.Variable(tf.zeros([4,3]))
+tf_bias = tf.Variable(tf.zeros([3]))
 
-let activitySet = NSCharacterSet(charactersInString: &quot;⚽️🏈&quot;)
+# Output
+tf_softmax = tf.nn.softmax(tf.matmul(tf_in,tf_weight) + tf_bias)
 
-let stuff = NSCharacterSet(charactersInString: &quot;🏈&quot;)
+# Training via backpropagation
+tf_softmax_correct = tf.placeholder(&quot;float&quot;, [None,3])
+tf_cross_entropy = -tf.reduce_sum(tf_softmax_correct*tf.log(tf_softmax))
 
-var count=0
+# Train using tf.train.GradientDescentOptimizer
+tf_train_step = tf.train.GradientDescentOptimizer(0.01).minimize(tf_cross_entropy)
 
+# Add accuracy checking nodes
+tf_correct_prediction = tf.equal(tf.argmax(tf_softmax,1), tf.argmax(tf_softmax_correct,1))
+tf_accuracy = tf.reduce_mean(tf.cast(tf_correct_prediction, &quot;float&quot;))
 
-extension NSScanner {
-  
-  func scanEmoji(s: String,inout intoStringArray:[String]) {
-    let emojiSet = Set(s.characters)
-    for i in self.string.characters  {
-      if emojiSet.contains(i) {
-        intoStringArray.append(String(i))
-      }
-    }
-  }
-  
-}
+# Initialize and run
+init = tf.initialize_all_variables()
+sess = tf.Session()
+sess.run(init)
 
+# Run the training
+for i in range(10):
+    sess.run(tf_train_step, feed_dict={tf_in: data_train, tf_softmax_correct: target_train})
 
-
-hours.enumerateLines { (line, _) in
-  
-  
-  let scanner = NSScanner(string: line)
-  scanner.charactersToBeSkipped = skippedCharacters
-  
-  var startDay, endDay,event, weather: NSString?
-  var event2: [String] = []
-  var weather2:[String]=[]
-  var startHour: Int = 0
-  var startMinute: Int = 0
-  var endHour: Int = 0
-  var endMinute: Int = 0
-  count++
-  
-  scanner.scanEmoji(&quot;🏈⚽️⛷&quot;,intoStringArray: &amp;event2)
-  scanner.scanEmoji(&quot;🌤☀️⛅️🌥🌦☁️🌧⛈🌩⚡️🌪&quot;, intoStringArray: &amp;weather2)
-  
-  
-  
-  
-  scanner.scanCharactersFromSet(NSCharacterSet.symbolCharacterSet(), intoString: &amp;weather)
-  
-  scanner.scanCharactersFromSet(NSCharacterSet.letterCharacterSet(), intoString: &amp;startDay)
-  scanner.scanCharactersFromSet(NSCharacterSet.letterCharacterSet(), intoString: &amp;endDay)
-  
-  
-  
-  
-  scanner.scanInteger(&amp;startHour)
-  scanner.scanInteger(&amp;startMinute)
-  scanner.scanInteger(&amp;endHour)
-  scanner.scanInteger(&amp;endMinute)
-  
-  // print(count,startDay,endDay,event,weather,startHour,startMinute)
-  print(&quot;Event2&quot;,count,event2,weather2)
-  
-  // Will need to put in array or do something here
-  
-}
-
-</code></pre><div class='cell text-cell'><div><br></div></div></div>
+    # Print accuracy
+    print &quot;Run {}&quot;.format(i)
+    print sess.run(tf_accuracy, feed_dict={tf_in: data_test, tf_softmax_correct: target_test})</code></pre></div>
 </body>
 </html>
