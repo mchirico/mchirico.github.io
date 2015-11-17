@@ -79,6 +79,109 @@
 </ul>
 
 <p>To see what else you can do with Markdown (including <strong>tables</strong>, <strong>images</strong>, <strong>numbered lists</strong>, and more) take a look at the <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">Cheatsheet</a>.</p>
+
+<pre><code class="python">import sklearn
+import tensorflow as tf
+from sklearn import datasets
+
+iris = datasets.load_iris()
+
+# Convert targets to one hot
+targets_onehot = [0] * len(iris.target)
+for i,target in enumerate(iris.target):
+    targets_onehot[i] = [0] * 3
+    targets_onehot[i][target] = 1
+
+#from sklearn import cross_validation
+from sklearn.model_selection import train_test_split
+data_train, data_test, target_train, target_test = train_test_split(iris.data, targets_onehot)
+
+print &quot;Training: {}\tTesting: {}&quot;.format(len(data_train), len(data_test))
+
+tf_in = tf.placeholder(&quot;float&quot;, [None, 4]) # Four inputs
+
+# Weight and bias variables
+tf_weight = tf.Variable(tf.zeros([4,3]))
+tf_bias = tf.Variable(tf.zeros([3]))
+
+# Output
+tf_softmax = tf.nn.softmax(tf.matmul(tf_in,tf_weight) + tf_bias)
+
+# Training via backpropagation
+tf_softmax_correct = tf.placeholder(&quot;float&quot;, [None,3])
+tf_cross_entropy = -tf.reduce_sum(tf_softmax_correct*tf.log(tf_softmax))
+
+# Train using tf.train.GradientDescentOptimizer
+tf_train_step = tf.train.GradientDescentOptimizer(0.01).minimize(tf_cross_entropy)
+
+# Add accuracy checking nodes
+tf_correct_prediction = tf.equal(tf.argmax(tf_softmax,1), tf.argmax(tf_softmax_correct,1))
+tf_accuracy = tf.reduce_mean(tf.cast(tf_correct_prediction, &quot;float&quot;))
+
+# Initialize and run
+init = tf.initialize_all_variables()
+sess = tf.Session()
+sess.run(init)
+
+# Run the training
+for i in range(10):
+    sess.run(tf_train_step, feed_dict={tf_in: data_train, tf_softmax_correct: target_train})
+
+    # Print accuracy
+    print &quot;Run {}&quot;.format(i)
+    print sess.run(tf_accuracy, feed_dict={tf_in: data_test, tf_softmax_correct: target_test})
+</code></pre>
+
+<pre><code>Training: 112   Testing: 38
+Run 0
+0.394737
+Run 1
+0.315789
+Run 2
+0.421053
+Run 3
+0.315789
+Run 4
+0.315789
+Run 5
+0.315789
+Run 6
+0.315789
+Run 7
+0.315789
+Run 8
+0.315789
+Run 9
+0.315789
+</code></pre>
+
+<pre><code class="python">import sklearn
+import tensorflow as tf
+from sklearn import datasets
+
+iris = datasets.load_iris()
+
+# Convert targets to one hot
+targets_onehot = [0] * len(iris.target)
+for i,target in enumerate(iris.target):
+    targets_onehot[i] = [0] * 3
+    targets_onehot[i][target] = 1
+
+#from sklearn import cross_validation
+from sklearn.model_selection import train_test_split
+data_train, data_test, target_train, target_test = train_test_split(iris.data, targets_onehot)
+
+
+</code></pre>
+
+<pre><code class="python">data_train.shape
+</code></pre>
+
+<pre><code>(112, 4)
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
 			</div>
 		</div>
 	</main> <!-- content -->
