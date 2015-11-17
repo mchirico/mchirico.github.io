@@ -50,7 +50,10 @@
   <div id="titlearea">
     <h2>Dictionaries </h2>
   </div>
-  <div id="contentarea"><div class='cell text-cell'>These are probably the most useful dictionary functions…and they’re simple to use.<div></div></div><pre class='cell code-cell'><code>// Can sort by key or value
+  <div id="contentarea"><div class='cell text-cell'><div>This avoids having an if/else statement with optionals.</div></div><pre class='cell code-cell'><code>var r:[String:Int]?
+
+// After this r has a value
+r = r ?? [&quot;one&quot;:1]</code></pre><div class='cell text-cell'>These are probably the most useful dictionary functions…and they’re simple to use.<div></div></div><pre class='cell code-cell'><code>// Can sort by key or value
 var testResults = [&quot;bob&quot;:20,&quot;sue&quot;:10,&quot;tom&quot;: 90, &quot;mike&quot;: 65]
 
 let nameSort = testResults.sort({$0.0 &lt; $1.0})
