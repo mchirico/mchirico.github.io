@@ -46,28 +46,29 @@
 
 </head>
 <body class="tex2jax_ignore">
-  <div id="nav"><div>Next: <a href='Singleton Pattern in Swift.html'>Singleton Pattern in Swift</a>, Previous: <a href='Protocols.html'>Protocols</a>, Up: <a href='index.html'>Index</a></div></div>
+  <div id="nav"><div>Next: <a href='R Tips.html'>R Tips</a>, Previous: <a href='Pivot Tables in R  tidyr and SQLite.html'>Pivot Tables in R: tidyr and SQLite </a>, Up: <a href='index.html'>Index</a></div></div>
   <div id="titlearea">
-    <h2>R Tips</h2>
+    <h2>Protocols</h2>
   </div>
-  <div id="contentarea"><pre class='cell code-cell'><code># TIP 1:
-#   Combining columns, then converting to numeric
-# 
-library(tidyr)
-j=unite(j, Datetime, Date:Time, sep=&#39; &#39;)
+  <div id="contentarea"><div class='cell text-cell'><div>Okay…start out with something simple….the simple example in the Swift documentation.</div><div><br></div></div><pre class='cell code-cell'><code>protocol Togglable {
+  mutating func toggle()
+}
 
-set.seed(10)
-df &lt;- data.frame(replicate(6,sample( c ( 1:20), 6, rep = TRUE)))
-names(df) &lt;- letters[1:6]
-df
-df=unite(df,ne,e:f,sep=&quot;&quot;)
-# Now convert to integer
-df$ne=strtoi(df$ne)
-str(df$ne)
+enum OnOffSwitch: Togglable {
+  case Off, On
+  mutating func toggle() {
+    switch self {
+    case Off:
+      self = On
+    case On:
+      self = Off
+    }
+  }
+}
+var lightSwitch = OnOffSwitch.Off
+lightSwitch.toggle()
 
-# Or number
-df$ne= as.numeric(df$ne)
-str(df$ne)
+lightSwitch.toggle()
 </code></pre></div>
 </body>
 </html>
