@@ -4,34 +4,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- common.css -->
-  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px 2%;color:#333;word-wrap:break-word}img{max-width:100%!important}code{margin:0;padding:.2em 0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre{margin:0}pre>code{margin:0;padding:0;font-size:100%;word-break:normal;background:0 0;border:0}blockquote{margin:0;padding:0 15px;color:#777;border-left:4px solid #ddd}hr{background-color:#ddd;border:0;height:1px;margin:15px 0}ol{list-style-type:decimal}ol ol,ul ol{list-style-type:lower-latin}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-roman}table{border-spacing:0;border-collapse:collapse;margin-top:0;margin-bottom:16px}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(even){background-color:#f8f8f8}input[type=checkbox]{cursor:default;margin-right:.5em}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{float:left;margin:.3em 1em .25em -1.6em;vertical-align:middle}</style>
-  <!-- exported.css -->
+  <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: Arial, Helvetica, sans-serif;margin: 0;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre {margin: 0;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+  <!-- ace-static.css -->
+  <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+  <style>.ace-chrome .ace_gutter {background: #ebebeb;color: #333;overflow : hidden;}.ace-chrome .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-chrome {background-color: #FFFFFF;color: black;}.ace-chrome .ace_cursor {color: black;}.ace-chrome .ace_invisible {color: rgb(191, 191, 191);}.ace-chrome .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-chrome .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-chrome .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-chrome .ace_invalid {background-color: rgb(153, 0, 0);color: white;}.ace-chrome .ace_fold {}.ace-chrome .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-chrome .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-chrome .ace_support.ace_type,.ace-chrome .ace_support.ace_class.ace-chrome .ace_support.ace_other {color: rgb(109, 121, 222);}.ace-chrome .ace_variable.ace_parameter {font-style:italic;color:#FD971F;}.ace-chrome .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-chrome .ace_comment {color: #236e24;}.ace-chrome .ace_comment.ace_doc {color: #236e24;}.ace-chrome .ace_comment.ace_doc.ace_tag {color: #236e24;}.ace-chrome .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-chrome .ace_variable {color: rgb(49, 132, 149);}.ace-chrome .ace_xml-pe {color: rgb(104, 104, 91);}.ace-chrome .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-chrome .ace_heading {color: rgb(12, 7, 255);}.ace-chrome .ace_list {color:rgb(185, 6, 144);}.ace-chrome .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-chrome .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-chrome .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-chrome .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-chrome .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-chrome .ace_gutter-active-line {background-color : #dcdcdc;}.ace-chrome .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-chrome .ace_storage,.ace-chrome .ace_keyword,.ace-chrome .ace_meta.ace_tag {color: rgb(147, 15, 128);}.ace-chrome .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-chrome .ace_string {color: #1A1AA6;}.ace-chrome .ace_entity.ace_other.ace_attribute-name {color: #994409;}.ace-chrome .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style>
+  <!-- export.css -->
   <style>
-    #nav{margin:5px 10px 10px;font-size:15px}
-    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    body{margin:0 auto;max-width:800px;line-height:1.4}
+    #nav{margin:5px 0 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
     #contentarea{font-size:15px;margin:16px 0}
-    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
-    .code-cell{font-size:13px}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+    .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
     .latex-cell{white-space:pre-wrap;}
   </style>
   <!-- User CSS -->
   <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        processEscapes: true,
-        processClass: 'latex-cell'
-      },
-      "HTML-CSS": {
-        preferredFont: "STIX"
-      }
-    };
-  </script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
-  <script>hljs.initHighlightingOnLoad();</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -45,226 +33,233 @@
 </script>
 
 </head>
-<body class="tex2jax_ignore">
+<body>
   <div id="nav"><div>Next: <a href='For Loops in Swift  with Where.html'>For Loops in Swift  with Where</a>, Previous: <a href='enums in Swift.html'>enums in Swift</a>, Up: <a href='index.html'>Index</a></div></div>
   <div id="titlearea">
     <h2>Files in Swift</h2>
   </div>
-  <div id="contentarea"><div class='cell text-cell'>Here’s a very simple function for reading and writing data to a file<div><br></div></div><pre class='cell code-cell'><code>    func test (file: String,text: String) {
-        
-        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        let fileURL = documentsURL.URLByAppendingPathComponent(file)
-        
-        do {
-            try text.writeToURL(fileURL, atomically: true, encoding: NSUTF8StringEncoding)
-        } catch _ {
-            print(&quot;error write&quot;)
-        }
-        
-        do {
-            let text2 = try String(contentsOfURL: fileURL)
-            print(text2)
-        } catch _ {
-            print(&quot;error read&quot;)
-        }
-        
-    }
-</code></pre><div class='cell text-cell'>Okay, so suppose you want to write a dictionary? &nbsp; You can do that too… below the whole class is shown<div><br></div></div><pre class='cell code-cell'><code>class RW {
-    
-    var documentsURL: NSURL?
-    var fileURL:NSURL?
-    
-    func setFileURL(file: String) {
-        documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory,
-            inDomains: .UserDomainMask)[0]
-        fileURL = documentsURL!.URLByAppendingPathComponent(file)
-        
-    }
-  
-    func write(file: String, mDict: [String:String]) {
-        setFileURL(file)
-        let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(mDict)
-        if let fileAssigend = fileURL {
-              data.writeToURL(fileAssigend, atomically: true)
-        }
-    }
-    
-    func read(file: String,inout mDict: [String:String]) {
-        setFileURL(file)
-        
-        var data:NSData?
-        if let url = fileURL {
-             data =  NSData(contentsOfURL: url)
-            if let result = data {
-              mDict = NSKeyedUnarchiver.unarchiveObjectWithData(result) as! [String:String]
-            }
-        }
-        
-    }
-    
-}
-
-/* Example Usage:
-
-let rw = RW()
-var mDict:[String:String] = [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;]
-
-rw.write(&quot;test0&quot;,mDict: mDict)
-mDict[&quot;one&quot;]=&quot;g&quot;  // Note making change here
-
-rw.read(&quot;test0&quot;,mDict: &amp;mDict)
-print(mDict)  // returns [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;]
-
-
-*/
-
-</code></pre><div class='cell text-cell'>But, you may need to do even more…<div><br></div><div><br></div></div><pre class='cell code-cell'><code>import UIKit
-
-/*
-
-Example way to use the class below
-
-let rw = RW()
-var mDict:[String:String] = [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;]
-
-rw.write(&quot;test0&quot;,mDict: mDict)
-mDict[&quot;one&quot;]=&quot;g&quot;
-rw.read(&quot;test0&quot;,mDict: &amp;mDict)
-print(mDict)
-
-
-or
-
-let rw = RW()
-var mDict = [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;,&quot;three&quot;:3,&quot;more&quot;:[&quot;stuff&quot;:3]] as NSObject
-
-rw.write(&quot;test0&quot;,mDict: mDict)
-var r = mDict as! [String:NSObject]
-r[&quot;one&quot;]=&quot;e&quot;
-print(&quot;Change \(r)&quot;)
-
-rw.read(&quot;test0&quot;,mDict: &amp;mDict)
-print(mDict)
-
-
-Actually, you can get much more complicated
-
-*/
-
-//    class A:NSObject, NSCoding {
-//        var s:String=&quot;&quot;
-//        var mDictS:[String:[Int]]=[:]
-//        var mDictN:[String:[NSObject]]=[:]
-//        
-//        override init() {
-//            
-//        }
-//        
-//        @objc required  init(coder aDecoder: NSCoder) {
-//            s = aDecoder.decodeObjectForKey(&quot;s&quot;) as! String
-//            mDictS = aDecoder.decodeObjectForKey(&quot;mDictS&quot;) as! [String:[Int]]
-//            mDictN = aDecoder.decodeObjectForKey(&quot;mDictN&quot;) as! [String:[NSObject]]
-//            
-//        }
-//        
-//        @objc func encodeWithCoder(aCoder: NSCoder) {
-//            aCoder.encodeObject(s, forKey: &quot;s&quot;)
-//            aCoder.encodeObject(mDictS, forKey: &quot;mDictS&quot;)
-//            aCoder.encodeObject(mDictN, forKey: &quot;mDictN&quot;)
-//        }
-//        
-//        func pr() -&gt; String {
-//            return s
-//        }
-//    }
-//
-//
-//    let a = A()
-//    a.s=&quot;more&quot;
-//    print(a.pr())
-//
-//
-//    let rw = RW()
-//    var mDict = [&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;,&quot;three&quot;:3,&quot;more&quot;:[&quot;stuff&quot;:3],&quot;a&quot;:a] as NSObject
-//
-//    rw.write(&quot;test0&quot;,mDict: mDict)
-//    var r = mDict as! [String:NSObject]
-//    r[&quot;one&quot;]=&quot;e&quot;
-//    print(&quot;Change \(r)&quot;)
-//
-//    rw.read(&quot;test0&quot;,mDict: &amp;mDict)
-//    print(mDict)
-//    r = mDict as! [String:NSObject]
-//    if let result =  r[&quot;a&quot;] as! A? {
-//        print(result.pr())
-//    }
-//
-//    var tDict = [&quot;one&quot;:&quot;1&quot;]
-//    rw.write(&quot;test2&quot;,mDict: tDict)
-//    tDict[&quot;one&quot;]=&quot;3&quot;
-//    rw.read(&quot;test2&quot;, mDict: &amp;tDict)
-//    print(tDict)
-//
-//
-
-
-
-class RW {
-    
-    
-    var documentsURL: NSURL?
-    var fileURL:NSURL?
-    
-    func setFileURL(file: String) {
-        documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory,
-            inDomains: .UserDomainMask)[0]
-        fileURL = documentsURL!.URLByAppendingPathComponent(file)
-        
-    }
-    
-    func write(file: String, mDict: [String:String]) {
-        setFileURL(file)
-        let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(mDict)
-        if let fileAssigend = fileURL {
-            data.writeToURL(fileAssigend, atomically: true)
-        }
-    }
-    
-    func read(file: String,inout mDict: [String:String]) {
-        setFileURL(file)
-        
-        var data:NSData?
-        if let url = fileURL {
-            data =  NSData(contentsOfURL: url)
-            if let result = data {
-                mDict = NSKeyedUnarchiver.unarchiveObjectWithData(result) as! [String:String]
-            }
-        }
-        
-    }
-    
-    // Below with NSObject
-    func write(file: String, mDict: NSObject) {
-        setFileURL(file)
-        let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(mDict)
-        if let fileAssigend = fileURL {
-            data.writeToURL(fileAssigend, atomically: true)
-        }
-    }
-    
-    func read(file: String,inout mDict: NSObject) {
-        setFileURL(file)
-        
-        var data:NSData?
-        if let url = fileURL {
-            data =  NSData(contentsOfURL: url)
-            if let result = data {
-                mDict = NSKeyedUnarchiver.unarchiveObjectWithData(result) as! NSObject
-            }
-        }
-        
-    }
-    
-}</code></pre></div>
+  <div id="contentarea"><div class="cell text-cell">Here’s a very simple function for reading and writing data to a file<div><br></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">test</span>&nbsp;(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">text</span>:&nbsp;String)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;documentsURL&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSFileManager.<span class="ace_support ace_function ace_swift">defaultManager</span>().<span class="ace_support ace_function ace_swift">URLsForDirectory</span>(.DocumentDirectory<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">inDomains</span>:&nbsp;.UserDomainMask)[<span class="ace_constant ace_numeric ace_swift">0</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;fileURL&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;documentsURL.<span class="ace_support ace_function ace_swift">URLByAppendingPathComponent</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">do</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;text.<span class="ace_support ace_function ace_swift">writeToURL</span>(fileURL<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">atomically</span>:&nbsp;<span class="ace_string ace_boolean ace_swift">true</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">encoding</span>:&nbsp;NSUTF8StringEncoding)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;_&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(<span class="ace_string ace_quoted ace_double ace_swift">"error&nbsp;write"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">do</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;text2&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;try&nbsp;<span class="ace_support ace_function ace_swift">String</span>(<span class="ace_meta ace_tag ace_swift">contentsOfURL</span>:&nbsp;fileURL)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(text2)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;_&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(<span class="ace_string ace_quoted ace_double ace_swift">"error&nbsp;read"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell">Okay, so suppose you want to write a dictionary? &nbsp; You can do that too… below the whole class is shown<div><br></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">class</span>&nbsp;RW&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">documentsURL</span>:&nbsp;NSURL<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">fileURL</span>:NSURL<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">setFileURL</span>(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;documentsURL&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSFileManager.<span class="ace_support ace_function ace_swift">defaultManager</span>().<span class="ace_support ace_function ace_swift">URLsForDirectory</span>(.DocumentDirectory<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_meta ace_tag ace_swift">inDomains</span>:&nbsp;.UserDomainMask)[<span class="ace_constant ace_numeric ace_swift">0</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;fileURL&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;documentsURL<span class="ace_keyword ace_operator ace_swift">!</span>.<span class="ace_support ace_function ace_swift">URLByAppendingPathComponent</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">write</span>(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">mDict</span>:&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:String])&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">setFileURL</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;<span class="ace_meta ace_tag ace_swift">data</span>&nbsp;:&nbsp;NSData&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSKeyedArchiver.<span class="ace_support ace_function ace_swift">archivedDataWithRootObject</span>(mDict)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;fileAssigend&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;fileURL&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;data.<span class="ace_support ace_function ace_swift">writeToURL</span>(fileAssigend<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">atomically</span>:&nbsp;<span class="ace_string ace_boolean ace_swift">true</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">read</span>(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_keyword ace_reserved ace_swift">inout</span>&nbsp;<span class="ace_meta ace_tag ace_swift">mDict</span>:&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:String])&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">setFileURL</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">data</span>:NSData<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;url&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;fileURL&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;data&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">NSData</span>(<span class="ace_meta ace_tag ace_swift">contentsOfURL</span>:&nbsp;url)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;result&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;data&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;mDict&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSKeyedUnarchiver.<span class="ace_support ace_function ace_swift">unarchiveObjectWithData</span>(result)&nbsp;<span class="ace_keyword ace_reserved ace_swift">as</span><span class="ace_keyword ace_operator ace_swift">!</span>&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:String]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">/*&nbsp;Example&nbsp;Usage:</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">let&nbsp;rw&nbsp;=&nbsp;RW()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">var&nbsp;mDict:[String:String]&nbsp;=&nbsp;["one":"1","two":"2"]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">rw.write("test0",mDict:&nbsp;mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">mDict["one"]="g"&nbsp;&nbsp;//&nbsp;Note&nbsp;making&nbsp;change&nbsp;here</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">rw.read("test0",mDict:&nbsp;&amp;mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">print(mDict)&nbsp;&nbsp;//&nbsp;returns&nbsp;["one":"1","two":"2"]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell">But, you may need to do even more…<div><br></div><div><br></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">import</span>&nbsp;UIKit
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">/*</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">Example&nbsp;way&nbsp;to&nbsp;use&nbsp;the&nbsp;class&nbsp;below</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">let&nbsp;rw&nbsp;=&nbsp;RW()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">var&nbsp;mDict:[String:String]&nbsp;=&nbsp;["one":"1","two":"2"]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">rw.write("test0",mDict:&nbsp;mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">mDict["one"]="g"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">rw.read("test0",mDict:&nbsp;&amp;mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">print(mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">or</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">let&nbsp;rw&nbsp;=&nbsp;RW()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">var&nbsp;mDict&nbsp;=&nbsp;["one":"1","two":"2","three":3,"more":["stuff":3]]&nbsp;as&nbsp;NSObject</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">rw.write("test0",mDict:&nbsp;mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">var&nbsp;r&nbsp;=&nbsp;mDict&nbsp;as!&nbsp;[String:NSObject]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">r["one"]="e"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">print("Change&nbsp;\(r)")</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">rw.read("test0",mDict:&nbsp;&amp;mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">print(mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">Actually,&nbsp;you&nbsp;can&nbsp;get&nbsp;much&nbsp;more&nbsp;complicated</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;A:NSObject,&nbsp;NSCoding&nbsp;{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;s:String=""</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;mDictS:[String:[Int]]=[:]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;mDictN:[String:[NSObject]]=[:]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;override&nbsp;init()&nbsp;{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@objc&nbsp;required&nbsp;&nbsp;init(coder&nbsp;aDecoder:&nbsp;NSCoder)&nbsp;{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s&nbsp;=&nbsp;aDecoder.decodeObjectForKey("s")&nbsp;as!&nbsp;String</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mDictS&nbsp;=&nbsp;aDecoder.decodeObjectForKey("mDictS")&nbsp;as!&nbsp;[String:[Int]]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mDictN&nbsp;=&nbsp;aDecoder.decodeObjectForKey("mDictN")&nbsp;as!&nbsp;[String:[NSObject]]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@objc&nbsp;func&nbsp;encodeWithCoder(aCoder:&nbsp;NSCoder)&nbsp;{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aCoder.encodeObject(s,&nbsp;forKey:&nbsp;"s")</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aCoder.encodeObject(mDictS,&nbsp;forKey:&nbsp;"mDictS")</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aCoder.encodeObject(mDictN,&nbsp;forKey:&nbsp;"mDictN")</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func&nbsp;pr()&nbsp;-&gt;&nbsp;String&nbsp;{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;s</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;a&nbsp;=&nbsp;A()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;a.s="more"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;print(a.pr())</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;rw&nbsp;=&nbsp;RW()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;mDict&nbsp;=&nbsp;["one":"1","two":"2","three":3,"more":["stuff":3],"a":a]&nbsp;as&nbsp;NSObject</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;rw.write("test0",mDict:&nbsp;mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;r&nbsp;=&nbsp;mDict&nbsp;as!&nbsp;[String:NSObject]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;r["one"]="e"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;print("Change&nbsp;\(r)")</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;rw.read("test0",mDict:&nbsp;&amp;mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;print(mDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;r&nbsp;=&nbsp;mDict&nbsp;as!&nbsp;[String:NSObject]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;let&nbsp;result&nbsp;=&nbsp;&nbsp;r["a"]&nbsp;as!&nbsp;A?&nbsp;{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(result.pr())</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;tDict&nbsp;=&nbsp;["one":"1"]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;rw.write("test2",mDict:&nbsp;tDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;tDict["one"]="3"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;rw.read("test2",&nbsp;mDict:&nbsp;&amp;tDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;&nbsp;&nbsp;print(tDict)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">class</span>&nbsp;RW&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">documentsURL</span>:&nbsp;NSURL<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">fileURL</span>:NSURL<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">setFileURL</span>(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;documentsURL&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSFileManager.<span class="ace_support ace_function ace_swift">defaultManager</span>().<span class="ace_support ace_function ace_swift">URLsForDirectory</span>(.DocumentDirectory<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_meta ace_tag ace_swift">inDomains</span>:&nbsp;.UserDomainMask)[<span class="ace_constant ace_numeric ace_swift">0</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;fileURL&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;documentsURL<span class="ace_keyword ace_operator ace_swift">!</span>.<span class="ace_support ace_function ace_swift">URLByAppendingPathComponent</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">write</span>(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">mDict</span>:&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:String])&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">setFileURL</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;<span class="ace_meta ace_tag ace_swift">data</span>&nbsp;:&nbsp;NSData&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSKeyedArchiver.<span class="ace_support ace_function ace_swift">archivedDataWithRootObject</span>(mDict)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;fileAssigend&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;fileURL&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;data.<span class="ace_support ace_function ace_swift">writeToURL</span>(fileAssigend<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">atomically</span>:&nbsp;<span class="ace_string ace_boolean ace_swift">true</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">read</span>(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_keyword ace_reserved ace_swift">inout</span>&nbsp;<span class="ace_meta ace_tag ace_swift">mDict</span>:&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:String])&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">setFileURL</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">data</span>:NSData<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;url&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;fileURL&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">NSData</span>(<span class="ace_meta ace_tag ace_swift">contentsOfURL</span>:&nbsp;url)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;result&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;data&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;mDict&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSKeyedUnarchiver.<span class="ace_support ace_function ace_swift">unarchiveObjectWithData</span>(result)&nbsp;<span class="ace_keyword ace_reserved ace_swift">as</span><span class="ace_keyword ace_operator ace_swift">!</span>&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:String]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Below&nbsp;with&nbsp;NSObject</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">write</span>(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">mDict</span>:&nbsp;NSObject)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">setFileURL</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;<span class="ace_meta ace_tag ace_swift">data</span>&nbsp;:&nbsp;NSData&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSKeyedArchiver.<span class="ace_support ace_function ace_swift">archivedDataWithRootObject</span>(mDict)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;fileAssigend&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;fileURL&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;data.<span class="ace_support ace_function ace_swift">writeToURL</span>(fileAssigend<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">atomically</span>:&nbsp;<span class="ace_string ace_boolean ace_swift">true</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">read</span>(<span class="ace_meta ace_tag ace_swift">file</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_keyword ace_reserved ace_swift">inout</span>&nbsp;<span class="ace_meta ace_tag ace_swift">mDict</span>:&nbsp;NSObject)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">setFileURL</span>(file)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">data</span>:NSData<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;url&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;fileURL&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">NSData</span>(<span class="ace_meta ace_tag ace_swift">contentsOfURL</span>:&nbsp;url)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;result&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;data&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;mDict&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSKeyedUnarchiver.<span class="ace_support ace_function ace_swift">unarchiveObjectWithData</span>(result)&nbsp;<span class="ace_keyword ace_reserved ace_swift">as</span><span class="ace_keyword ace_operator ace_swift">!</span>&nbsp;NSObject
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div></div>
+  <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'For Loops in Swift  with Where.html';
+if (e.keyCode === 37) window.location.href = 'enums in Swift.html';
+}</script>
 </body>
 </html>

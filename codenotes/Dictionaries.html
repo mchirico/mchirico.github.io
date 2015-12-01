@@ -4,34 +4,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- common.css -->
-  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px 2%;color:#333;word-wrap:break-word}img{max-width:100%!important}code{margin:0;padding:.2em 0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre{margin:0}pre>code{margin:0;padding:0;font-size:100%;word-break:normal;background:0 0;border:0}blockquote{margin:0;padding:0 15px;color:#777;border-left:4px solid #ddd}hr{background-color:#ddd;border:0;height:1px;margin:15px 0}ol{list-style-type:decimal}ol ol,ul ol{list-style-type:lower-latin}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-roman}table{border-spacing:0;border-collapse:collapse;margin-top:0;margin-bottom:16px}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(even){background-color:#f8f8f8}input[type=checkbox]{cursor:default;margin-right:.5em}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{float:left;margin:.3em 1em .25em -1.6em;vertical-align:middle}</style>
-  <!-- exported.css -->
+  <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: Arial, Helvetica, sans-serif;margin: 0;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre {margin: 0;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+  <!-- ace-static.css -->
+  <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+  <style>.ace-chrome .ace_gutter {background: #ebebeb;color: #333;overflow : hidden;}.ace-chrome .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-chrome {background-color: #FFFFFF;color: black;}.ace-chrome .ace_cursor {color: black;}.ace-chrome .ace_invisible {color: rgb(191, 191, 191);}.ace-chrome .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-chrome .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-chrome .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-chrome .ace_invalid {background-color: rgb(153, 0, 0);color: white;}.ace-chrome .ace_fold {}.ace-chrome .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-chrome .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-chrome .ace_support.ace_type,.ace-chrome .ace_support.ace_class.ace-chrome .ace_support.ace_other {color: rgb(109, 121, 222);}.ace-chrome .ace_variable.ace_parameter {font-style:italic;color:#FD971F;}.ace-chrome .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-chrome .ace_comment {color: #236e24;}.ace-chrome .ace_comment.ace_doc {color: #236e24;}.ace-chrome .ace_comment.ace_doc.ace_tag {color: #236e24;}.ace-chrome .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-chrome .ace_variable {color: rgb(49, 132, 149);}.ace-chrome .ace_xml-pe {color: rgb(104, 104, 91);}.ace-chrome .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-chrome .ace_heading {color: rgb(12, 7, 255);}.ace-chrome .ace_list {color:rgb(185, 6, 144);}.ace-chrome .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-chrome .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-chrome .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-chrome .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-chrome .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-chrome .ace_gutter-active-line {background-color : #dcdcdc;}.ace-chrome .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-chrome .ace_storage,.ace-chrome .ace_keyword,.ace-chrome .ace_meta.ace_tag {color: rgb(147, 15, 128);}.ace-chrome .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-chrome .ace_string {color: #1A1AA6;}.ace-chrome .ace_entity.ace_other.ace_attribute-name {color: #994409;}.ace-chrome .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style>
+  <!-- export.css -->
   <style>
-    #nav{margin:5px 10px 10px;font-size:15px}
-    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    body{margin:0 auto;max-width:800px;line-height:1.4}
+    #nav{margin:5px 0 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
     #contentarea{font-size:15px;margin:16px 0}
-    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
-    .code-cell{font-size:13px}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+    .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
     .latex-cell{white-space:pre-wrap;}
   </style>
   <!-- User CSS -->
   <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        processEscapes: true,
-        processClass: 'latex-cell'
-      },
-      "HTML-CSS": {
-        preferredFont: "STIX"
-      }
-    };
-  </script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
-  <script>hljs.initHighlightingOnLoad();</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -45,196 +33,206 @@
 </script>
 
 </head>
-<body class="tex2jax_ignore">
+<body>
   <div id="nav"><div>Next: <a href='enums in Swift.html'>enums in Swift</a>, Previous: <a href='Dates.html'>Dates</a>, Up: <a href='index.html'>Index</a></div></div>
   <div id="titlearea">
     <h2>Dictionaries </h2>
   </div>
-  <div id="contentarea"><div class='cell text-cell'><div><h3 class="section-name" tabindex="0" style="border: 0px; font-size: 2.2em; margin: 0px 0px 15px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: Helvetica; font-weight: 100; line-height: normal; widows: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">Nil Coalescing Operator</h3></div><div>This avoids having an if/else statement with optionals.</div></div><pre class='cell code-cell'><code>var r:[String:Int]?
-
-// After this r has a value
-r = r ?? [&quot;one&quot;:1]</code></pre><div class='cell text-cell'>These are probably the most useful dictionary functions…and they’re simple to use.<div></div></div><pre class='cell code-cell'><code>// Can sort by key or value
-var testResults = [&quot;bob&quot;:20,&quot;sue&quot;:10,&quot;tom&quot;: 90, &quot;mike&quot;: 65]
-
-let nameSort = testResults.sort({$0.0 &lt; $1.0})
-nameSort  // Names or keys sort
-
-let scoreSort = testResults.sort({$0.1 &gt; $1.1})
-scoreSort  // Value sort
-
-
-
-
-var sDict:[String:Int]=[:]   // Define your dictionary
-
-var t=&quot;one&quot;
-sDict[t] = (sDict[t] ?? 0) + 1  // [&quot;one&quot;:1]
-sDict[t] = (sDict[t] ?? 0) + 1  // [&quot;one&quot;:2]
-
-// Quick Note: You can also use NSCountedSet()
-
-let set = NSCountedSet()
-set.addObject(&quot;one&quot;)
-set.addObject(&quot;one&quot;)
-set.countForObject(&quot;one&quot;) // 2
-set.count // Total number of objects ... 1
-//  End Quck Note
-
-
-
-// Note above the use of the &#39;Nil Coalescing Operator. If a
-// key does not exist in the dictionary, it&#39;s added with a value
-// of (0) + 1, or 1.  This &#39;Nil Coalescing Operator is pretty handy.
-
-
-let names = [&quot;tom&quot;,&quot;bob&quot;,&quot;sue&quot;,&quot;tom&quot;,&quot;wendy&quot;,&quot;sue&quot;]  // Suppose you want to know how many times
-// each name comes up.
-
-for i in names {
-    sDict[i] = (sDict[i] ?? 0) + 1  // Use &#39;Nil Coalescing Operator&#39;
-}
-
-// [&quot;sue&quot;: 2, &quot;tom&quot;: 2, &quot;one&quot;: 2, &quot;bob&quot;: 1, &quot;wendy&quot;: 1]
-
-
-// Okay, but now you probably want it ordered.
-
-
-for i in sDict.keys.sort(&lt;) {
-    print(i,sDict[i]!)
-}
-
-
-// Suppose you know the value, but not the keys
-
-for i in sDict.values.sort(&lt;) {
-    let keys = (sDict as NSDictionary).allKeysForObject(i)
-    print(keys,i)
-}
-
-/* The above works, you&#39;ll get the output below
-   with duplicates.
-
-[bob, wendy] 1
-[bob, wendy] 1
-[sue, tom, one] 2
-[sue, tom, one] 2
-[sue, tom, one] 2
-
-
-But, you can fix this using Set
-*/
-
-var mSet:Set&lt;String&gt;=[]
-for i in sDict.values.sort(&lt;) {
-    let keys = (sDict as NSDictionary).allKeysForObject(i)
-    mSet.insert(&quot;\(keys),\(i)&quot;)
-}
-print(&quot;\n\n&quot;)
-for i in mSet {
-    print(i)
-}
-
-/*
-
-[sue, tom, one],2
-[bob, wendy],1
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre><div class='cell text-cell'></div><div class='cell text-cell'></div><div class='cell text-cell'><div>Sort on Dictionary</div></div><div class='cell text-cell'></div><pre class='cell code-cell'><code>// First the quick way
-
-var testResults = [&quot;bob&quot;:20,&quot;sue&quot;:10,&quot;tom&quot;: 90, &quot;mike&quot;: 65]
-
-let nameSort = testResults.sort({$0.0 &lt; $1.0})
-nameSort
-
-let scoreSort = testResults.sort({$0.1 &gt; $1.1})
-scoreSort
-
-
-
-
-let tValue: [String: [Int]] = [&quot;one&quot;:[1,100,1],&quot;two&quot;:[1,23],&quot;three&quot;:[3,5],&quot;a&quot;:[3,4],&quot;z&quot;:[1,2,4]]
-
-
-func mySort2(a:[Int],b:[Int] ) -&gt; Bool {
-    
-    if a.count &gt; 1 &amp;&amp; b.count &gt; 1 {
-        return a[1] &gt; b[1]
-        
-    }else {
-        return false
-    }
-}
-
-mySort2([1,2],b:[4,5,6])
-
-for j in (tValue.values.sort{mySort2($0,b:$1)}) {
-    print(j)
-}
-
-let rs = tValue.keys.sort({$0&gt;$1})
-rs.dropLast().dropLast().dropFirst()
-
-
-</code></pre><div class='cell text-cell'>Finding Keys<div><br></div></div><pre class='cell code-cell'><code>
-var testResults = [&quot;bob&quot;:20,&quot;sue&quot;:10,&quot;tom&quot;: 90, &quot;mike&quot;: 65]
-let r = testResults.filter({ $0.0.hasPrefix(&quot;m&quot;)})
-print(r[0].0)  // mike
-print(r[0].1)  // 65
-// r.count    // Number of finds
-
-
-
-
-// Long way
-
-let tValue: [String: [Int]] = [&quot;one&quot;:[1,1,1],&quot;two&quot;:[1,23],&quot;three&quot;:[3,5],&quot;a&quot;:[3,4],&quot;z&quot;:[1,2,4]]
-
-func find(i:String) -&gt; [Int] {
-    guard let k=tValue[i] else {
-        return []
-    }
-    return k
-}
-
-find(&quot;one&quot;)  // [1,1,1]
-find(&quot;now&quot;)  // []
-
-
-
-</code></pre><div class='cell text-cell'>You can do filter rules<div><br></div></div><pre class='cell code-cell'><code>var testResults = [&quot;bob&quot;:20,&quot;sue&quot;:10,&quot;tom&quot;: 90, &quot;mike&quot;: 65]
-
-// Following will just print the names
-var names = testResults.reduce(&quot;&quot;,combine: {$0 + &quot;\($1.0), &quot;})
-print(names) // prints &quot;mike, sue, bob, tom, \n&quot;
-names.removeRange(names.endIndex.advancedBy(-2)..&lt;names.endIndex)
-print(names) // prints &quot;mike, sue, bob, tom\n&quot;  Note, got rid of &quot;, &quot;
-</code></pre><div class='cell text-cell'>You can also compare keys and values<div><br></div></div><pre class='cell code-cell'><code>var myInD = [20:12, 10:12, 5:70, 76:100]
-
-// Find key  &lt; value
-let lr2 = myInD.filter({$0.1 &lt; $0.0})
-print(lr2) // &quot;[(20, 12)]\n&quot;
-
-// Find key &gt; value + 20
-let lr3 = myInD.filter({$0.1 &gt; $0.0 + 20} )
-print(lr3)  // &quot;[(5, 70), (76, 100)]\n&quot;
-
-
-
-</code></pre></div>
+  <div id="contentarea"><div class="cell text-cell"><div><h3 class="section-name" tabindex="0" style="border: 0px; font-size: 2.2em; margin: 0px 0px 15px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: Helvetica; font-weight: 100; line-height: normal; widows: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">Nil Coalescing Operator</h3></div><div>This avoids having an if/else statement with optionals.</div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">r</span>:[<span class="ace_meta ace_tag ace_swift">String</span>:Int]<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;After&nbsp;this&nbsp;r&nbsp;has&nbsp;a&nbsp;value</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>r&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;r&nbsp;<span class="ace_keyword ace_operator ace_swift">??</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"one"</span>:<span class="ace_constant ace_numeric ace_swift">1</span>]
+</div></div></div></div><div class="cell text-cell">These are probably the most useful dictionary functions…and they’re simple to use.<div></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Can&nbsp;sort&nbsp;by&nbsp;key&nbsp;or&nbsp;value</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;testResults&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"bob"</span>:<span class="ace_constant ace_numeric ace_swift">20</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"sue"</span>:<span class="ace_constant ace_numeric ace_swift">10</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"tom"</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">90</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"mike"</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">65</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;nameSort&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;testResults.<span class="ace_support ace_function ace_swift">sort</span>({$<span class="ace_constant ace_numeric ace_swift">0.0</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">&lt;</span>&nbsp;$<span class="ace_constant ace_numeric ace_swift">1.0</span>})
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>nameSort&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Names&nbsp;or&nbsp;keys&nbsp;sort</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;scoreSort&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;testResults.<span class="ace_support ace_function ace_swift">sort</span>({$<span class="ace_constant ace_numeric ace_swift">0.1</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;$<span class="ace_constant ace_numeric ace_swift">1.1</span>})
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>scoreSort&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Value&nbsp;sort</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">sDict</span>:[<span class="ace_meta ace_tag ace_swift">String</span>:Int]<span class="ace_keyword ace_operator ace_swift">=</span>[:]&nbsp;&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Define&nbsp;your&nbsp;dictionary</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;t<span class="ace_keyword ace_operator ace_swift">=</span><span class="ace_string ace_quoted ace_double ace_swift">"one"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>sDict[t]&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;(sDict[t]&nbsp;<span class="ace_keyword ace_operator ace_swift">??</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>)&nbsp;<span class="ace_keyword ace_operator ace_swift">+</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">1</span>&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;["one":1]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>sDict[t]&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;(sDict[t]&nbsp;<span class="ace_keyword ace_operator ace_swift">??</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>)&nbsp;<span class="ace_keyword ace_operator ace_swift">+</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">1</span>&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;["one":2]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Quick&nbsp;Note:&nbsp;You&nbsp;can&nbsp;also&nbsp;use&nbsp;NSCountedSet()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">set</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">NSCountedSet</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">set</span>.<span class="ace_support ace_function ace_swift">addObject</span>(<span class="ace_string ace_quoted ace_double ace_swift">"one"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">set</span>.<span class="ace_support ace_function ace_swift">addObject</span>(<span class="ace_string ace_quoted ace_double ace_swift">"one"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">set</span>.<span class="ace_support ace_function ace_swift">countForObject</span>(<span class="ace_string ace_quoted ace_double ace_swift">"one"</span>)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;2</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">set</span>.count&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Total&nbsp;number&nbsp;of&nbsp;objects&nbsp;...&nbsp;1</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;&nbsp;End&nbsp;Quck&nbsp;Note</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Note&nbsp;above&nbsp;the&nbsp;use&nbsp;of&nbsp;the&nbsp;'Nil&nbsp;Coalescing&nbsp;Operator.&nbsp;If&nbsp;a</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;key&nbsp;does&nbsp;not&nbsp;exist&nbsp;in&nbsp;the&nbsp;dictionary,&nbsp;it's&nbsp;added&nbsp;with&nbsp;a&nbsp;value</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;of&nbsp;(0)&nbsp;+&nbsp;1,&nbsp;or&nbsp;1.&nbsp;&nbsp;This&nbsp;'Nil&nbsp;Coalescing&nbsp;Operator&nbsp;is&nbsp;pretty&nbsp;handy.</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;names&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"tom"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"bob"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"sue"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"tom"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"wendy"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"sue"</span>]&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Suppose&nbsp;you&nbsp;want&nbsp;to&nbsp;know&nbsp;how&nbsp;many&nbsp;times</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;each&nbsp;name&nbsp;comes&nbsp;up.</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;names&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;sDict[i]&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;(sDict[i]&nbsp;<span class="ace_keyword ace_operator ace_swift">??</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>)&nbsp;<span class="ace_keyword ace_operator ace_swift">+</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">1</span>&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Use&nbsp;'Nil&nbsp;Coalescing&nbsp;Operator'</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;["sue":&nbsp;2,&nbsp;"tom":&nbsp;2,&nbsp;"one":&nbsp;2,&nbsp;"bob":&nbsp;1,&nbsp;"wendy":&nbsp;1]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Okay,&nbsp;but&nbsp;now&nbsp;you&nbsp;probably&nbsp;want&nbsp;it&nbsp;ordered.</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;sDict.keys.<span class="ace_support ace_function ace_swift">sort</span>(<span class="ace_keyword ace_operator ace_swift">&lt;</span>)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(i<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>sDict[i]<span class="ace_keyword ace_operator ace_swift">!</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Suppose&nbsp;you&nbsp;know&nbsp;the&nbsp;value,&nbsp;but&nbsp;not&nbsp;the&nbsp;keys</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;sDict.values.<span class="ace_support ace_function ace_swift">sort</span>(<span class="ace_keyword ace_operator ace_swift">&lt;</span>)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;keys&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;(sDict&nbsp;<span class="ace_keyword ace_reserved ace_swift">as</span>&nbsp;NSDictionary).<span class="ace_support ace_function ace_swift">allKeysForObject</span>(i)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(keys<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>i)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">/*&nbsp;The&nbsp;above&nbsp;works,&nbsp;you'll&nbsp;get&nbsp;the&nbsp;output&nbsp;below</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">&nbsp;&nbsp;&nbsp;with&nbsp;duplicates.</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">[bob,&nbsp;wendy]&nbsp;1</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">[bob,&nbsp;wendy]&nbsp;1</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">[sue,&nbsp;tom,&nbsp;one]&nbsp;2</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">[sue,&nbsp;tom,&nbsp;one]&nbsp;2</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">[sue,&nbsp;tom,&nbsp;one]&nbsp;2</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">But,&nbsp;you&nbsp;can&nbsp;fix&nbsp;this&nbsp;using&nbsp;Set</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">mSet</span>:<span class="ace_keyword ace_reserved ace_swift">Set</span><span class="ace_keyword ace_operator ace_swift">&lt;</span>String<span class="ace_keyword ace_operator ace_swift">&gt;=</span>[]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;sDict.values.<span class="ace_support ace_function ace_swift">sort</span>(<span class="ace_keyword ace_operator ace_swift">&lt;</span>)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;keys&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;(sDict&nbsp;<span class="ace_keyword ace_reserved ace_swift">as</span>&nbsp;NSDictionary).<span class="ace_support ace_function ace_swift">allKeysForObject</span>(i)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;mSet.<span class="ace_support ace_function ace_swift">insert</span>(<span class="ace_string ace_quoted ace_double ace_swift">"</span><span class="ace_keyword ace_operator ace_swift">\(</span><span class="ace_string-interpolation">keys</span><span class="ace_keyword ace_operator ace_swift">)</span><span class="ace_string ace_quoted ace_double ace_swift">,</span><span class="ace_keyword ace_operator ace_swift">\(</span><span class="ace_string-interpolation">i</span><span class="ace_keyword ace_operator ace_swift">)</span><span class="ace_string ace_quoted ace_double ace_swift">"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">print</span>(<span class="ace_string ace_quoted ace_double ace_swift">"\n\n"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;mSet&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(i)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">/*</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">[sue,&nbsp;tom,&nbsp;one],2</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">[bob,&nbsp;wendy],1</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"></div><div class="cell text-cell"></div><div class="cell text-cell"><div>Sort on Dictionary</div></div><div class="cell text-cell"></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;First&nbsp;the&nbsp;quick&nbsp;way</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;testResults&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"bob"</span>:<span class="ace_constant ace_numeric ace_swift">20</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"sue"</span>:<span class="ace_constant ace_numeric ace_swift">10</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"tom"</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">90</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"mike"</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">65</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;nameSort&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;testResults.<span class="ace_support ace_function ace_swift">sort</span>({$<span class="ace_constant ace_numeric ace_swift">0.0</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">&lt;</span>&nbsp;$<span class="ace_constant ace_numeric ace_swift">1.0</span>})
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>nameSort
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;scoreSort&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;testResults.<span class="ace_support ace_function ace_swift">sort</span>({$<span class="ace_constant ace_numeric ace_swift">0.1</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;$<span class="ace_constant ace_numeric ace_swift">1.1</span>})
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>scoreSort
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;<span class="ace_meta ace_tag ace_swift">tValue</span>:&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:&nbsp;[Int]]&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"one"</span>:[<span class="ace_constant ace_numeric ace_swift">1</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">100</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">1</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"two"</span>:[<span class="ace_constant ace_numeric ace_swift">1</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">23</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"three"</span>:[<span class="ace_constant ace_numeric ace_swift">3</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">5</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"a"</span>:[<span class="ace_constant ace_numeric ace_swift">3</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">4</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"z"</span>:[<span class="ace_constant ace_numeric ace_swift">1</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">2</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">4</span>]]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">mySort2</span>(<span class="ace_meta ace_tag ace_swift">a</span>:[Int]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">b</span>:[Int]&nbsp;)&nbsp;<span class="ace_keyword ace_operator ace_swift">-&gt;</span>&nbsp;Bool&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;a.count&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">1</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">&amp;&amp;</span>&nbsp;b.count&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">1</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;a[<span class="ace_constant ace_numeric ace_swift">1</span>]&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;b[<span class="ace_constant ace_numeric ace_swift">1</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}<span class="ace_keyword ace_reserved ace_swift">else</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;<span class="ace_string ace_boolean ace_swift">false</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">mySort2</span>([<span class="ace_constant ace_numeric ace_swift">1</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">2</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">b</span>:[<span class="ace_constant ace_numeric ace_swift">4</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">5</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">6</span>])
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;j&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;(tValue.values.sort{<span class="ace_support ace_function ace_swift">mySort2</span>($<span class="ace_constant ace_numeric ace_swift">0</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">b</span>:$<span class="ace_constant ace_numeric ace_swift">1</span>)})&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(j)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;rs&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;tValue.keys.<span class="ace_support ace_function ace_swift">sort</span>({$<span class="ace_constant ace_numeric ace_swift">0</span><span class="ace_keyword ace_operator ace_swift">&gt;</span>$<span class="ace_constant ace_numeric ace_swift">1</span>})
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>rs.<span class="ace_support ace_function ace_swift">dropLast</span>().<span class="ace_support ace_function ace_swift">dropLast</span>().<span class="ace_support ace_function ace_swift">dropFirst</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell">Finding Keys<div><br></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;testResults&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"bob"</span>:<span class="ace_constant ace_numeric ace_swift">20</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"sue"</span>:<span class="ace_constant ace_numeric ace_swift">10</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"tom"</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">90</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"mike"</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">65</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;r&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;testResults.<span class="ace_support ace_function ace_swift">filter</span>({&nbsp;$<span class="ace_constant ace_numeric ace_swift">0.0</span>.<span class="ace_support ace_function ace_swift">hasPrefix</span>(<span class="ace_string ace_quoted ace_double ace_swift">"m"</span>)})
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">print</span>(r[<span class="ace_constant ace_numeric ace_swift">0</span>]<span class="ace_constant ace_numeric ace_swift">.0</span>)&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;mike</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">print</span>(r[<span class="ace_constant ace_numeric ace_swift">0</span>]<span class="ace_constant ace_numeric ace_swift">.1</span>)&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;65</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;r.count&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Number&nbsp;of&nbsp;finds</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Long&nbsp;way</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;<span class="ace_meta ace_tag ace_swift">tValue</span>:&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:&nbsp;[Int]]&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"one"</span>:[<span class="ace_constant ace_numeric ace_swift">1</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">1</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">1</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"two"</span>:[<span class="ace_constant ace_numeric ace_swift">1</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">23</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"three"</span>:[<span class="ace_constant ace_numeric ace_swift">3</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">5</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"a"</span>:[<span class="ace_constant ace_numeric ace_swift">3</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">4</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"z"</span>:[<span class="ace_constant ace_numeric ace_swift">1</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">2</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">4</span>]]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">find</span>(<span class="ace_meta ace_tag ace_swift">i</span>:String)&nbsp;<span class="ace_keyword ace_operator ace_swift">-&gt;</span>&nbsp;[Int]&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;guard&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;k<span class="ace_keyword ace_operator ace_swift">=</span>tValue[i]&nbsp;<span class="ace_keyword ace_reserved ace_swift">else</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;[]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;k
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">find</span>(<span class="ace_string ace_quoted ace_double ace_swift">"one"</span>)&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;[1,1,1]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">find</span>(<span class="ace_string ace_quoted ace_double ace_swift">"now"</span>)&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;[]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell">You can do filter rules<div><br></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;testResults&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"bob"</span>:<span class="ace_constant ace_numeric ace_swift">20</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"sue"</span>:<span class="ace_constant ace_numeric ace_swift">10</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"tom"</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">90</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"mike"</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">65</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Following&nbsp;will&nbsp;just&nbsp;print&nbsp;the&nbsp;names</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;names&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;testResults.<span class="ace_support ace_function ace_swift">reduce</span>(<span class="ace_string ace_quoted ace_double ace_swift">""</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">combine</span>:&nbsp;{$<span class="ace_constant ace_numeric ace_swift">0</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">+</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"</span><span class="ace_keyword ace_operator ace_swift">\(</span><span class="ace_string-interpolation">$1.0</span><span class="ace_keyword ace_operator ace_swift">)</span><span class="ace_string ace_quoted ace_double ace_swift">,&nbsp;"</span>})
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">print</span>(names)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;prints&nbsp;"mike,&nbsp;sue,&nbsp;bob,&nbsp;tom,&nbsp;\n"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>names.<span class="ace_support ace_function ace_swift">removeRange</span>(names.endIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(<span class="ace_constant ace_numeric ace_swift">-2</span>)..<span class="ace_keyword ace_operator ace_swift">&lt;</span>names.endIndex)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">print</span>(names)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;prints&nbsp;"mike,&nbsp;sue,&nbsp;bob,&nbsp;tom\n"&nbsp;&nbsp;Note,&nbsp;got&nbsp;rid&nbsp;of&nbsp;",&nbsp;"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell">You can also compare keys and values<div><br></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;myInD&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_constant ace_numeric ace_swift">20</span>:<span class="ace_constant ace_numeric ace_swift">12</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">10</span>:<span class="ace_constant ace_numeric ace_swift">12</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">5</span>:<span class="ace_constant ace_numeric ace_swift">70</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">76</span>:<span class="ace_constant ace_numeric ace_swift">100</span>]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Find&nbsp;key&nbsp;&nbsp;&lt;&nbsp;value</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;lr2&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;myInD.<span class="ace_support ace_function ace_swift">filter</span>({$<span class="ace_constant ace_numeric ace_swift">0.1</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">&lt;</span>&nbsp;$<span class="ace_constant ace_numeric ace_swift">0.0</span>})
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">print</span>(lr2)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;"[(20,&nbsp;12)]\n"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Find&nbsp;key&nbsp;&gt;&nbsp;value&nbsp;+&nbsp;20</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;lr3&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;myInD.<span class="ace_support ace_function ace_swift">filter</span>({$<span class="ace_constant ace_numeric ace_swift">0.1</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;$<span class="ace_constant ace_numeric ace_swift">0.0</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">+</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">20</span>}&nbsp;)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">print</span>(lr3)&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;"[(5,&nbsp;70),&nbsp;(76,&nbsp;100)]\n"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div></div>
+  <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'enums in Swift.html';
+if (e.keyCode === 37) window.location.href = 'Dates.html';
+}</script>
 </body>
 </html>

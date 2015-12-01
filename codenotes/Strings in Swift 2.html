@@ -4,34 +4,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- common.css -->
-  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px 2%;color:#333;word-wrap:break-word}img{max-width:100%!important}code{margin:0;padding:.2em 0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre{margin:0}pre>code{margin:0;padding:0;font-size:100%;word-break:normal;background:0 0;border:0}blockquote{margin:0;padding:0 15px;color:#777;border-left:4px solid #ddd}hr{background-color:#ddd;border:0;height:1px;margin:15px 0}ol{list-style-type:decimal}ol ol,ul ol{list-style-type:lower-latin}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-roman}table{border-spacing:0;border-collapse:collapse;margin-top:0;margin-bottom:16px}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(even){background-color:#f8f8f8}input[type=checkbox]{cursor:default;margin-right:.5em}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{float:left;margin:.3em 1em .25em -1.6em;vertical-align:middle}</style>
-  <!-- exported.css -->
+  <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: Arial, Helvetica, sans-serif;margin: 0;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre {margin: 0;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+  <!-- ace-static.css -->
+  <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+  <style>.ace-chrome .ace_gutter {background: #ebebeb;color: #333;overflow : hidden;}.ace-chrome .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-chrome {background-color: #FFFFFF;color: black;}.ace-chrome .ace_cursor {color: black;}.ace-chrome .ace_invisible {color: rgb(191, 191, 191);}.ace-chrome .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-chrome .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-chrome .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-chrome .ace_invalid {background-color: rgb(153, 0, 0);color: white;}.ace-chrome .ace_fold {}.ace-chrome .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-chrome .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-chrome .ace_support.ace_type,.ace-chrome .ace_support.ace_class.ace-chrome .ace_support.ace_other {color: rgb(109, 121, 222);}.ace-chrome .ace_variable.ace_parameter {font-style:italic;color:#FD971F;}.ace-chrome .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-chrome .ace_comment {color: #236e24;}.ace-chrome .ace_comment.ace_doc {color: #236e24;}.ace-chrome .ace_comment.ace_doc.ace_tag {color: #236e24;}.ace-chrome .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-chrome .ace_variable {color: rgb(49, 132, 149);}.ace-chrome .ace_xml-pe {color: rgb(104, 104, 91);}.ace-chrome .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-chrome .ace_heading {color: rgb(12, 7, 255);}.ace-chrome .ace_list {color:rgb(185, 6, 144);}.ace-chrome .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-chrome .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-chrome .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-chrome .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-chrome .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-chrome .ace_gutter-active-line {background-color : #dcdcdc;}.ace-chrome .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-chrome .ace_storage,.ace-chrome .ace_keyword,.ace-chrome .ace_meta.ace_tag {color: rgb(147, 15, 128);}.ace-chrome .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-chrome .ace_string {color: #1A1AA6;}.ace-chrome .ace_entity.ace_other.ace_attribute-name {color: #994409;}.ace-chrome .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style>
+  <!-- export.css -->
   <style>
-    #nav{margin:5px 10px 10px;font-size:15px}
-    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    body{margin:0 auto;max-width:800px;line-height:1.4}
+    #nav{margin:5px 0 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
     #contentarea{font-size:15px;margin:16px 0}
-    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
-    .code-cell{font-size:13px}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+    .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
     .latex-cell{white-space:pre-wrap;}
   </style>
   <!-- User CSS -->
   <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        processEscapes: true,
-        processClass: 'latex-cell'
-      },
-      "HTML-CSS": {
-        preferredFont: "STIX"
-      }
-    };
-  </script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
-  <script>hljs.initHighlightingOnLoad();</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -45,297 +33,318 @@
 </script>
 
 </head>
-<body class="tex2jax_ignore">
+<body>
   <div id="nav"><div>Next: <a href='Swift Cool Stuff.html'>Swift Cool Stuff</a>, Previous: <a href='Static in Swift.html'>Static in Swift</a>, Up: <a href='index.html'>Index</a></div></div>
   <div id="titlearea">
     <h2>Strings in Swift 2</h2>
   </div>
-  <div id="contentarea"><div class='cell text-cell'></div><div class='cell text-cell'>Trimming white spaces, before and after<div></div></div><pre class='cell code-cell'><code>var s2=&quot; one two &quot;
-s2.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-
-// Can also take out newline
-var s3=&quot;one two\n&quot;
-s3.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-
-
-</code></pre><div class='cell text-cell'><div>Walk through each character in a string. Note, it’s really a sequence. And it’s really&nbsp;</div><div>walking through each position.</div></div><pre class='cell code-cell'><code>let ss = &quot;⚽️⛷a&quot;
-
-for i in ss.startIndex..&lt;ss.endIndex {
-  print(i,ss[i])
-}
-
-// Note
-ss[ss.startIndex.advancedBy(1)] // ⛷
-
-// Or
-
-for i in ss.characters {
-  print(i)
-}
-
-
-// Other ways to walk
-
-var a = &quot;This is my sentence&quot;.characters.split(&quot; &quot;)
-  .map() {
-    String($0.last!).uppercaseString
-}
-
-
-</code></pre><div class='cell text-cell'><div><br></div></div><div class='cell text-cell'>Replace spaces with ‘:’, or whatever character you want.</div><pre class='cell code-cell'><code>// You want to change &quot;a b c&quot; to &quot;a:b:c&quot;
-
-var s:String = &quot;a b c&quot;
-while let r = s.rangeOfString(&quot; &quot;) {
-  s.replaceRange(r, with: &quot;:&quot;)
-}
-
-// Or, maybe more elegant
-var s=&quot;a b c&quot;
-s.componentsSeparatedByString(&quot; &quot;).joinWithSeparator(&quot;:&quot;)
-
-// Or, maybe more direct
-var s=&quot;a b c&quot;
-s.stringByReplacingOccurrencesOfString(&quot; &quot;, withString: &quot;:&quot;)
-
-
-
-</code></pre><div class='cell text-cell'><div>Quick summary of ranges and substrings</div></div><pre class='cell code-cell'><code>let t = &quot;mchirico@gmail.com bob@gmail.com tmust@gmail.com&quot;
-
-t.substringToIndex(t.startIndex.advancedBy(3)) // &quot;muc&quot;
-t.substringWithRange(t.startIndex.advancedBy(3)...t.startIndex.advancedBy(8)) // &quot;irico@&quot;
-
-</code></pre><pre class='cell code-cell'><code>So you can build a substr function. This doesn&#39;t check ranges</code></pre><pre class='cell code-cell'><code>func substr(s: String,beg: Int, end: Int) -&gt; String? {
-  return s.substringWithRange(s.startIndex.advancedBy(beg)...s.startIndex.advancedBy(end))
-  
-}
-
-substr(&quot;one two three&quot;,beg: 0,end: 3) // &quot;one&quot;
-</code></pre><div class='cell text-cell'><div>Here’s a <span style="background-color: rgb(254, 250, 0);">safe</span> version of substr or one that won’t return an error</div></div><pre class='cell code-cell'><code>func substr(s: String,beg: Int, end: Int) -&gt; String? {
-  var begin = beg
-  
-  if beg &lt; 0 {
-    begin = 0
-  }
-  
-  if beg &gt; end || end &lt; 0 || beg &gt;= s.utf16.count {
-    return nil
-  }
-  
-  if end &gt;= s.utf16.count {
-    return s.substringWithRange(s.startIndex.advancedBy(begin)...s.endIndex.advancedBy(-1))
-  }
-  
-  return s.substringWithRange(s.startIndex.advancedBy(begin)...s.startIndex.advancedBy(end))
-  
-}
-
-// EXAMPLES:
-
-substr(&quot;test&quot;,beg: -3,end: 400) // returns nil
-substr(&quot;test&quot;,beg: -3,end: 400) // returns &quot;test&quot;
-
-if let k = substr(&quot;test&quot;,beg: 0,end: 1) {
-  print(k) // &quot;te\n&quot;
-}
-
-
-
-
-</code></pre><pre class='cell code-cell'><code>
-// Use the following to split a string
-&quot;Bob Anderson&quot;.componentsSeparatedByString(&quot; &quot;)
-
-let marray = &quot;Bob Anderson&quot;.componentsSeparatedByString(&quot; &quot;)
-marray[0] // Bob
-marray[1] // Anderson
-
-&quot;Bob Anderson&quot;.hasPrefix(&quot;Bob&quot;) // True
-&quot;Bob Anderson&quot;.hasSuffix(&quot;Anderson&quot;) // True
-
-
-&quot;Bob Anderson&quot;.lowercaseString
-&quot;Bob Anderson&quot;.substringToIndex(8) // Bob Ande
-&quot;Bob Anderson&quot;.rangeOfString(&quot;Ander&quot;)
-
-let m = &quot;xyz&quot;
-let m2=&quot;Ander&quot;
-if let k = &quot;Bob Anderson&quot;.rangeOfString(m2) {
-    k // &quot;4..&lt;9&quot;
-    k.count  // 5
-    k.maxElement()  // 8
-    k.minElement()  // 4
-    for i in k {
-        print(i)
-    }
-}
-</code></pre><div class='cell text-cell'></div><div class='cell text-cell'>Strings and Dates<div></div></div><pre class='cell code-cell'><code>var dateString0 = &quot;2015-09-23 15:05:00&quot;
-var dateString1 = &quot;2015-09-23 15:09:01&quot;
-
-var dfmt = NSDateFormatter()
-dfmt.dateFormat = &quot;yyyy-MM-dd HH:mm:ss&quot;
-
-var d0s = dfmt.dateFromString(dateString0)
-var d1s = dfmt.dateFromString(dateString1)
-
-</code></pre><div class='cell markdown-cell'><p>Finding patterns...strings within strings.  Or cats...</p>
-</div><pre class='cell code-cell'><code>let r = findAndNext(&quot;aaa👿baabclka👿bc👿aa&quot;,s1: &quot;👿&quot;)
-print(r.count)  // 3
-for i in r {
-  print(i!)
-}
-/*
-
-3..&lt;5
-13..&lt;15
-17..&lt;19
-
-*/</code></pre><div class='cell text-cell'><div><br></div><div>Below is the code for findAndNext</div><div><br></div></div><pre class='cell code-cell'><code>func findAndNext(s0: String, s1: String,
-  var mr:Range&lt;String.CharacterView.Index&gt;? = nil) -&gt; [Range&lt;String.CharacterView.Index&gt;?] {
-    var aar:[Range&lt;String.CharacterView.Index&gt;?] = []
-    
-    if let t = s0.rangeOfString(s1, range: mr) {
-      aar.append(t)
-      mr = t
-      mr?.startIndex = mr!.startIndex.advancedBy(1)
-      mr?.endIndex = s0.endIndex
-      aar = aar + findAndNext(s0,s1: s1,mr: mr)
-    }
-    
-    return aar
-}
-
-
-
-</code></pre><div class='cell text-cell'><br><div>&nbsp; </div></div><div class='cell text-cell'><span style="background-color: rgb(254, 250, 0);">More on patterns….regular expressions. &nbsp;My favorite</span></div><pre class='cell code-cell'><code> &quot;This is some text \t 🏈🏈&quot;.regex(&quot;[^ |^\t]+&quot;)
-   // Yields: [&quot;This&quot;, &quot;is&quot;, &quot;some&quot;, &quot;text&quot;, &quot;🏈🏈&quot;]      </code></pre><pre class='cell code-cell'><code>
-import UIKit
-// NSMatchingOptions(rawValue: 0)
-
-
-extension String {
-  func regex (pattern: String) -&gt; [String] {
-    do {
-      let regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions(rawValue: 0))
-      let nsstr = self as NSString
-      let all = NSRange(location: 0, length: nsstr.length)
-      var matches : [String] = [String]()
-      regex.enumerateMatchesInString(self, options: NSMatchingOptions(rawValue: 0), range: all) {
-        (result : NSTextCheckingResult?, _, _) in
-        if let r = result {
-          let result = nsstr.substringWithRange(r.range) as String
-          matches.append(result)
-        }
-      }
-      return matches
-    } catch {
-      return [String]()
-    }
-  }
-}
-
-// First note size difference with emojis
-let pig = &quot;👿 &quot;
-pig.lengthOfBytesUsingEncoding(NSUTF16StringEncoding) // 6
-pig.utf16.count  // 3
-pig.characters.count  //2
-
-
-&quot;This is some text \t 🏈🏈&quot;.regex(&quot;[^ |^\t]+&quot;)
-// [&quot;This&quot;, &quot;is&quot;, &quot;some&quot;, &quot;text&quot;, &quot;🏈🏈&quot;]
-
-
-
-
-</code></pre><div class='cell text-cell'><div><br></div></div><div class='cell text-cell'><div><br></div></div><pre class='cell code-cell'><code>class A {
-    var t = &quot;&quot;
-    func setT(s: String) {
-        t=s
-    }
-    
-    func getT() -&gt; String {
-        return t
-    }
-    
-    
-}
-
-var a = A(), b = A()
-a.setT(&quot;3&quot;)
-a.getT()
-b.setT(&quot;40&quot;)
-
-let n = [&quot;one&quot;,&quot;two&quot;,&quot;three&quot;,3,9,&quot;stuff&quot;,3.4,&quot;wow&quot;,a,b]
-
-for i in n where i is String {
-    print(i)
-}
-
-
-for i in n where i is A {
-  print( (i as! A).getT() )
-}</code></pre><div class='cell text-cell'>All properties have didSet and willSet<div><a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html">https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html</a><br><div><br></div></div></div><pre class='cell code-cell'><code>var str = &quot;Hello, playground&quot;
-var isComplete = &quot; &quot; {
-  didSet {
-      str=&quot;jump&quot;
-   }
-   willSet {
-       print(&quot;before set&quot;)  // or whatever action you want to call
-   }
-}</code></pre><div class='cell text-cell'>Need to clean up the following…but can be useful looking for tokens</div><pre class='cell code-cell'><code>func getToken(url: NSURL) -&gt; Dictionary&lt;String, String&gt;? {
-    var results = [String:String]()
-    
-    var s=&quot;\(url)&quot;
-    repeat {
-        if let r = s.rangeOfString(&quot;#&quot;)?.endIndex {
-            s=s.substringFromIndex(r)
-        }
-    } while ( s.rangeOfString(&quot;#&quot;)?.endIndex != nil)
-    
-    let k=s.componentsSeparatedByString(&quot;&amp;&quot;)
-    
-    if k.count &gt; 0 {
-        for pair in k {
-            let kv = pair.componentsSeparatedByString(&quot;=&quot;)
-            if kv.count &gt; 1 {
-                results.updateValue(kv[1], forKey: kv[0])
-            }
-        }
-        
-    }
-    
-    return results
-}
-</code></pre><div class='cell text-cell'><div>Cool way to use scanner</div><div>ref:&nbsp;<a href="http://nshipster.com/nscharacterset/">http://nshipster.com/nscharacterset/</a></div></div><pre class='cell code-cell'><code>
-
-
-let hours = &quot;Mon-Thurs:  8:00 - 18:00\n&quot; +
-&quot;Fri:        7:00 - 17:00\n&quot; +
-&quot;Sat-Sun:    10:00 - 15:00\n&quot;
-
-
-let skippedCharacters = NSMutableCharacterSet.punctuationCharacterSet()
-skippedCharacters.formUnionWithCharacterSet(NSCharacterSet.whitespaceCharacterSet())
-
-hours.enumerateLines { (line, _) in
-  let scanner = NSScanner(string: line)
-  scanner.charactersToBeSkipped = skippedCharacters
-  
-  var startDay, endDay: NSString?
-  var startHour: Int = 0
-  var startMinute: Int = 0
-  var endHour: Int = 0
-  var endMinute: Int = 0
-  
-  scanner.scanCharactersFromSet(NSCharacterSet.letterCharacterSet(), intoString: &amp;startDay)
-  scanner.scanCharactersFromSet(NSCharacterSet.letterCharacterSet(), intoString: &amp;endDay)
-  
-  scanner.scanInteger(&amp;startHour)
-  scanner.scanInteger(&amp;startMinute)
-  scanner.scanInteger(&amp;endHour)
-  scanner.scanInteger(&amp;endMinute)
-  
-  // Will need to put in array or do something here
-  
-}</code></pre></div>
+  <div id="contentarea"><div class="cell text-cell"></div><div class="cell text-cell">Trimming white spaces, before and after<div></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;s2<span class="ace_keyword ace_operator ace_swift">=</span><span class="ace_string ace_quoted ace_double ace_swift">"&nbsp;one&nbsp;two&nbsp;"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>s2.<span class="ace_support ace_function ace_swift">stringByTrimmingCharactersInSet</span>(NSCharacterSet.<span class="ace_support ace_function ace_swift">whitespaceCharacterSet</span>())
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Can&nbsp;also&nbsp;take&nbsp;out&nbsp;newline</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;s3<span class="ace_keyword ace_operator ace_swift">=</span><span class="ace_string ace_quoted ace_double ace_swift">"one&nbsp;two\n"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>s3.<span class="ace_support ace_function ace_swift">stringByTrimmingCharactersInSet</span>(NSCharacterSet.<span class="ace_support ace_function ace_swift">whitespaceAndNewlineCharacterSet</span>())
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"><div>Walk through each character in a string. Note, it’s really a sequence. And it’s really&nbsp;</div><div>walking through each position.</div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;ss&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"⚽️⛷a"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;ss.startIndex..<span class="ace_keyword ace_operator ace_swift">&lt;</span>ss.endIndex&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(i<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>ss[i])
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Note</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ss[ss.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(<span class="ace_constant ace_numeric ace_swift">1</span>)]&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;⛷</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Or</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;ss.characters&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(i)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Other&nbsp;ways&nbsp;to&nbsp;walk</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;a&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"This&nbsp;is&nbsp;my&nbsp;sentence"</span>.characters.<span class="ace_support ace_function ace_swift">split</span>(<span class="ace_string ace_quoted ace_double ace_swift">"&nbsp;"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;.<span class="ace_support ace_function ace_swift">map</span>()&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">String</span>($<span class="ace_constant ace_numeric ace_swift">0</span>.last<span class="ace_keyword ace_operator ace_swift">!</span>).uppercaseString
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"><div><br></div></div><div class="cell text-cell">Replace spaces with ‘:’, or whatever character you want.</div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;You&nbsp;want&nbsp;to&nbsp;change&nbsp;"a&nbsp;b&nbsp;c"&nbsp;to&nbsp;"a:b:c"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">s</span>:String&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"a&nbsp;b&nbsp;c"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">while</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;r&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;s.<span class="ace_support ace_function ace_swift">rangeOfString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"&nbsp;"</span>)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;s.<span class="ace_support ace_function ace_swift">replaceRange</span>(r<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">with</span>:&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">":"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Or,&nbsp;maybe&nbsp;more&nbsp;elegant</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;s<span class="ace_keyword ace_operator ace_swift">=</span><span class="ace_string ace_quoted ace_double ace_swift">"a&nbsp;b&nbsp;c"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>s.<span class="ace_support ace_function ace_swift">componentsSeparatedByString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"&nbsp;"</span>).<span class="ace_support ace_function ace_swift">joinWithSeparator</span>(<span class="ace_string ace_quoted ace_double ace_swift">":"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Or,&nbsp;maybe&nbsp;more&nbsp;direct</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;s<span class="ace_keyword ace_operator ace_swift">=</span><span class="ace_string ace_quoted ace_double ace_swift">"a&nbsp;b&nbsp;c"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>s.<span class="ace_support ace_function ace_swift">stringByReplacingOccurrencesOfString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"&nbsp;"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">withString</span>:&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">":"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"><div>Quick summary of ranges and substrings</div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;t&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"mchirico@gmail.com&nbsp;bob@gmail.com&nbsp;tmust@gmail.com"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>t.<span class="ace_support ace_function ace_swift">substringToIndex</span>(t.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(<span class="ace_constant ace_numeric ace_swift">3</span>))&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;"muc"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>t.<span class="ace_support ace_function ace_swift">substringWithRange</span>(t.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(<span class="ace_constant ace_numeric ace_swift">3</span>)...t.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(<span class="ace_constant ace_numeric ace_swift">8</span>))&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;"irico@"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>So&nbsp;you&nbsp;can&nbsp;build&nbsp;a&nbsp;substr&nbsp;function.&nbsp;This&nbsp;doesn't&nbsp;check&nbsp;ranges
+</div></div></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">substr</span>(<span class="ace_meta ace_tag ace_swift">s</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">beg</span>:&nbsp;Int<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">end</span>:&nbsp;Int)&nbsp;<span class="ace_keyword ace_operator ace_swift">-&gt;</span>&nbsp;String<span class="ace_keyword ace_operator ace_swift">?</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;s.<span class="ace_support ace_function ace_swift">substringWithRange</span>(s.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(beg)...s.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(end))
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">substr</span>(<span class="ace_string ace_quoted ace_double ace_swift">"one&nbsp;two&nbsp;three"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">beg</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">end</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">3</span>)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;"one"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"><div>Here’s a <span style="background-color: rgb(254, 250, 0);">safe</span> version of substr or one that won’t return an error</div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">substr</span>(<span class="ace_meta ace_tag ace_swift">s</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">beg</span>:&nbsp;Int<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">end</span>:&nbsp;Int)&nbsp;<span class="ace_keyword ace_operator ace_swift">-&gt;</span>&nbsp;String<span class="ace_keyword ace_operator ace_swift">?</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;begin&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;beg
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;beg&nbsp;<span class="ace_keyword ace_operator ace_swift">&lt;</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;begin&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;beg&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;end&nbsp;<span class="ace_keyword ace_operator ace_swift">||</span>&nbsp;end&nbsp;<span class="ace_keyword ace_operator ace_swift">&lt;</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">||</span>&nbsp;beg&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;=</span>&nbsp;s.utf16.count&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;nil
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;end&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;=</span>&nbsp;s.utf16.count&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;s.<span class="ace_support ace_function ace_swift">substringWithRange</span>(s.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(begin)...s.endIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(<span class="ace_constant ace_numeric ace_swift">-1</span>))
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;s.<span class="ace_support ace_function ace_swift">substringWithRange</span>(s.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(begin)...s.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(end))
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;EXAMPLES:</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">substr</span>(<span class="ace_string ace_quoted ace_double ace_swift">"test"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">beg</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">-3</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">end</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">400</span>)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;returns&nbsp;nil</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">substr</span>(<span class="ace_string ace_quoted ace_double ace_swift">"test"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">beg</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">-3</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">end</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">400</span>)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;returns&nbsp;"test"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;k&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">substr</span>(<span class="ace_string ace_quoted ace_double ace_swift">"test"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">beg</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">end</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">1</span>)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(k)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;"te\n"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;Use&nbsp;the&nbsp;following&nbsp;to&nbsp;split&nbsp;a&nbsp;string</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"Bob&nbsp;Anderson"</span>.<span class="ace_support ace_function ace_swift">componentsSeparatedByString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"&nbsp;"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;marray&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"Bob&nbsp;Anderson"</span>.<span class="ace_support ace_function ace_swift">componentsSeparatedByString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"&nbsp;"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>marray[<span class="ace_constant ace_numeric ace_swift">0</span>]&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Bob</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>marray[<span class="ace_constant ace_numeric ace_swift">1</span>]&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Anderson</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"Bob&nbsp;Anderson"</span>.<span class="ace_support ace_function ace_swift">hasPrefix</span>(<span class="ace_string ace_quoted ace_double ace_swift">"Bob"</span>)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;True</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"Bob&nbsp;Anderson"</span>.<span class="ace_support ace_function ace_swift">hasSuffix</span>(<span class="ace_string ace_quoted ace_double ace_swift">"Anderson"</span>)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;True</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"Bob&nbsp;Anderson"</span>.lowercaseString
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"Bob&nbsp;Anderson"</span>.<span class="ace_support ace_function ace_swift">substringToIndex</span>(<span class="ace_constant ace_numeric ace_swift">8</span>)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Bob&nbsp;Ande</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"Bob&nbsp;Anderson"</span>.<span class="ace_support ace_function ace_swift">rangeOfString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"Ander"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;m&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"xyz"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;m2<span class="ace_keyword ace_operator ace_swift">=</span><span class="ace_string ace_quoted ace_double ace_swift">"Ander"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;k&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"Bob&nbsp;Anderson"</span>.<span class="ace_support ace_function ace_swift">rangeOfString</span>(m2)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;k&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;"4..&lt;9"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;k.count&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;5</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;k.<span class="ace_support ace_function ace_swift">maxElement</span>()&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;8</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;k.<span class="ace_support ace_function ace_swift">minElement</span>()&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;4</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;k&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(i)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"></div><div class="cell text-cell">Strings and Dates<div></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;dateString0&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"2015-09-23&nbsp;15:05:00"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;dateString1&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"2015-09-23&nbsp;15:09:01"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;dfmt&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">NSDateFormatter</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>dfmt.dateFormat&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"yyyy-MM-dd&nbsp;HH:mm:ss"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;d0s&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;dfmt.<span class="ace_support ace_function ace_swift">dateFromString</span>(dateString0)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;d1s&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;dfmt.<span class="ace_support ace_function ace_swift">dateFromString</span>(dateString1)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell markdown-cell"><p>Finding patterns...strings within strings.  Or cats...</p>
+</div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;r&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">findAndNext</span>(<span class="ace_string ace_quoted ace_double ace_swift">"aaa👿baabclka👿bc👿aa"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">s1</span>:&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"👿"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_swift">print</span>(r.count)&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;3</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;r&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(i<span class="ace_keyword ace_operator ace_swift">!</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">/*</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">3..&lt;5</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">13..&lt;15</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">17..&lt;19</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_block ace_swift">*/</span>
+</div></div></div></div><div class="cell text-cell"><div><br></div><div>Below is the code for findAndNext</div><div><br></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">findAndNext</span>(<span class="ace_meta ace_tag ace_swift">s0</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">s1</span>:&nbsp;String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">mr</span>:Range<span class="ace_keyword ace_operator ace_swift">&lt;</span>String.CharacterView.Index<span class="ace_keyword ace_operator ace_swift">&gt;?</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;nil)&nbsp;<span class="ace_keyword ace_operator ace_swift">-&gt;</span>&nbsp;[Range<span class="ace_keyword ace_operator ace_swift">&lt;</span>String.CharacterView.Index<span class="ace_keyword ace_operator ace_swift">&gt;?</span>]&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">aar</span>:[Range<span class="ace_keyword ace_operator ace_swift">&lt;</span>String.CharacterView.Index<span class="ace_keyword ace_operator ace_swift">&gt;?</span>]&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;t&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;s0.<span class="ace_support ace_function ace_swift">rangeOfString</span>(s1<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">range</span>:&nbsp;mr)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;aar.<span class="ace_support ace_function ace_swift">append</span>(t)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;mr&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;t
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;mr<span class="ace_keyword ace_operator ace_swift">?</span>.startIndex&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;mr<span class="ace_keyword ace_operator ace_swift">!</span>.startIndex.<span class="ace_support ace_function ace_swift">advancedBy</span>(<span class="ace_constant ace_numeric ace_swift">1</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;mr<span class="ace_keyword ace_operator ace_swift">?</span>.endIndex&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;s0.endIndex
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;aar&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;aar&nbsp;<span class="ace_keyword ace_operator ace_swift">+</span>&nbsp;<span class="ace_support ace_function ace_swift">findAndNext</span>(s0<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">s1</span>:&nbsp;s1<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_meta ace_tag ace_swift">mr</span>:&nbsp;mr)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;aar
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"><br><div>&nbsp; </div></div><div class="cell text-cell"><span style="background-color: rgb(254, 250, 0);">More on patterns….regular expressions. &nbsp;My favorite</span></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"This&nbsp;is&nbsp;some&nbsp;text&nbsp;\t&nbsp;🏈🏈"</span>.<span class="ace_support ace_function ace_swift">regex</span>(<span class="ace_string ace_quoted ace_double ace_swift">"[^&nbsp;|^\t]+"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Yields:&nbsp;["This",&nbsp;"is",&nbsp;"some",&nbsp;"text",&nbsp;"🏈🏈"]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div></div></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">import</span>&nbsp;UIKit
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;NSMatchingOptions(rawValue:&nbsp;0)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">extension</span>&nbsp;String&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">regex</span>&nbsp;(<span class="ace_meta ace_tag ace_swift">pattern</span>:&nbsp;String)&nbsp;<span class="ace_keyword ace_operator ace_swift">-&gt;</span>&nbsp;[String]&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">do</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;regex&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;try&nbsp;<span class="ace_support ace_function ace_swift">NSRegularExpression</span>(<span class="ace_meta ace_tag ace_swift">pattern</span>:&nbsp;pattern<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">options</span>:&nbsp;<span class="ace_support ace_function ace_swift">NSRegularExpressionOptions</span>(<span class="ace_meta ace_tag ace_swift">rawValue</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>))
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;nsstr&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">self</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">as</span>&nbsp;NSString
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;all&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">NSRange</span>(<span class="ace_meta ace_tag ace_swift">location</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">length</span>:&nbsp;nsstr.length)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">matches</span>&nbsp;:&nbsp;[String]&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[String]()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;regex.<span class="ace_support ace_function ace_swift">enumerateMatchesInString</span>(<span class="ace_keyword ace_reserved ace_swift">self</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">options</span>:&nbsp;<span class="ace_support ace_function ace_swift">NSMatchingOptions</span>(<span class="ace_meta ace_tag ace_swift">rawValue</span>:&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>)<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">range</span>:&nbsp;all)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;(<span class="ace_meta ace_tag ace_swift">result</span>&nbsp;:&nbsp;NSTextCheckingResult<span class="ace_keyword ace_operator ace_swift">?</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;_<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;_)&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;r&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;result&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;result&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;nsstr.<span class="ace_support ace_function ace_swift">substringWithRange</span>(r.range)&nbsp;<span class="ace_keyword ace_reserved ace_swift">as</span>&nbsp;String
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;matches.<span class="ace_support ace_function ace_swift">append</span>(result)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;matches
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;[String]()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;First&nbsp;note&nbsp;size&nbsp;difference&nbsp;with&nbsp;emojis</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;pig&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"👿&nbsp;"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>pig.<span class="ace_support ace_function ace_swift">lengthOfBytesUsingEncoding</span>(NSUTF16StringEncoding)&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;6</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>pig.utf16.count&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;3</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>pig.characters.count&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//2</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"This&nbsp;is&nbsp;some&nbsp;text&nbsp;\t&nbsp;🏈🏈"</span>.<span class="ace_support ace_function ace_swift">regex</span>(<span class="ace_string ace_quoted ace_double ace_swift">"[^&nbsp;|^\t]+"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_line ace_swift">//&nbsp;["This",&nbsp;"is",&nbsp;"some",&nbsp;"text",&nbsp;"🏈🏈"]</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"><div><br></div></div><div class="cell text-cell"><div><br></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">class</span>&nbsp;A&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;t&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">""</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">setT</span>(<span class="ace_meta ace_tag ace_swift">s</span>:&nbsp;String)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;t<span class="ace_keyword ace_operator ace_swift">=</span>s
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">getT</span>()&nbsp;<span class="ace_keyword ace_operator ace_swift">-&gt;</span>&nbsp;String&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;t
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;a&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">A</span>()<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;b&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">A</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>a.<span class="ace_support ace_function ace_swift">setT</span>(<span class="ace_string ace_quoted ace_double ace_swift">"3"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>a.<span class="ace_support ace_function ace_swift">getT</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>b.<span class="ace_support ace_function ace_swift">setT</span>(<span class="ace_string ace_quoted ace_double ace_swift">"40"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;n&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_string ace_quoted ace_double ace_swift">"one"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"two"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"three"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">3</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">9</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"stuff"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_constant ace_numeric ace_swift">3.4</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span><span class="ace_string ace_quoted ace_double ace_swift">"wow"</span><span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>a<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>b]
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;n&nbsp;<span class="ace_keyword ace_reserved ace_swift">where</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">is</span>&nbsp;String&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(i)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;n&nbsp;<span class="ace_keyword ace_reserved ace_swift">where</span>&nbsp;i&nbsp;<span class="ace_keyword ace_reserved ace_swift">is</span>&nbsp;A&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(&nbsp;(i&nbsp;<span class="ace_keyword ace_reserved ace_swift">as</span><span class="ace_keyword ace_operator ace_swift">!</span>&nbsp;A).<span class="ace_support ace_function ace_swift">getT</span>()&nbsp;)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell text-cell">All properties have didSet and willSet<div><a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html">https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html</a><br><div><br></div></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;str&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"Hello,&nbsp;playground"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;isComplete&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"&nbsp;"</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">didSet</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;str<span class="ace_keyword ace_operator ace_swift">=</span><span class="ace_string ace_quoted ace_double ace_swift">"jump"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">willSet</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">print</span>(<span class="ace_string ace_quoted ace_double ace_swift">"before&nbsp;set"</span>)&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;or&nbsp;whatever&nbsp;action&nbsp;you&nbsp;want&nbsp;to&nbsp;call</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell text-cell">Need to clean up the following…but can be useful looking for tokens</div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">getToken</span>(<span class="ace_meta ace_tag ace_swift">url</span>:&nbsp;NSURL)&nbsp;<span class="ace_keyword ace_operator ace_swift">-&gt;</span>&nbsp;Dictionary<span class="ace_keyword ace_operator ace_swift">&lt;</span>String<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;String<span class="ace_keyword ace_operator ace_swift">&gt;?</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;results&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;[<span class="ace_meta ace_tag ace_swift">String</span>:String]()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;s<span class="ace_keyword ace_operator ace_swift">=</span><span class="ace_string ace_quoted ace_double ace_swift">"</span><span class="ace_keyword ace_operator ace_swift">\(</span><span class="ace_string-interpolation">url</span><span class="ace_keyword ace_operator ace_swift">)</span><span class="ace_string ace_quoted ace_double ace_swift">"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;repeat&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;r&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;s.<span class="ace_support ace_function ace_swift">rangeOfString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"#"</span>)<span class="ace_keyword ace_operator ace_swift">?</span>.endIndex&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;s<span class="ace_keyword ace_operator ace_swift">=</span>s.<span class="ace_support ace_function ace_swift">substringFromIndex</span>(r)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="ace_keyword ace_reserved ace_swift">while</span>&nbsp;(&nbsp;s.<span class="ace_support ace_function ace_swift">rangeOfString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"#"</span>)<span class="ace_keyword ace_operator ace_swift">?</span>.endIndex&nbsp;<span class="ace_keyword ace_operator ace_swift">!=</span>&nbsp;nil)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;k<span class="ace_keyword ace_operator ace_swift">=</span>s.<span class="ace_support ace_function ace_swift">componentsSeparatedByString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"&amp;"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;k.count&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">for</span>&nbsp;pair&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>&nbsp;k&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;kv&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;pair.<span class="ace_support ace_function ace_swift">componentsSeparatedByString</span>(<span class="ace_string ace_quoted ace_double ace_swift">"="</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">if</span>&nbsp;kv.count&nbsp;<span class="ace_keyword ace_operator ace_swift">&gt;</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">1</span>&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;results.<span class="ace_support ace_function ace_swift">updateValue</span>(kv[<span class="ace_constant ace_numeric ace_swift">1</span>]<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">forKey</span>:&nbsp;kv[<span class="ace_constant ace_numeric ace_swift">0</span>])
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">return</span>&nbsp;results
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div></div></div></div><div class="cell text-cell"><div>Cool way to use scanner</div><div>ref:&nbsp;<a href="http://nshipster.com/nscharacterset/">http://nshipster.com/nscharacterset/</a></div></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;hours&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_string ace_quoted ace_double ace_swift">"Mon-Thurs:&nbsp;&nbsp;8:00&nbsp;-&nbsp;18:00\n"</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">+</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"Fri:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:00&nbsp;-&nbsp;17:00\n"</span>&nbsp;<span class="ace_keyword ace_operator ace_swift">+</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_string ace_quoted ace_double ace_swift">"Sat-Sun:&nbsp;&nbsp;&nbsp;&nbsp;10:00&nbsp;-&nbsp;15:00\n"</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;skippedCharacters&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;NSMutableCharacterSet.<span class="ace_support ace_function ace_swift">punctuationCharacterSet</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>skippedCharacters.<span class="ace_support ace_function ace_swift">formUnionWithCharacterSet</span>(NSCharacterSet.<span class="ace_support ace_function ace_swift">whitespaceCharacterSet</span>())
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>hours.enumerateLines&nbsp;{&nbsp;(line<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;_)&nbsp;<span class="ace_keyword ace_reserved ace_swift">in</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;scanner&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">NSScanner</span>(<span class="ace_meta ace_tag ace_swift">string</span>:&nbsp;line)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;scanner.charactersToBeSkipped&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;skippedCharacters
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;startDay<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">endDay</span>:&nbsp;NSString<span class="ace_keyword ace_operator ace_swift">?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">startHour</span>:&nbsp;Int&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">startMinute</span>:&nbsp;Int&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">endHour</span>:&nbsp;Int&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">var</span>&nbsp;<span class="ace_meta ace_tag ace_swift">endMinute</span>:&nbsp;Int&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_constant ace_numeric ace_swift">0</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;scanner.<span class="ace_support ace_function ace_swift">scanCharactersFromSet</span>(NSCharacterSet.<span class="ace_support ace_function ace_swift">letterCharacterSet</span>()<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">intoString</span>:&nbsp;<span class="ace_keyword ace_operator ace_swift">&amp;</span>startDay)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;scanner.<span class="ace_support ace_function ace_swift">scanCharactersFromSet</span>(NSCharacterSet.<span class="ace_support ace_function ace_swift">letterCharacterSet</span>()<span class="ace_comment ace_punctuation ace_comma ace_swift">,</span>&nbsp;<span class="ace_meta ace_tag ace_swift">intoString</span>:&nbsp;<span class="ace_keyword ace_operator ace_swift">&amp;</span>endDay)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;scanner.<span class="ace_support ace_function ace_swift">scanInteger</span>(<span class="ace_keyword ace_operator ace_swift">&amp;</span>startHour)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;scanner.<span class="ace_support ace_function ace_swift">scanInteger</span>(<span class="ace_keyword ace_operator ace_swift">&amp;</span>startMinute)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;scanner.<span class="ace_support ace_function ace_swift">scanInteger</span>(<span class="ace_keyword ace_operator ace_swift">&amp;</span>endHour)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;scanner.<span class="ace_support ace_function ace_swift">scanInteger</span>(<span class="ace_keyword ace_operator ace_swift">&amp;</span>endMinute)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_comment ace_line ace_swift">//&nbsp;Will&nbsp;need&nbsp;to&nbsp;put&nbsp;in&nbsp;array&nbsp;or&nbsp;do&nbsp;something&nbsp;here</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div></div>
+  <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'Swift Cool Stuff.html';
+if (e.keyCode === 37) window.location.href = 'Static in Swift.html';
+}</script>
 </body>
 </html>
