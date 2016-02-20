@@ -34,21 +34,21 @@
 
 </head>
 <body>
-  <div id="nav"><div>Previous: <a href='Go_(Golang).html'>Go_(Golang)</a>, Up: <a href='index.html'>Index</a></div></div>
+  <div id="nav"><div>Next: <a href='Tuple_vs_List.html'>Tuple_vs_List</a>, Previous: <a href='Custom_Operators.html'>Custom_Operators</a>, Up: <a href='index.html'>Index</a></div></div>
   <div id="titlearea">
-    <h2>Pandas</h2>
+    <h2>Random_Sleep_Delay</h2>
   </div>
-  <div id="contentarea"><div class="cell text-cell">Ref:&nbsp;<a href="http://stackoverflow.com/questions/35528119/pandas-recalculate-index-after-a-concatenation">http://stackoverflow.com/questions/35528119/pandas-recalculate-index-after-a-concatenation</a></div><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span>&nbsp;<span class="ace_identifier">pands</span>
+  <div id="contentarea"><div class="cell code-cell"><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">import</span>&nbsp;Foundation
 </div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">k</span><span class="ace_keyword ace_operator">=</span><span class="ace_paren ace_lparen">[[</span><span class="ace_constant ace_numeric">1</span>,<span class="ace_constant ace_numeric">2</span>,<span class="ace_constant ace_numeric">3</span>,<span class="ace_constant ace_numeric">4</span><span class="ace_paren ace_rparen">]</span>,<span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span>,<span class="ace_constant ace_numeric">2</span>,<span class="ace_constant ace_numeric">3</span>,<span class="ace_constant ace_numeric">4</span><span class="ace_paren ace_rparen">]]</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">d</span><span class="ace_keyword ace_operator">=</span><span class="ace_identifier">pd</span>.<span class="ace_identifier">DataFrame</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">k</span>,<span class="ace_identifier">columns</span><span class="ace_keyword ace_operator">=</span><span class="ace_paren ace_lparen">[</span><span class="ace_string">'a'</span>,<span class="ace_string">'b'</span>,<span class="ace_string">'c'</span>,<span class="ace_string">'d'</span><span class="ace_paren ace_rparen">])</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">d</span><span class="ace_keyword ace_operator">=</span><span class="ace_identifier">pd</span>.<span class="ace_identifier">concat</span><span class="ace_paren ace_lparen">([</span><span class="ace_identifier">d</span>,<span class="ace_identifier">d</span><span class="ace_paren ace_rparen">])</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">#&nbsp;Now&nbsp;you&nbsp;have&nbsp;an&nbsp;index&nbsp;problem</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">d</span>.<span class="ace_identifier">reset_index</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">drop</span><span class="ace_keyword ace_operator">=</span><span class="ace_constant ace_language">True</span>,<span class="ace_identifier">inplace</span><span class="ace_keyword ace_operator">=</span><span class="ace_constant ace_language">True</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_reserved ace_swift">func</span>&nbsp;<span class="ace_support ace_function ace_swift">randomDelay</span>(<span class="ace_meta ace_tag ace_swift">maxDuration</span>:&nbsp;Double)&nbsp;{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_keyword ace_reserved ace_swift">let</span>&nbsp;randomWait&nbsp;<span class="ace_keyword ace_operator ace_swift">=</span>&nbsp;<span class="ace_support ace_function ace_swift">arc4random_uniform</span>(<span class="ace_support ace_function ace_swift">UInt32</span>(maxDuration&nbsp;<span class="ace_keyword ace_operator ace_swift">*</span>&nbsp;<span class="ace_support ace_function ace_swift">Double</span>(USEC_PER_SEC)))
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&nbsp;&nbsp;<span class="ace_support ace_function ace_swift">usleep</span>(randomWait)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
 </div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
 </div></div></div></div></div>
   <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 37) window.location.href = 'Go_(Golang).html';
+if (e.keyCode === 39) window.location.href = 'Tuple_vs_List.html';
+if (e.keyCode === 37) window.location.href = 'Custom_Operators.html';
 }</script>
 </body>
 </html>
