@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
   to checkout my CV on <a href=https://stackoverflow.com/cv/mchirico>cv/mchirico.</a>
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://mchirico.github.io/" # the base hostname & protocol for your site
 twitter_username: mchirico
 github_username:  mchirico
 
