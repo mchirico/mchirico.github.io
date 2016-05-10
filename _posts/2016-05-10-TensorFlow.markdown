@@ -32,16 +32,72 @@ sudo apt-get update
 sudo apt-get install cuda
 {% endhighlight %}
 
-You have to restart.
+You have to restart, when all of this is done.
 
 
+### Docker Instructions
+
+Take a look at install docker on [ubuntu.](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
+
+{% highlight bash %}
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+{% endhighlight %}
+
+You have to create `/etc/apt/sources.list.d/docker.list` and add the following
+text
+
+/etc/apt/sources.list.d/docker.list
+
+{% highlight bash %}
+deb https://apt.dockerproject.org/repo ubuntu-trusty main
+{% endhighlight %}
+
+Hence
+
+{% highlight bash %}
+cat /etc/apt/sources.list.d/docker.list
+# You should see the following:
+#   deb https://apt.dockerproject.org/repo ubuntu-trusty main
+{% endhighlight %}
+
+
+Next, you've got to do a lot of updates...
+
+{% highlight bash %}
+sudo apt-get update
+sudo apt-get purge lxc-docker
+apt-cache policy docker-engine
+sudo apt-get update
+sudo apt-get install linux-image-extra-$(uname -r)
+sudo apt-get install linux-image-generic-lts-trusty
+
+# Yeah, you have to reboot
+sudo reboot
+
+sudo apt-get install docker-engine
+sudo service docker start
+
+# Test it
+sudo docker run hello-world
+{% endhighlight %}
+
+
+
+
+
+* * *
+
+## TensorFlow 
 
 
 
 You'll want to modify the docker_run_gpu.sh to allow access to the necessary 
-ports.
+ports. Or, you can just download the  [fixed docker_run_gpu.sh](https://gist.githubusercontent.com/mchirico/47f2067075e6b8adacbcdb821d2d7f07/raw/f0d22d48ed35f3bafbbaf29cdeaeb52e82e882c3/docker_run_gpu.sh)
 
 {% highlight bash %}
+# These are the changes I made to docker_run_gpu.sh
 docker run -p 8888:8888 -p 6006:6006     -it $CUDA_SO $DEVICES "$@"
 {% endhighlight %}
 
@@ -59,6 +115,6 @@ Check out the [Tensorflow docs][install-docs] for more info on how to grab the d
 [install-docs]: https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html#docker-installation
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
-[cuda] https://developer.nvidia.com/cuda-downloads
+[cuda]: https://developer.nvidia.com/cuda-downloads
 
 
