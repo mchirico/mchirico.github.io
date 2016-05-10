@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Image Manipulation'
+date:   2016-05-10 11:17:24 -0400
+categories: image tensorflow
+---
+
