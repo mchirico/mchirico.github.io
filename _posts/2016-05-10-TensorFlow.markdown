@@ -23,9 +23,9 @@ Once it's modified, you'll want to pull down the latest tensorflow gpu version.
 
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Check out the [Tensorflow docs][install-docs] for more info on how to grab the docker image.
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
+[install-docs]: https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html#docker-installation
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 
