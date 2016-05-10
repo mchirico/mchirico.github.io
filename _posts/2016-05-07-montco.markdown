@@ -36,4 +36,4 @@ d.index = pd.DatetimeIndex(d.timeStamp)
 {% endhighlight %}
 
 
-
+It probably makes more sense to see it in iPython [notebook](https://github.com/mchirico/mchirico.github.io/blob/master/p/Montco%20Get%20Data.ipynb)
