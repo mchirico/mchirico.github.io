@@ -5,4 +5,35 @@ date:   2016-05-07 13:17:24 -0400
 categories: Montco Python Update
 ---
 
+Example of getting the data
+
+
+{% highlight python %}
+
+
+import pandas as pd
+import io
+import datetime
+
+import requests
+requests.packages.urllib3.disable_warnings()
+
+
+# Read in the data
+def readTZ():
+    url="https://storage.googleapis.com/montco-stats/tz.csv"
+    d=requests.get(url,verify=False).content
+    d=pd.read_csv(io.StringIO(d.decode('utf-8')),
+                  header=0,names=['lat', 'lng','desc','zip','title','timeStamp','twp','e'],
+            dtype={'lat':str,'lng':str,'desc':str,'zip':str,
+                  'title':str,'timeStamp':datetime.datetime,'twp':str,'e':int})
+    d=pd.DataFrame(d)
+    return d
+
+d=readTZ()
+d.index = pd.DatetimeIndex(d.timeStamp)
+
+{% endhighlight %}
+
+
 
