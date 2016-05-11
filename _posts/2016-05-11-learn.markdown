@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "TensorFlow Learn "
+date:   2016-05-11 16:17:24 -0400
+categories: tensorflow gpu aws
+---
+
+If you have the full version of TensorFlow installed, you can
+leverage tensorflow.contrib.[learn.](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn)
+
+{% highlight python %}
+import numpy as np
+import tensorflow as tf
+import tensorflow.contrib.learn as learn
+
+iris = datasets.load_iris()
+classifier = learn.TensorFlowLinearClassifier(n_classes=3)
+classifier.fit(iris.data, iris.target)
+score = metrics.accuracy_score(iris.target, classifier.predict(iris.data))
+print("Accuracy: %f" % score)
+
+# This will give you the following output... note, it's 
+# a complete model.
+
+# Step #100, epoch #20, avg. train loss: 0.56387
+# Step #200, epoch #40, avg. train loss: 0.39505
+# Accuracy: 0.973333
+
+{% endhighlight %}
+
+
+
+
