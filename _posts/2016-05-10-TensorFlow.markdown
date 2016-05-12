@@ -108,8 +108,18 @@ I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library
 >>
 {% endhighlight %}
 
+## Jupyter 
 
-You have to restart, when all of this is done.
+I also use Jupyter for a non-docker version as well... Here's my
+setup file. I have a **/kaggle** directory where my source is
+kept.  You'll want to change this to whatever directory you use.
+
+
+{% gist mchirico/58ef09d601704dd48dfdb4dfe238b43f %}
+
+
+
+
 
 
 ### Docker Instructions
