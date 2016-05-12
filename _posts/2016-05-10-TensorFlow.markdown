@@ -83,9 +83,9 @@ yes|conda update anaconda
 
 ## Tensorflow for Anaconda
 
-You have to rename the tensorflow-0.x..-cp34-cp34m...whl file. Note that **cp34** and 
-**cp34m* stands for the python version.  If you're running 3.5, you'll need to 
-change this. Below are the steps on how to do this...
+You have to rename the **tensorflow-0.x\*-cp34-cp34m\*.whl** file. Note that **cp34** and 
+**cp34m** stands for the python version.  If you're running 3.5, you'll need to 
+change this. See the steps below..
 
 {% highlight bash %}
 # Download and rename the file
