@@ -32,6 +32,83 @@ sudo apt-get update
 sudo apt-get install cuda
 {% endhighlight %}
 
+
+### CuDNN
+
+You need to make sure all the libraries get installed. This
+includes **CuDNN**  [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn)
+
+I took a chance, and install v5. Note, v4 is recummended; however, I haven't had
+and problems with v5.
+
+{% highlight bash %}
+tar -xzf cudnn-7.5-linux-x64-v5.0-rc.tgz
+cd cuda
+sudo cp ./lib64/* /usr/local/cuda/lib64/
+sudo cp ./include/* /usr/local/include/
+{% endhighlight %}
+
+
+### Environment variables
+
+You should add the last two lines to your **.bashrc**
+
+{% highlight bash %}
+tail -n3 .bashrc
+export PATH="/home/ubuntu/anaconda3/bin:$PATH"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
+export CUDA_HOME=/usr/local/cuda
+{% endhighlight %}
+
+
+## Anaconda
+
+I also installed Anaconda [Python 3.5 64bit](http://repo.continuum.io/archive/Anaconda3-4.0.0-Linux-x86_64.sh)
+{% highlight bash %}
+bash ./Anaconda3-4.0.0-Linux-x86_64.sh
+
+{% endhighlight %}
+
+After it's installed, update anaconda
+
+{% highlight bash %}
+
+yes|conda update conda
+yes|conda update anaconda
+
+{% endhighlight %}
+
+
+
+
+## Tensorflow for Anaconda
+
+You have to rename the tensorflow-0.x..-cp34-cp34m...whl file. Note that **cp34** and 
+**cp34m* stands for the python version.  If you're running 3.5, you'll need to 
+change this. Below are the steps on how to do this...
+
+{% highlight bash %}
+# Download and rename the file
+wget https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp34-cp34m-linux_x86_64.whl
+mv tensorflow-0.8.0-cp34-cp34m-linux_x86_64.whl tensorflow-0.8.0-cp35-cp35m-linux_x86_64.whl
+#
+pip install --ignore-installed --upgrade tensorflow-0.8.0-cp35-cp35m-linux_x86_64.whl
+{% endhighlight %}
+
+
+### Test 
+
+{% highlight python %}
+>>> import tensorflow as tf
+I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:105] successfully opened CUDA library libcurand.so locally
+>>
+{% endhighlight %}
+
+
 You have to restart, when all of this is done.
 
 

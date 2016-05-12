@@ -9,12 +9,14 @@ If you have the full version of TensorFlow installed, you can
 leverage tensorflow.contrib.[learn.](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn)
 
 {% highlight python %}
-import numpy as np
-import tensorflow as tf
-import tensorflow.contrib.learn as learn
+
+from sklearn import datasets, metrics
+from tensorflow.contrib import skflow
+
+run_config = skflow.estimators.RunConfig(num_cores=3)
 
 iris = datasets.load_iris()
-classifier = learn.TensorFlowLinearClassifier(n_classes=3)
+classifier = learn.TensorFlowLinearClassifier(n_classes=3,steps=800, config=run_config)
 classifier.fit(iris.data, iris.target)
 score = metrics.accuracy_score(iris.target, classifier.predict(iris.data))
 print("Accuracy: %f" % score)
@@ -24,8 +26,14 @@ print("Accuracy: %f" % score)
 
 # Step #100, epoch #20, avg. train loss: 0.56387
 # Step #200, epoch #40, avg. train loss: 0.39505
+# Step #300, epoch #60, avg. train loss: 0.33969
+# Step #400, epoch #80, avg. train loss: 0.30646
+# Step #500, epoch #100, avg. train loss: 0.28121
+# Step #600, epoch #120, avg. train loss: 0.26077
+# Step #700, epoch #140, avg. train loss: 0.24579
+# Step #800, epoch #160, avg. train loss: 0.23332
 # Accuracy: 0.973333
-
+# In [27]:
 {% endhighlight %}
 
 
