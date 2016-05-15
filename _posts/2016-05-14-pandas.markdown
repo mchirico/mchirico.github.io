@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Pandas"
+date:   2016-05-14 11:12:24 -0400
+categories: tensorflow gpu aws
+---
+
+Odd...
+
+{% highlight python %}
+
+N=1000
+Delta = 0.001
+def smush(m):
+    x=m[1] % N * N
+    y=int((m[2]/Delta))*10
+    return int(x+y)
+
+d['loc']=d.apply(smush, axis=1)
+
+
+{% endhighlight %}
+
+
+
+
