@@ -5,7 +5,7 @@ date:   2016-05-16 20:09:19 -0400
 categories: tensorflow gpu aws
 ---
 
-You use the **nvidia-smi** command to look at GPU memory usage.
+You use the **[nvidia-smi](http://developer.download.nvidia.com/compute/cuda/6_0/rel/gdk/nvidia-smi.331.38.pdf)** command to look at GPU memory usage.
 I'm doing some tests with TensorFlow.
 
 {% highlight bash %}
