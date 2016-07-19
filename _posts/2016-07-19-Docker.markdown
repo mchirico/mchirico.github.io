@@ -1,0 +1,55 @@
+---
+layout: post
+title:  "Dockerfile (pip install) "
+date:   2016-07-19 17:35:29 -0400 
+categories: Docker pip
+---
+
+**Cache Downloaded PIP Packages in Dockerfile**
+
+My Dockerfile below has *RUN pip install* commands on each line. This
+is done so that each time I run my docker build command it doesn't
+take forever to build.
+
+{% highlight bash %}
+FROM ubuntu
+MAINTAINER Mike Chirico <mchirico@gmail.com>
+RUN apt-get update
+RUN apt-get install -y python sqlite3 vim
+RUN apt-get install -y python-setuptools python-dev build-essential python-pip
+
+# Yes, do this twice so it get's cached
+RUN pip install --upgrade pip
+RUN pip install gunicorn==19.6.0
+RUN pip install numpy==1.11.1
+RUN pip install pandas==0.18.1
+
+RUN mkdir /src
+ADD requirements.txt /src
+ADD _loadFacebook.sql /src
+ADD grabFacebookData.py /src
+ADD combineData.py /src
+ADD tokenf.py /src
+ADD mainRun.sh /src
+ADD LICENSE /src
+
+# Someday we'll forget to update the above, so
+# I actually repeat the software listing in the
+# requirements.txt. Plus, add anything that you
+# don't want cached. It will not pull pandas again.
+RUN pip install -r /src/requirements.txt
+
+{% endhighlight %}
+
+
+
+Now, let's suppose I want to build mchirico/facebook-group-scrape:latest. The
+first time I run this, it's going to upgrade pip, gunicorn, numpy and then
+take forever pulling down pandas.  Obviously, after you pull down pandas,
+you want to pip to store this in the cache.  In order to cache the results
+of pip, you have to put each one on a separate line.
+
+{% highlight bash %}
+docker build -t mchirico/facebook-group-scrape:latest .
+
+{% endhighlight %}
