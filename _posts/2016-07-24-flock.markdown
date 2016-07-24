@@ -9,7 +9,13 @@ categories: flock Linux
 
 If you have a cronjob that runs every periodically, it's
 possible the jobs will run into each other. But, you can
-prevent this by wrapping your bash shell around flock
+prevent this by wrapping your bash shell around flock. Only
+one program can run. If the bash script tries to start up
+a 2nd time, it will wait for 10s and if it still can't get
+the lock, it will exit.
+
+This will prevent two or more copies of your program from
+running.
 
 {% highlight bash %}
 #!/bin/bash
