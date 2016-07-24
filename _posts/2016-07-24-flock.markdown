@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "flock in Linux Cron"
+date:   2016-07-24 08:12:55 -0400 
+categories: flock Linux
+---
+
+# Bash Job with flock
+
+If you have a cronjob that runs every periodically, it's
+possible the jobs will run into each other. But, you can
+prevent this by wrapping your bash shell around flock
+
+{% highlight bash %}
+#!/bin/bash
+(
+    # Wait 10s for lock on /var/lock/.myjob.exclusivelock
+    flock -x -w 10 200 || exit 1
+	
+# Put long running job here
+./myLongRunningJob.sh
+	
+)  200>/var/lock/.myjob.exclusivelock	
+
+{% endhighlight %}
+
+
