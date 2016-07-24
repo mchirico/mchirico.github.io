@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "flock in Linux Cron"
+title:  "flock in Bash Cron Scripts"
 date:   2016-07-24 08:12:55 -0400 
-categories: flock Linux
+categories: flock Linux bash
 ---
 
-# Bash Job with flock
+# Bash Scripts with flock
 
 If you have a cronjob that runs every periodically, it's
 possible the jobs will run into each other. But, you can
