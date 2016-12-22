@@ -3,8 +3,6 @@ layout: post
 title:  "Google Maps "
 date:   2016-12-22 14:18:37 -0400 
 categories: Google Maps
-author:
-  display_name: Mike Chirico
 ---
 
 I started creating a lot of Google maps on kaggle..  It's nice, you
