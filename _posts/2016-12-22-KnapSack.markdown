@@ -7,7 +7,7 @@ categories: python
 
 
 Reference: [fiddle](http://pythonfiddle.com/0-1-knapsack/)
-[video](video: https://www.youtube.com/watch?v=EH6h7WA7sDw)
+[video](https://www.youtube.com/watch?v=EH6h7WA7sDw)
 
 Below the program will find the maximum value giving the following
 weight limit W. For example, having a W=5 (weight limit of 5), what
