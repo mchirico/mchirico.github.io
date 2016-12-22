@@ -22,3 +22,4 @@ github_username:  mchirico
 
 # Build settings
 markdown: kramdown
+future: true
