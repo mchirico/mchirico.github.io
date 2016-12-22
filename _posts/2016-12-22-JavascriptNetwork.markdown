@@ -125,3 +125,10 @@ categories: Javascript
 ---
 
 {% endhighlight %}
+
+
+
+#### Reference
+
+If you get stuck, checkout the source [repository](https://github.com/mchirico/mchirico.github.io)
+
