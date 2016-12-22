@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "KnapSack Problem "
+date:   2016-12-22 12:12:56 -0400 
+categories: python 
+---
+
+
+Reference: [fiddle](http://pythonfiddle.com/0-1-knapsack/)
+[video](video: https://www.youtube.com/watch?v=EH6h7WA7sDw)
+
+Below the program will find the maximum value giving the following
+weight limit W. For example, having a W=5 (weight limit of 5), what
+is the maximum value?
+
+The answer should be 5+2+2 == 9.  These are the values added up. The
+5 has a weight of 3 and each 2 has a weight of 1  total weights = 3+1+1
+
+
+
+{% highlight python %}
+
+
+def knapSack(W, wt, val, n):
+    K = [[0 for x in range(W+1)] for x in range(n+1)]
+ 
+    # Build table K[][] in bottom up manner
+    for i in range(n+1):
+        for w in range(W+1):
+            if i==0 or w==0:
+                K[i][w] = 0
+            elif wt[i-1] <= w:
+                K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]],  K[i-1][w])
+            else:
+                K[i][w] = K[i-1][w]
+ 
+    return (K[n][W])
+
+# Driver program to test above function
+val = [5, 3, 2, 2]
+wt = [3, 2, 1,1]
+W = 5
+n = len(val)
+print(knapSack(W, wt, val, n))
+
+
+{% endhighlight %}
+
+
