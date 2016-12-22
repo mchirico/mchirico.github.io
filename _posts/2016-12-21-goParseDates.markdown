@@ -16,8 +16,8 @@ I want to convert it to "America/Los_Angeles" and "UTC".
 time.ParseInLocation("2006-01-02 15:04:05", s, ny)
 {% endhighlight %}
 
-The above command will hangle this.  The full program is shown
-below.
+The above command will handle this.  The full program is shown
+below. It's probably easier to just run this from the playground.
 
 
 {% highlight go %}
