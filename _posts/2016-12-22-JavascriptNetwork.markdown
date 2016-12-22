@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Adding Javascript "
+title:  "Custom Javascript In Jekyll Blogs"
 date:   2016-12-22 16:32:39 -0400
 jsarr:
 - graphs/dag_default.js
