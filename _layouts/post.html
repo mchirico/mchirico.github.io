@@ -8,22 +8,6 @@ layout: default
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 
 
-    <!-- My Stuff -->
-    {% for js in page.jsarr %}
-    
-     <style type="text/css">
-      #mynetwork {
-      width: 600px;
-      height: 400px;
-      border: 1px solid lightgray;
-      }
-    </style>
-    <script type="text/javascript">
-      {% include {{ js }} %}
-    </script>
-    
-    {% endfor %}
-    
 
 
     
@@ -34,3 +18,15 @@ layout: default
   </div>
 
 </article>
+
+
+    <!-- My Stuff -->
+    {% for js in page.jsarr %}
+    
+
+    <script type="text/javascript">
+      {% include {{ js }} %}
+    </script>
+    
+    {% endfor %}
+    
