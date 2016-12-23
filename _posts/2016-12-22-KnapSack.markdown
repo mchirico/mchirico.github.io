@@ -57,19 +57,31 @@ def knapSack(W, wt, val):
     for i in range(-1,-(len(V)),-1):
         if N > 0 and V[i][N] > 0:
             ans.append(V[i][N])
-            N= N - wt[val.index(V[i][N])]
+            #N= N - wt[val.index(V[i][N])]
+            N = N - min([ wt[j] for j in [o for o, x in enumerate(val) if x == V[i][N] ]])
+
  
-    sum_weight=sum([wt[val.index(i)] for i in  ans] )
+    def minInList(target):
+        return min([ wt[j] for j in [o for o, x in enumerate(val) if x == target ]])
+        
+    #sum_weight=sum([wt[val.index(i)] for i in  ans] )
+    sum_weight=sum([minInList(i) for i in  ans] )
+    
+    
     return (K[n][W],sum_weight,ans)
 
 # Driver program to test above function
-val = [5,3,2,2]
+val = [5,3,2,3]
 wt = [3,2,1,1]
 W = 5
-
 print(knapSack(W, wt, val))
-
-# (9, 5, [2, 2, 5])
+ 
+# This will return 
+#  (10, 5, [3, 2, 5])
+#
+#  Where 10 is the cumulative value
+#        5 is the total weight (use the lowest 3 weight
+#        [3,2,5]  Are the value items chosen
 
 
 
