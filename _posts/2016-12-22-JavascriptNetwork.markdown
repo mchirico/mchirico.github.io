@@ -44,58 +44,19 @@ Create the following
 [```_includes/graphs/dag_default.js```](https://github.com/mchirico/mchirico.github.io/blob/master/_includes/graphs/dag_default.js),
 but don't include any ```script``` tags.
 
-{% highlight javascript %}
-  // create an array with nodes
-  var nodes = new vis.DataSet([
-    {id: 1, label: 'Check Kaggle'},
-    {id: 2, label: 'Submit Entry'},
-    {id: 3, label: 'Think About Problem'},
-    {id: 4, label: 'Create/Visit  Kernel'},
-    {id: 5, label: 'View Results'},
-    {id: 6, label: 'Research'}      
-      
-  ]);
 
-  // create an array with edges
-  var edges = new vis.DataSet([
-      {from: 1, to: 3},
-      {from: 1, to: 2},
-      {from: 2, to: 4},
-      {from: 2, to: 5},
-      {from: 3, to: 1},
-      {from: 5, to: 4},
-      {from: 1, to: 6},
-      {from: 5, to: 1},
-      {from: 6, to: 3},
-      {from: 3, to: 6},                  
-      
-  ]);
+<script src="https://gist.github.com/mchirico/423ee989d06f4c3f84f45114c08f9cd2.js"></script>
 
-  // create a network
-  var container = document.getElementById('mynetwork');
-  var data = {
-    nodes: nodes,
-    edges: edges
-  };
-  var options = {};
-  var network = new vis.Network(container, data, options);
 
-{% endhighlight %}
 
 #### Edit ```_includes/head.html```
 
 You can view the full file [_includes/head.html](https://github.com/mchirico/mchirico.github.io/blob/master/_includes/head.html) but
 below are my changes.
 
-{% highlight html %}
-  <!--  Chirico: Add Custom Headers    -->
-  {% if page.jsarr %}
-    <script src="https://storage.googleapis.com/montco-stats/javascript/vis-4.17.0/dist/vis.js" type="text/javascript"></script>
-    <link href="https://storage.googleapis.com/montco-stats/javascript/vis-4.17.0/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
-  {% endif %}
-  <!--  Chirico: Done custom          -->
 
-{% endhighlight %}
+<script src="https://gist.github.com/mchirico/757fd223de6e808cdeb01c12b2b4676a.js"></script>
+
 
 
 #### Modify ```_layout/post.html```
