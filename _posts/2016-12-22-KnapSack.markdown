@@ -19,6 +19,6 @@ The answer should be 5+2+2 == 9.  These are the values added up. The
 
 <script src="//repl.it/embed/EwNd/0.js"></script>
 
-<script src="https://gist.github.com/mchirico/75b96e74e524f32e9d77a97b63505327.js"></script>
+
 
 
