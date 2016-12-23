@@ -8,11 +8,14 @@ jsarr:
 categories: Javascript
 ---
 
-You can get the instruction on how to do this from
-the following [link](http://blog.emmatosch.com/2016/03/09/using-custom-javascript-in-jekyll-blogs.html).
-It's pretty cool being able to add your own javascript.
 
-Not that this graph has anything meaningful, but it was easy to create. 
+
+
+
+Not that this graph has anything meaningful, but it was easy to create using [visjs.org](http://visjs.org/). Follow
+along and I'll show you have to create this on you Jekyll Blogs.  You can also view a good
+[tutorial](http://blog.emmatosch.com/2016/03/09/using-custom-javascript-in-jekyll-blogs.html)
+by Emma Tosch.
 
 
 <style type="text/css">
