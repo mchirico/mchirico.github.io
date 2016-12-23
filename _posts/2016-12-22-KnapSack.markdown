@@ -21,7 +21,17 @@ The answer should be 5+2+2 == 9.  These are the values added up. The
 {% highlight python %}
 
 
-def knapSack(W, wt, val, n):
+def knapSack(W, wt, val):
+    
+    # Simple Checks
+    if [i for i in wt if i <= 0] != []:
+        print("Weights must be < 0")
+        return False
+    if len(wt) != len(val) and len(val) >0 :
+        print("len(wt) != len(val) or len == 0")
+        return False
+        
+    n = len(val)
     K = [[0 for x in range(W+1)] for x in range(n+1)]
     V = [[0 for x in range(W+1)] for x in range(n+1)]
     
@@ -56,8 +66,8 @@ def knapSack(W, wt, val, n):
 val = [5,3,2,2]
 wt = [3,2,1,1]
 W = 5
-n = len(val)
-print(knapSack(W, wt, val,n))
+
+print(knapSack(W, wt, val))
 
 # (9, 5, [2, 2, 5])
 
