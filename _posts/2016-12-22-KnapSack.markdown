@@ -17,74 +17,7 @@ The answer should be 5+2+2 == 9.  These are the values added up. The
 5 has a weight of 3 and each 2 has a weight of 1  total weights = 3+1+1
 
 
+<script src="https://gist.github.com/mchirico/75b96e74e524f32e9d77a97b63505327.js"></script>
 
-{% highlight python %}
-
-
-def knapSack(W, wt, val):
-    
-    # Simple Checks
-    if [i for i in wt if i <= 0] != []:
-        print("Weights must be < 0")
-        return False
-    if len(wt) != len(val) and len(val) >0 :
-        print("len(wt) != len(val) or len == 0")
-        return False
-        
-    n = len(val)
-    K = [[0 for x in range(W+1)] for x in range(n+1)]
-    V = [[0 for x in range(W+1)] for x in range(n+1)]
-    
- 
-    # Build table K[][] in bottom up manner
-    for i in range(n+1):
-        for w in range(W+1):
-            if i==0 or w==0:
-                K[i][w] = 0
-            elif wt[i-1] <= w:
-                if val[i-1] + K[i-1][w-wt[i-1]] > K[i-1][w]:
-                    V[i][w]=val[i-1] 
-
-                K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]],  K[i-1][w])
-            else:
-                K[i][w] = K[i-1][w]
-                
-
-
-    # Gets the items in our list  
-    ans=[]
-    N = W
-    for i in range(-1,-(len(V)),-1):
-        if N > 0 and V[i][N] > 0:
-            ans.append(V[i][N])
-            #N= N - wt[val.index(V[i][N])]
-            N = N - min([ wt[j] for j in [o for o, x in enumerate(val) if x == V[i][N] ]])
-
- 
-    def minInList(target):
-        return min([ wt[j] for j in [o for o, x in enumerate(val) if x == target ]])
-        
-    #sum_weight=sum([wt[val.index(i)] for i in  ans] )
-    sum_weight=sum([minInList(i) for i in  ans] )
-    
-    
-    return (K[n][W],sum_weight,ans)
-
-# Driver program to test above function
-val = [5,3,2,3]
-wt = [3,2,1,1]
-W = 5
-print(knapSack(W, wt, val))
- 
-# This will return 
-#  (10, 5, [3, 2, 5])
-#
-#  Where 10 is the cumulative value
-#        5 is the total weight (use the lowest 3 weight
-#        [3,2,5]  Are the value items chosen
-
-
-
-{% endhighlight %}
 
 
