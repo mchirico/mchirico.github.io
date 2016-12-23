@@ -102,17 +102,8 @@ below are my changes.
 
 Note this needs to go near the bottom of the [_layout/post.html](https://github.com/mchirico/mchirico.github.io/blob/master/_layouts/post.html)
 
-{% highlight html %}
-    <!-- My Stuff -->
-    {% for js in page.jsarr %}
-    
 
-    <script type="text/javascript">
-      {% include {{ js }} %}
-    </script>
-    
-    {% endfor %}
-{% endhighlight %}
+<script src="https://gist.github.com/mchirico/783dd57dd7525cd0ac9c0626bc091805.js"></script>
 
 
 

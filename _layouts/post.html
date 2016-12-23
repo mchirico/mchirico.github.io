@@ -20,17 +20,23 @@ layout: default
 </article>
 
 
-    <!-- My Stuff -->
-    {% for js in page.jsarr %}
-    
 
-    <script type="text/javascript">
-      {% include {{ js }} %}
-    </script>
-    
+    <!-- Stuff for jsarr tag  -->
+
+    {% for js in page.jsarr %}
+      <script type="text/javascript">
+	{% include {{ js }} %}
+      </script>
     {% endfor %}
 
+    <!-- End Stuff for jsarr tag  -->
 
+
+
+
+
+    <!-- disqus stuff -->
+    
     {% if page.comments %}
     <div id="disqus_thread"></div>
     <script>
