@@ -6,7 +6,7 @@ categories: python
 ---
 
 
-Reference: [fiddle](http://pythonfiddle.com/0-1-knapsack/)
+Reference: [repl.it example](https://repl.it/EwNd/0)
 [video](https://www.youtube.com/watch?v=EH6h7WA7sDw)
 
 Below the program will find the maximum value giving the following
@@ -17,7 +17,7 @@ The answer should be 5+2+2 == 9.  These are the values added up. The
 5 has a weight of 3 and each 2 has a weight of 1  total weights = 3+1+1
 
 
-<script src="https://gist.github.com/mchirico/75b96e74e524f32e9d77a97b63505327.js"></script>
 
+<script src="https://gist.github.com/mchirico/75b96e74e524f32e9d77a97b63505327.js"></script>
 
 
