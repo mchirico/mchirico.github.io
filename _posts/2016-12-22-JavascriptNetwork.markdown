@@ -37,7 +37,9 @@ mkdir -p _includes/graphs
 {% endhighlight %}
 
 
-Create the following file: ```_includes/graphs/dag_default.js```
+Create the following
+[```_includes/graphs/dag_default.js```](https://github.com/mchirico/mchirico.github.io/blob/master/_includes/graphs/dag_default.js),
+but don't include any ```script``` tags.
 
 {% highlight javascript %}
   // create an array with nodes
@@ -77,9 +79,10 @@ Create the following file: ```_includes/graphs/dag_default.js```
 
 {% endhighlight %}
 
-#### Edit ```includes/head.html```
+#### Edit ```_includes/head.html```
 
-
+You can view the full file [_includes/head.html](https://github.com/mchirico/mchirico.github.io/blob/master/_includes/head.html) but
+below are my changes.
 
 {% highlight html %}
   <!--  Chirico: Add Custom Headers    -->
@@ -94,7 +97,7 @@ Create the following file: ```_includes/graphs/dag_default.js```
 
 #### Modify ```_layout/post.html```
 
-Note this need to go at the end of the page.
+Note this needs to go near the bottom of the [_layout/post.html](https://github.com/mchirico/mchirico.github.io/blob/master/_layouts/post.html)
 
 {% highlight html %}
     <!-- My Stuff -->
@@ -112,7 +115,7 @@ Note this need to go at the end of the page.
 
 #### Creating Pages
 
-Here's a sample header on my page.
+Here's a sample header on my [markdown page](https://raw.githubusercontent.com/mchirico/mchirico.github.io/master/_posts/2016-12-22-JavascriptNetwork.markdown)
 
 
 {% highlight html %}
