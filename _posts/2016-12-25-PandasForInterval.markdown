@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using Pandas for Time Interval "
+title:  "Using Pandas: Hours between 2 Intervals "
 date:   2016-12-25 15:08:56 -0400 
 comments: true
 categories: pandas time
