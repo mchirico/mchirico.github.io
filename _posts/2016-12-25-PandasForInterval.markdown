@@ -6,8 +6,8 @@ comments: true
 categories: pandas time
 ---
 
-<script src="//repl.it/embed/Ewio/1.js"></script>
 
+<script src="//repl.it/embed/Ewio/2.js"></script>
 
 {% highlight python %}
 
