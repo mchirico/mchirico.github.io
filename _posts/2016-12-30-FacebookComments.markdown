@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Add Subject "
+title:  "Facebook Comments "
 date:   2016-12-30 13:07:50 -0400 
 comments: false
-categories: tensorflow gpu aws
+categories: Facebook comments
 ---
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -16,16 +17,11 @@ categories: tensorflow gpu aws
 
 
 
+This is a sample working with comments.
 
 <div class="fb-comments"  data-numposts="5"></div>
 
 
 
-
-Put in some sample text
-
-{% highlight python %}
-
-{% endhighlight %}
 
 
