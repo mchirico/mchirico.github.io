@@ -17,7 +17,8 @@ categories: Facebook comments
 
 
 
-This is a sample working with comments.
+Hmmm...okay, I'm big on communication.  Maybe Facebook has additional
+options that could make it better?  who knows...
 
 <div class="fb-comments"  data-numposts="5"></div>
 
