@@ -18,7 +18,8 @@ categories: Facebook comments
 
 
 Hmmm...okay, I'm big on communication.  Maybe Facebook has additional
-options that could make it better?  who knows...
+options that could make it better?  Who knows... Below is an example
+that allows for threaded conversations.
 
 <div class="fb-comments"  data-numposts="5"></div>
 
