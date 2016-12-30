@@ -115,7 +115,8 @@ setup file. I have a **/kaggle** directory where my source is
 kept.  You'll want to change this to whatever directory you use.
 
 
-{% gist mchirico/58ef09d601704dd48dfdb4dfe238b43f %}
+<script src="https://gist.github.com/mchirico/58ef09d601704dd48dfdb4dfe238b43f.js"></script>
+
 
 
 
