@@ -11,7 +11,7 @@ categories: python R LinearProgramming
 
 Here's my [translation](https://www.kaggle.com/mchirico/d/mchirico/montcoalert/linear-programming) to python.
 
-
+There's a lot of cool stuff stuff with Linear Programming.
 
 
 
