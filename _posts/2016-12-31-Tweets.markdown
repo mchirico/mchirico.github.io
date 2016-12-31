@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "Tweets "
+date:   2016-12-31 08:02:15 -0400 
+comments: false
+categories: Tweets
+---
+
+Getting tweets with tweepy
+
+
+``` python
+#!/usr/bin/env python
+"""
+  https://github.com/tweepy/tweepy
+
+   pip install tweepy
+
+"""
+from __future__ import absolute_import, print_function
+
+import tweepy
+from tweepy.streaming import StreamListener
+from tweepy import OAuthHandler
+from tweepy import Stream
+
+import sys
+
+
+# Go to http://apps.twitter.com and create an app.
+# The consumer key and secret will be generated for you after
+consumer_key="CONSUMER KEY"
+consumer_secret="CONSUMER SECRET"
+
+# After the step above, you will be redirected to your app's page.
+# Create an access token under the the "Your access token" section
+access_token="ACCESS TOKEN"
+access_token_secret="ACCESS SECRET"
+
+if __name__ == '__main__':
+
+    if len(sys.argv) == 1:
+        print("You need to supply a twitter id")
+        print("Example:\n%s mchirico\n" % (sys.argv[0]))
+        exit()
+
+    auth = OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
+    api = tweepy.API(auth)
+
+
+    for i  in tweepy.Cursor(api.user_timeline, id='mchirico', include_rts = True).items():
+        if not i.retweeted:
+            print("%s,origional,%s" % (i.created_at.strftime('%Y-%m-%d %H:%M:%S'), i.text.encode('ascii', 'namereplace')  ))
+        else:
+            print("%s,retweeted,%s" % (i.created_at.strftime('%Y-%m-%d %H:%M:%S'), i.text.encode('ascii', 'namereplace')  ))
+
+
+
+
+```
+
+
+

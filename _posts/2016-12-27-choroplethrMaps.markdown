@@ -8,6 +8,12 @@ categories: kaggle maps
 
 ![map](https://storage.googleapis.com/montco-stats/kaggleNeoplasms.png)
 
+I put up the [US county-level mortality](https://www.kaggle.com/IHME/us-countylevel-mortality) Dataset
+on kaggle.  I'm still convinced that mortality data was a better way to poll data on
+the presidential election. A lot of people were unhappy the American's future prospect, and
+and think counties that had a history of self-harm, generally voted for Trump. Anyway... need
+more data to support that.
+
 [Simple script on Kaggle](https://www.kaggle.com/mchirico/d/IHME/us-countylevel-mortality/quick-start-r)
 
 
