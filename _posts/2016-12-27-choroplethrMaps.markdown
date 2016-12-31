@@ -25,6 +25,11 @@ Cool chart. Maybe some interesting correlations. This is a
 ![cool](https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2016-12-3110.39.21.png)
 
 
+This is a good example by [Umesh](https://www.kaggle.com/umeshnarayanappa/d/IHME/us-countylevel-mortality/explore-state-level-mortality-rates)
+
+![umesh](https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2016-12-3110.48.03.png)
+
+
 
 {% highlight R %}
 library(choroplethr)
