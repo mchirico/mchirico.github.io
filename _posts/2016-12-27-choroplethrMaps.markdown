@@ -17,6 +17,15 @@ more data to support that.
 [Simple script on Kaggle](https://www.kaggle.com/mchirico/d/IHME/us-countylevel-mortality/quick-start-r)
 
 
+Cool chart. Maybe some interesting correlations. This is a
+ [kaggle kernel](https://www.kaggle.com/robertoruiz/d/IHME/us-countylevel-mortality/eda-1-some-interesting-correlations)
+ by RobertoRuiz.
+
+
+![cool](https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2016-12-3110.39.21.png)
+
+
+
 {% highlight R %}
 library(choroplethr)
 library(choroplethrMaps)

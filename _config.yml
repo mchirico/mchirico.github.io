@@ -23,8 +23,11 @@ twitter_username: mchirico
 github_username:  mchirico
 
 # Build settings
+
+
 markdown: kramdown
 highlighter: rouge
+
 
 theme: minima
 
