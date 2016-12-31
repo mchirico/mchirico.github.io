@@ -28,4 +28,4 @@ highlighter: rouge
 
 theme: minima
 
-
+#excerpt_separator: <!--more-->

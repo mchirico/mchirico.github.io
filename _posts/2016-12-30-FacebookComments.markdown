@@ -6,6 +6,12 @@ comments: false
 categories: Facebook comments
 ---
 
+
+This is the blurb
+
+<!--more-->
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -47,7 +53,7 @@ code {
 
 
 
-``` r
+```R
 library(tidyverse)
 library(plotly)
 library(rpart)
