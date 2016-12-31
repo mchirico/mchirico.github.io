@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Facebook Comments "
+title:  "Site Update: Facebook comments, Code Formatting "
 date:   2016-12-30 13:07:50 -0400 
 comments: false
 categories: Facebook comments
@@ -29,7 +29,7 @@ So if _sass/_base.scss
 ``` html
 
 code {
-    font-size: 14px;
+    font-size: 13px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #ffff;
