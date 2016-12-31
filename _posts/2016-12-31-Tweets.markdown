@@ -3,10 +3,12 @@ layout: post
 title:  "Tweets "
 date:   2016-12-31 08:02:15 -0400 
 comments: false
-categories: Tweets
+categories: Tweets python
 ---
 
-Getting tweets with tweepy
+Here's a quick way to get tweets from tweepy.  It's just a simple
+way to get the UTC timestamp, whether it's a retweet and namereplace
+some of the encoded strings.
 
 
 ``` python
