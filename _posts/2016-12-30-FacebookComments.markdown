@@ -24,9 +24,30 @@ that allows for threaded conversations.
 <div class="fb-comments"  data-numposts="5"></div>
 
 
+So if _sass/_base.scss
+
+``` html
+
+code {
+    font-size: 14px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #ffff;
+   }
 
 
-``` R
+```
+
+
+``` html
+<a hfre="#">Hello world</a>
+<a hfre="#">Hello world</a>
+
+```
+
+
+
+``` javascript
 library(tidyverse)
 library(plotly)
 library(rpart)
