@@ -35,7 +35,7 @@ that allows for threaded conversations.
 
 So if _sass/_base.scss
 
-``` html
+``` css
 
 code {
     font-size: 13px;
