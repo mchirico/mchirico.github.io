@@ -10,8 +10,6 @@ categories: pandas time
 
 
 
-{% highlight python %}
 
-{% endhighlight %}
 
 
