@@ -47,7 +47,7 @@ code {
 
 
 
-``` javascript
+``` r
 library(tidyverse)
 library(plotly)
 library(rpart)

@@ -26,5 +26,6 @@ github_username:  mchirico
 markdown: kramdown
 highlighter: rouge
 
+theme: minima
 
 
