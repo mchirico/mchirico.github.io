@@ -25,3 +25,7 @@ github_username:  mchirico
 # Build settings
 markdown: kramdown
 future: true
+
+redcarpet:
+    extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
+    

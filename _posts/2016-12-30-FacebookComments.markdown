@@ -26,7 +26,7 @@ that allows for threaded conversations.
 
 
 
-{% highlight R linenos %}
+``` R
 library(tidyverse)
 library(plotly)
 library(rpart)
@@ -36,4 +36,5 @@ library(Metrics)
 library(glmnet)
 library(formattable)
 
-{% endhighlight %}
+```
+
