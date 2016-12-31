@@ -6,18 +6,20 @@ categories: python
 ---
 
 
-Reference: [repl.it example](https://repl.it/EwNd/0)
-[video](https://www.youtube.com/watch?v=EH6h7WA7sDw)
 
 Below the program will find the maximum value giving the following
 weight limit W. For example, having a W=5 (weight limit of 5), what
 is the maximum value?
 
+Reference: [repl.it example](https://repl.it/EwNd/0)
+[video](https://www.youtube.com/watch?v=EH6h7WA7sDw)
+
+
 The answer should be 5+2+2 == 9.  These are the values added up. The
 5 has a weight of 3 and each 2 has a weight of 1  total weights = 3+1+1
 
+<script src="//repl.it/embed/EwNc/0.js"></script>
 
-<script src="//repl.it/embed/EwNd/0.js"></script>
 
 
 

@@ -7,9 +7,12 @@ categories: Facebook comments
 ---
 
 
-This is the blurb
+I started making updates to my Jekyll github page. What I really
+only wanted to do was update the code formatting.  Agreed. Jekyll
+offers a lot of options...
 
-<!--more-->
+
+
 
 
 <div id="fb-root"></div>
