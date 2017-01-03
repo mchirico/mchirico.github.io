@@ -8,7 +8,12 @@ categories: python
 
 How do you know which parameters to choose for Keras (TensorFlow)?
 
-[Example](https://www.kaggle.com/apapiu/digit-recognizer/conv-net-on-only-2-features)
+Here is an [Example](https://www.kaggle.com/apapiu/digit-recognizer/conv-net-on-only-2-features) kernel.
+There are some articles...
+
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0314.39.25.png">](https://dash.harvard.edu/bitstream/handle/1/11708816/snoek-bayesopt-nips-2012.pdf?sequence=1)
+
+
 
 
 <div id="fb-root"></div>
