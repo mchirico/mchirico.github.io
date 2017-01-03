@@ -16,6 +16,10 @@ There are some articles...
 
 
 
+
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0314.49.44.png">](http://jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf)
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
