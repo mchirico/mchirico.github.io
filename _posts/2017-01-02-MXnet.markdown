@@ -1,20 +1,18 @@
 ---
 layout: post
-title:  "Linear Programming "
-date:   2016-12-31 11:44:53 -0400 
+title:  "MXnet "
+date:   2017-01-02 08:29:00 -0400 
 comments: false
-categories: python R LinearProgramming
+categories: python MXnet
 ---
 
-
-<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2016-12-3111.46.10.png" width="450">
-
-Here's my [translation](https://www.kaggle.com/mchirico/d/mchirico/montcoalert/linear-programming) to python.
-
-There's a lot of cool stuff stuff with Linear Programming.
+This is an intro into some of the features
+of [MXnet](http://mxnet.io/) and some of the resources, like
+[The Python Notebooks for MXnet](https://github.com/dmlc/mxnet-notebooks/blob/master/python/outline.ipynb).
 
 
-<script src="https://gist.github.com/mchirico/8842b72b86df212f5e2431e3ab073fa8.js"></script>
+
+
 
 
 <div id="fb-root"></div>
