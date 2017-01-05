@@ -8,6 +8,8 @@ categories: python
 
 Good Reference
 
+[batch norm](https://youtu.be/qvRL74L81lg?t=223)
+
 
 [<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0420.23.34.png">](https://youtu.be/qnoLMkosHuE?t=502)
 
