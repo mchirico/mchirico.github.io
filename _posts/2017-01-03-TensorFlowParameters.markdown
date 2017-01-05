@@ -1,10 +1,22 @@
 ---
 layout: post
-title:  "TensorFlow Parameters "
+title:  "Neural Networks "
 date:   2017-01-03 14:34:15 -0400 
 comments: false
 categories: python
 ---
+
+Good Reference
+
+
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0420.23.34.png">](https://youtu.be/qnoLMkosHuE?t=502)
+
+
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0413.39.53.png">](http://course.fast.ai/lessons/lesson1.html)
+
+
+
+
 
 How do you know which parameters to choose for Keras (TensorFlow)?
 
