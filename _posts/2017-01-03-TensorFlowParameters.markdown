@@ -11,6 +11,8 @@ Good Reference
 [batch norm](https://youtu.be/qvRL74L81lg?t=223)
 
 
+
+
 [<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0420.23.34.png">](https://youtu.be/qnoLMkosHuE?t=502)
 
 
@@ -62,6 +64,11 @@ Here's another resource
 <br>
 <br>
 <br>
+
+
+Don't ignore the power of Excel
+
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0512.01.14.png">](https://1drv.ms/x/s!AkYmehBMBDMdgR1kLoXkcmxOkzfK)
 
 
 
