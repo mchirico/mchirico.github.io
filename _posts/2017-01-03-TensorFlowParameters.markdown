@@ -10,6 +10,8 @@ Good Reference
 
 [batch norm](https://youtu.be/qvRL74L81lg?t=223)
 
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0512.47.15.png">](https://keras.io/getting-started/faq/)
+
 
 
 
