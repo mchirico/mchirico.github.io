@@ -76,10 +76,16 @@ Don't ignore the power of Excel
 
 ## TODO
 
+
+
+
   Look up Resnet 
 
 [<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0722.32.24.png" width="300">](https://youtu.be/Q0z-l2KRYFY?t=2731)
    
+
+
+
 
 
 ## RESOURCES
