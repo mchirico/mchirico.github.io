@@ -107,6 +107,65 @@ This one seemed to have some cool code examples..
 
 
 
+## Numpy Stuff
+
+``` python
+
+# Options...left over plus any 1 
+x[0]+leftOver
+# will it increase the score?
+
+# Come back to this
+score = Score(x)
+
+def lowest():
+sum=100
+tic=''
+h=score[1]
+for k in h.keys():
+if h[k][0] < sum:
+sum = h[k][0]
+tic=k
+ticN=np.fromstring(tic[1:-1], dtype=int, sep=' ')
+return (tic,sum,ticN)
+
+leftOver=total - np.sum(x,axis=0)
+
+
+# What you have to work with
+leftOver+lowest()[2]
+
+def buildArrayFromScore():
+a=np.array([])
+for k in score[1].keys():
+if a.size==0:
+a=np.fromstring(k[1:-1], dtype=int, sep=' ')
+else:
+a=np.vstack((a,np.fromstring(k[1:-1], dtype=int, sep=' '))  ) 
+return a
+
+
+def ifFoundReplace(x,b,c):
+if b == c:
+return x
+idx=np.where(np.all(x==b,axis=1))
+if idx[0].size != 0:
+x[idx]=np.array(c)
+return x
+
+score[1].keys()
+
+
+
+
+```
+
+
+
+
+
+
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

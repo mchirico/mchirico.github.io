@@ -22,5 +22,16 @@ The answer should be 5+2+2 == 9.  These are the values added up. The
 <script src="https://gist.github.com/mchirico/2d747b4ed3ca65b7b3400e42362a5b5c.js"></script>
 
 
+## Fractional weights
+
+There's another problem here, but it uses fractional weight. Note, you need to sort
+the values and weights, before calling the function.
+
+
+<script src="https://gist.github.com/mchirico/3584f44af838508896b4634b62ef9e0c.js"></script>
+
+
+
+
 
 
