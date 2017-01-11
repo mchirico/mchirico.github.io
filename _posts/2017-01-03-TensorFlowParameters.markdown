@@ -3,10 +3,10 @@ layout: post
 title:  "Neural Networks "
 date:   2017-01-03 14:34:15 -0400 
 comments: false
-categories: python
+categories: python references
 ---
 
-Good Reference
+I start keeping my references here...
 
 [batch norm](https://youtu.be/qvRL74L81lg?t=223)
 
@@ -84,7 +84,13 @@ Don't ignore the power of Excel
 [<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0722.32.24.png" width="300">](https://youtu.be/Q0z-l2KRYFY?t=2731)
    
 
+### Python Examples for this book
 
+[<img src="https://camo.githubusercontent.com/85668a748fdcbe583344a261cdc1410bdc29d9f8/687474703a2f2f7777772d6263662e7573632e6564752f2537456761726574682f49534c2f49534c253230436f766572253230322e6a7067" width="100">](https://github.com/JWarmenhoven/ISLR-python)
+
+
+
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0706.20.00.png" width="200">](https://www.kaggle.com/getting-started/27412)
 
 
 
@@ -92,6 +98,14 @@ Don't ignore the power of Excel
 
 ### Deeplearning.net
 [<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0722.25.53.png" width="300">](http://deeplearning.net/)
+
+
+This one seemed to have some cool code examples..
+
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-1019.28.56.png" width="500">](http://seat.massey.ac.nz/personal/s.r.marsland/MLbook.html)
+
+
+
 
 
 <div id="fb-root"></div>
