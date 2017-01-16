@@ -46,7 +46,7 @@ sudo service sysstat restart
 sar -A
 ```
 
-This is a sample post
+
 
 
 <div id="fb-root"></div>
