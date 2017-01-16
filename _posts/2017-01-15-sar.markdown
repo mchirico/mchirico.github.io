@@ -7,13 +7,13 @@ categories: python
 ---
 
 
-### Step 1.  Install sysstat
+#### Step 1.  Install sysstat
 
 ``` bash
 sudo apt-get install sysstat
 ```
 
-### Step 2. Enable stat collection
+#### Step 2. Enable stat collection
 
 ``` bash
 sudo vi /etc/default/sysstat
@@ -21,7 +21,7 @@ sudo vi /etc/default/sysstat
 #save the file
 ```
 
-### Step 3. Change the collection interval.
+#### Step 3. Change the collection interval.
 Change from every 10 minutes to every 2 minutes.
 
 ``` bash
@@ -34,13 +34,13 @@ sudo vi /etc/cron.d/sysstat
 #   save the file
 ```
 
-### Step 4. Restart sysstat
+#### Step 4. Restart sysstat
 
 ``` bash
 sudo service sysstat restart
 ```
 
-### Step 5. If you want to see all statistics you can type:
+#### Step 5. If you want to see all statistics you can type:
 
 ``` bash
 sar -A
