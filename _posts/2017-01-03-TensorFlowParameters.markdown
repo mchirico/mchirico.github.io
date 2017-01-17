@@ -73,6 +73,21 @@ Don't ignore the power of Excel
 [<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0512.01.14.png">](https://1drv.ms/x/s!AkYmehBMBDMdgR1kLoXkcmxOkzfK)
 
 
+<br>
+Good Read...
+
+[http://www.scipy-lectures.org/](http://www.scipy-lectures.org/)
+
+
+
+This is a good intro to python, for scientific computing:
+
+[cs231n.github.io/python-numpy-tutorial/](http://cs231n.github.io/python-numpy-tutorial/)
+
+
+
+[<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-1712.41.29.png" width="600">](http://blog.revolutionanalytics.com/data-science/)
+
 
 ## TODO
 
