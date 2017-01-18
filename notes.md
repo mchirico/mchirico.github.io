@@ -179,6 +179,73 @@ score[1].keys()
 ```
 
 
+# Django
+
+Below are some quick notes on Django
+
+
+``` bash
+
+mkdir ~/myproject2
+cd myproject2
+virtualenv -p python3 myprojectenv2
+source myprojectenv2/bin/activate
+pip install numpy
+pip install pandas
+pip install flask
+
+
+```
+
+
+Below is an example ```/etc/init.d/uwsgi``` script.
+
+``` bash
+#!/bin/sh
+description "uWSGI server"
+
+start on runlevel [2345]
+stop  on runlevel [!2345]
+respawn
+exec /home/webchirico/bin/bin/uwsgi -c /webproject/myproject/myproject.ini
+
+```
+
+
+``` bash
+[uwsgi]
+
+module = wsgi
+
+uid = www-data
+gid = www-data
+chdir = /webproject/myproject/
+virtualenv = myprojectenv
+wsgi-file = wsgi.py
+
+master = true
+processes = 5
+enable-threads = true
+thunder-lock = true
+
+# For testing... user /spark39a
+# http = 127.0.0.1:3031
+
+socket = myproject.sock
+chmod-socket = 666
+vacuum = true
+
+die-on-term = true
+
+logto = /webproject/var/log/error.log
+daemonize = /webproject/var/log/myproject.log
+
+
+```
+
+
+
+
 
 
 
