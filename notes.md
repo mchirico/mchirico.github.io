@@ -179,6 +179,15 @@ score[1].keys()
 ```
 
 
+
+# Fast AI Course II
+
+[here](http://www.fast.ai/2017/01/17/curriculum2/)
+
+
+
+
+
 # Django
 
 Below are some quick notes on Django
