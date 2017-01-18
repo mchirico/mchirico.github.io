@@ -243,8 +243,11 @@ daemonize = /webproject/var/log/myproject.log
 
 ```
 
+### References
 
+[uwsgi-docs.readthedocs](http://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html)
 
+[stackoverflow](http://stackoverflow.com/a/17138212/904032)
 
 
 
