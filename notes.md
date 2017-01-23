@@ -261,6 +261,21 @@ daemonize = /webproject/var/log/myproject.log
 
 
 
+Steps for aide
+
+``` bash
+aideinit -c /etc/aide/aide.conf -y -f
+
+aide -c /etc/aide/aide.conf --check
+
+aide -c /etc/aide/aide.conf --update
+
+gsutil cp -r /var/lib/aide/aide.db gs://mchirico-aide/aipiggybot/
+
+gsutil cp -r /etc/aide/aide.conf gs://mchirico-aide/aipiggybot/
+
+```
+
 
 
 
