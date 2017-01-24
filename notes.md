@@ -276,6 +276,27 @@ gsutil cp -r /etc/aide/aide.conf gs://mchirico-aide/aipiggybot/
 
 ```
 
+Quick script
+
+``` bash
+#!/bin/bash
+export DATE=$(date "+%Y-%m-%d.%H:%M:%S")
+aide -c /etc/aide/aide.conf -u > "aipiggybot.${DATE}"
+gsutil cp "aipiggybot.${DATE}" gs://mchirico-aide/aipiggybot/
+gsutil cp /etc/aide/aide.conf gs://mchirico-aide/aipiggybot/"aide.conf.${DATE}"
+gsutil cp -r /var/lib/aide/aide.db gs://mchirico-aide/aipiggybot/
+gsutil cp ./myaide.sh gs://mchirico-aide/aipiggybot/
+gsutil ls gs://mchirico-aide/aipiggybot/
+# We'll update
+aideinit -c /etc/aide/aide.conf -y -f >/dev/null
+cat "aipiggybot.${DATE}"
+rm "aipiggybot.${DATE}"
+
+
+  
+```
+
+
 
 
 
