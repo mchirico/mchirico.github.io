@@ -297,6 +297,17 @@ rm "aipiggybot.${DATE}"
 ```
 
 
+Cool column matric idea.
+
+
+<a href="https://youtu.be/ZK3O402wf1c?t=554"><img src='https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-2522.26.46.png' width="400"></a>
+
+
+
+
+
+
+
 
 
 
