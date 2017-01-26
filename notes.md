@@ -302,6 +302,10 @@ Cool column matric idea.
 
 <a href="https://youtu.be/ZK3O402wf1c?t=554"><img src='https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-2522.26.46.png' width="400"></a>
 
+Another good list of lectures....
+
+<a href='http://projects.iq.harvard.edu/stat110/youtube'>http://projects.iq.harvard.edu/stat110/youtube</a>
+
 
 
 
