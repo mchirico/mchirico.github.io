@@ -311,6 +311,12 @@ Another good list of lectures....
 
 
 
+Interesting blog on Neural Networks...
+
+<a href='http://r2rt.com/recurrent-neural-networks-in-tensorflow-i.html'>
+<img src='https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-02-0320.38.28.png' width='480'></a>
+
+
 
 
 
