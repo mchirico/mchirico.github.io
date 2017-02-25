@@ -11,6 +11,10 @@ categories: stats
 <a href="http://www.excel-easy.com/examples/f-test.html">Quick Excel Examples</a>
 
 
+## PCA
+<a href="http://www.real-statistics.com/multivariate-statistics/factor-analysis/principal-component-analysis/">
+<img  src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-02-2508.17.53.png" width="350"></a>
+
 
 
 <div id="fb-root"></div>
