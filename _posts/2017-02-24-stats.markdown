@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Creating Stats Notes.. "
+date:   2017-02-24 23:22:34 -0400 
+comments: false
+categories: stats
+---
+
+## Stats
+
+<a href="http://www.excel-easy.com/examples/f-test.html">Quick Excel Examples</a>
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
