@@ -1,0 +1,107 @@
+---
+layout: post
+title:  "RNN - Recurrent Neural Networks "
+date:   2017-03-03 09:33:22 -0400 
+comments: true
+categories: RNN
+---
+
+<a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/">
+<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-03-0309.43.03.png" width="400"></a>
+
+
+Note above that U,V,W may be shared across the network.  
+
+
+Difference between RNN and LSTM?  What exactly is LSTM (Long Short Term Memory networks). 
+There's a good article below.
+
+<a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">
+<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-03-0310.04.20.png" width="400"></a>
+
+
+
+**Embeddings** Word2vec is a group of related models that are used to produce word embeddings.
+<a href="https://en.wikipedia.org/wiki/Word2vec">Word2vec</a>
+
+
+<br>
+**ACTIVATION FUNCTIONS:**
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Activation_identity.svg/240px-Activation_identity.svg.png">
+
+**Above Identity** <br>
+
+f(x) = x
+<br> Derivative f'(x) = 1
+<br>
+
+<br>
+
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Activation_rectified_linear.svg/240px-Activation_rectified_linear.svg.png">
+
+**Above ReLU**
+f(x)  = 0 for x < 0 <br>
+f(x)  = x for x >= 0 <br>
+<br>
+Derivative<br>
+f'(x)  = 0 for x < 0 <br>
+       = 1 for x >= 0 <br>
+
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Activation_softsign.png">
+<br>
+**Above Softsign**
+
+
+<br><br>
+See a lot more here:  https://en.wikipedia.org/wiki/Activation_function
+
+
+
+<br><br><br>
+**SOFTMAX**
+<br><br>
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e348290cf48ddbb6e9a6ef4e39363568b67c09d3">
+
+
+
+
+
+<br><br><br>
+The following below need to be sorted <br>
+
+<a href="https://www.tensorflow.org/api_guides/python/nn#Embeddings">
+<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-03-0312.48.40.png" width="500">
+</a>
+
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+

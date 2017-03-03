@@ -11,6 +11,11 @@ permalink: /Notes/
 This is going to start out a being a little raw, but I'm
 going to start keeping my references here...
 
+
+[Learning Rates](http://sebastianruder.com/optimizing-gradient-descent/)
+
+
+
 [batch norm](https://youtu.be/qvRL74L81lg?t=223)
 
 [<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0512.47.15.png">](https://keras.io/getting-started/faq/)
