@@ -81,6 +81,21 @@ The following below need to be sorted <br>
 
 
 
+<br><br>
+#tensorflow
+
+<br>
+<a href="https://youtu.be/eBbEDRsCmv4?list=PLOU2XLYxmsIKGc_NBoIhTn2Qhraji53cv&t=627"> video </a>
+
+
+
+One of the first things to do is add meaningful names.
+
+
+<br><br>
+<a href="https://www.youtube.com/watch?v=RJVL80Gg3lA"> Good t-SNE video</a>
+<br><br>
+
 
 
 
