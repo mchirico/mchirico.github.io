@@ -19,6 +19,22 @@ There's a good article below.
 <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">
 <img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-03-0310.04.20.png" width="400"></a>
 
+<br> There's a good video here <a href="https://youtu.be/zQxm3Upr3_I?list=PLkkuNyzb8LmxFutYuPA7B4oiMn6cjD6Rs&t=1542">
+<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-03-0616.56.19.png" width="400">
+</a>
+
+The <a href="http://introtodeeplearning.com/schedule.html">course (MIT 6.S191)</a>
+
+
+<br>
+**Tricks For Training Networks**
+<br>
+<a href="http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html">
+<img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-03-0707.37.07.png" width="500">
+</a>
+
+
+
 
 
 **Embeddings** Word2vec is a group of related models that are used to produce word embeddings.
@@ -82,7 +98,8 @@ The following below need to be sorted <br>
 
 
 <br><br>
-#tensorflow
+
+**tensorflow**
 
 <br>
 <a href="https://youtu.be/eBbEDRsCmv4?list=PLOU2XLYxmsIKGc_NBoIhTn2Qhraji53cv&t=627"> video </a>
