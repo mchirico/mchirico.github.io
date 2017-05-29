@@ -69,13 +69,17 @@ B.objects.filter(b='stuff').count()
     'Joe'
 """
 
-
-
 ```
 
 <h2>Update</h2>
 
+It's probably easier to do this all in one shot...
 
+``` python
+r=B.objects.filter(b='Joe').update(b='Sam')
+# r will not equal the number of values updated
+
+```
 
 
 <a href='https://docs.djangoproject.com/en/1.11/ref/models/querysets/#django.db.models.query.QuerySet.exists'>
