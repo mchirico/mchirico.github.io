@@ -21,6 +21,7 @@ from django.db import models
 
 class B(models.Model):
     b = models.CharField(max_length=10)
+    c = models.CharField(null=True,max_length=10)
 
 ```
 
@@ -49,7 +50,11 @@ B(b='Joe').save()
 # What's the difference from the two above?
 #   ans)  Note the first method gets the result
 vars(result)
-{'_state': <django.db.models.base.ModelState object at 0x108771f28>, 'id': 12, 'b': 'Joe'}
+{'_state': <django.db.models.base.ModelState at 0x105cf2128>,
+ 'b': 'Joe',
+  'c': None,
+   'id': 14}
+
 
 
 # You can prove it was created
@@ -58,7 +63,7 @@ B.objects.filter(b='stuff').count()
 # returns 1
 
 
-
+b=B.objects.create(b="Joe")
 """
   Now b gives you access to the following:
 
@@ -75,12 +80,27 @@ B.objects.filter(b='stuff').count()
 
 It's probably easier to do this all in one shot...
 
-``` python
+```python
 r = B.objects.filter(b='Joe').update(b='Sam')
 # r will now be equal the number of values updated
 # r will equal 1,2 or whatever...
 
 ```
+
+Or, you can do the following
+
+```python
+r = B(b='stuff')
+r.c = 'stuff2'
+r.save()
+
+# or
+# If the value is not found, it returns 0
+r=B.objects.filter(b='aslk').update(c='mo')
+# Here r== 0, because the value was not found.
+
+```
+
 
 
 <a href='https://docs.djangoproject.com/en/1.11/ref/models/querysets/#django.db.models.query.QuerySet.exists'>
