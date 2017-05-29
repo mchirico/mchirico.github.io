@@ -74,6 +74,10 @@ B.objects.filter(b='stuff').count()
 
 ```
 
+<h2>Update</h2>
+
+
+
 
 <a href='https://docs.djangoproject.com/en/1.11/ref/models/querysets/#django.db.models.query.QuerySet.exists'>
 <img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-05-2813.42.46.png" width="740">
