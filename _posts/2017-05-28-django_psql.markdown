@@ -76,8 +76,9 @@ B.objects.filter(b='stuff').count()
 It's probably easier to do this all in one shot...
 
 ``` python
-r=B.objects.filter(b='Joe').update(b='Sam')
+r = B.objects.filter(b='Joe').update(b='Sam')
 # r will now be equal the number of values updated
+# r will equal 1,2 or whatever...
 
 ```
 
