@@ -1,10 +1,79 @@
 ---
 layout: post
-title:  "Django "
+title:  "Django: Summary of  Database Calls "
 date:   2017-05-28 13:43:31 -0400 
 comments: false
 categories: python
 ---
+
+<h2>Model</h2>
+
+<p>
+Assume you have a very simple model setup.
+</p>
+
+
+``` python
+from django.db import models
+
+# Create your models here.
+from django.db import models
+
+class B(models.Model):
+    b = models.CharField(max_length=10)
+
+```
+
+<h2>Interactive</h2>
+
+```python
+
+python manage.py shell
+import django
+django.setup()
+from polls.models import B
+
+```
+
+
+
+
+
+<h2>Create</h2>
+
+``` python
+# Immediate create
+result=B.objects.create(b="Joe")
+# or
+B(b='Joe').save()
+
+# What's the difference from the two above?
+#   ans)  Note the first method gets the result
+vars(result)
+{'_state': <django.db.models.base.ModelState object at 0x108771f28>, 'id': 12, 'b': 'Joe'}
+
+
+# You can prove it was created
+B(b='stuff').save()
+B.objects.filter(b='stuff').count()
+# returns 1
+
+
+
+"""
+  Now b gives you access to the following:
+
+   b.id
+     6
+
+   b.b
+    'Joe'
+"""
+
+
+
+```
+
 
 <a href='https://docs.djangoproject.com/en/1.11/ref/models/querysets/#django.db.models.query.QuerySet.exists'>
 <img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-05-2813.42.46.png" width="740">
