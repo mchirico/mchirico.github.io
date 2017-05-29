@@ -8,8 +8,8 @@ categories: python
 
 <h2>Model</h2>
 
-<p>
-Assume you have a very simple model setup.
+<p>Let's begin with the model, or the database setup.
+Assume you have a very simple model setup as follows:
 </p>
 
 
@@ -26,6 +26,8 @@ class B(models.Model):
 
 <h2>Interactive</h2>
 
+By the way, you can interactively work with these database commands...
+
 ```python
 
 python manage.py shell
@@ -34,9 +36,6 @@ django.setup()
 from polls.models import B
 
 ```
-
-
-
 
 
 <h2>Create</h2>
