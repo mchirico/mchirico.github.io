@@ -99,6 +99,12 @@ r.save()
 r=B.objects.filter(b='aslk').update(c='mo')
 # Here r== 0, because the value was not found.
 
+
+r = B.objects.filter(b='stuff')
+if r.count() > 0:
+   print(r[0].c)
+   
+
 ```
 
 
@@ -108,6 +114,12 @@ r=B.objects.filter(b='aslk').update(c='mo')
 </a>
 
 
+
+
+<br>
+<h3>Some References</h3>
+<p>
+<a href='https://stackoverflow.com/questions/6190773/django-get-the-first-object-from-a-filter-query-or-create'>django-get-the-first-object-from-a-filter-query-or-create</a>
 
 
 
