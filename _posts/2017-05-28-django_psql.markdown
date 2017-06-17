@@ -116,11 +116,22 @@ if r.count() > 0:
 
 
 
+
+```python
+t = TemperatureData.objects.get(id=1)
+t.value = 999
+t.save(['value'])
+
+```
+https://stackoverflow.com/questions/3681627/how-to-update-fields-in-a-model-without-creating-a-new-record-in-django
+
+
 <br>
 <h3>Some References</h3>
 <p>
 <a href='https://stackoverflow.com/questions/6190773/django-get-the-first-object-from-a-filter-query-or-create'>django-get-the-first-object-from-a-filter-query-or-create</a>
 
+<a href='
 
 
 <div id="fb-root"></div>
