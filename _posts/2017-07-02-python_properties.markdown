@@ -14,7 +14,7 @@ Note below how **x** changed from a **method** to a **property**.
 
 class A:
     def __init__(self):
-            self._x = 0
+        self._x = 0
 	    
     def x(self):
         return self._x
@@ -31,7 +31,7 @@ Above it's defined as a method... now make it a property.
 
 class A:
     def __init__(self):
-            self._x = 0
+        self._x = 0
 
     @property
     def x(self):
@@ -51,7 +51,7 @@ Note the getter gets everytime when making an assignment.
 ```python
 class A:
     def __init__(self):
-            self._x = 0
+        self._x = 0
 
     @property
     def x(self):
