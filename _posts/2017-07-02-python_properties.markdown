@@ -8,7 +8,44 @@ categories: python
 
 ## Python @properties
 
+Note below how **x** changed from a **method** to a **property**.
 
+```python
+
+class A:
+    def __init__(self):
+            self._x = 0
+	    
+    def x(self):
+        return self._x
+
+
+A().x() # <-- This is a method
+
+```        
+
+
+Above it's defined as a method... now make it a property.
+
+```python
+
+class A:
+    def __init__(self):
+            self._x = 0
+
+    @property
+    def x(self):
+        return self._x
+
+
+A().x # <-- Now properity 
+
+```        
+    
+
+### Now the complete call with setter and deleter
+
+Note the getter gets everytime when making an assignment.
 
 
 ```python
@@ -17,19 +54,19 @@ class A:
             self._x = 0
 
     @property
-        def x(self):
-	        print("In getter!")
-		        print("x = {}".format(self._x))
-			        return self._x
+    def x(self):
+        print("In getter!")
+        print("x = {}".format(self._x))
+        return self._x
 
     @x.setter
-        def x(self, value):
-	        print("old value:{}  new value:{}".format(self.x, value))
-		        self._x = value
+    def x(self, value):
+        print("old value:{}  new value:{}".format(self.x, value))
+    	self._x = value
 
     @x.deleter
-        def x(self):
-	        del self._x
+    def x(self):
+       	del self._x
 
 
 a = A()
