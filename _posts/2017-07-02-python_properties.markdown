@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python Properties "
+title:  "Python Stuff... not finished "
 date:   2017-07-02 16:00:00 -0400 
 comments: false
 categories: python
@@ -85,6 +85,46 @@ Here's the output:
 
 
 ```
+
+
+
+
+# Python Exceptions
+
+
+```python
+
+try:
+
+    # raise ValueError('A very specific bad thing happened')
+    raise Exception('A very specific bad thing happened', 'b')
+
+except Exception as e:
+
+    print(len(e.args))  # 2
+
+    if e.args == ('A very specific bad thing happened', 'b'):
+        print('Success')  # this will match
+
+    if str(e) == "('A very specific bad thing happened', 'b')":
+        print('yes this will print')
+
+    print('e:{}'.format(str(e)))
+    # e:('A very specific bad thing happened', 'b')
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
 
 
 <div id="fb-root"></div>
