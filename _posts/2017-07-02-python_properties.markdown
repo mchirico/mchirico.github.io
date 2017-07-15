@@ -119,6 +119,14 @@ except Exception as e:
 
 
 
+# Python debugging
+
+```python
+import pdb; pdb.set_trace()
+```
+
+Some commone commands:
+
 
 
 
