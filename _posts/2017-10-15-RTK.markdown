@@ -13,10 +13,13 @@ categories: law
 
 [http://www.openrecords.pa.gov/Documents/FinalDet/29618.pdf](http://www.openrecords.pa.gov/Documents/FinalDet/29618.pdf)
 
+## References
 
-## Exceptions
+[right-to-know](http://pafoic.org/right-to-know-law/)
 
-[right-to-know-law-exception](http://pafoic.org/right-to-know-law-exceptions/)
+[section 708](http://pafoic.org/right-to-know-law/#708)
+
+
 
 
 <div id="fb-root"></div>
