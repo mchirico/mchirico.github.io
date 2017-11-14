@@ -12,6 +12,8 @@ Below is an example of extending String, to include
 some of the common *Python* like functions.
 
 ```swift
+var str = "Hello, playground"
+
 extension String {
   
   subscript (index: Int) -> Character {
@@ -29,23 +31,30 @@ extension String {
     return String(self[startIndex..<self.endIndex])
   }
   
-  func findstr(str: String) -> (Int,Int)? {
+  // BE  Begin End
+  func findBE(_ str: String) -> (Int,Int)? {
     if let r = self.range(of: str) {
       return (r.lowerBound.encodedOffset, r.upperBound.encodedOffset)
     }
     return nil
   }
+  func find(_ str: String) -> Int? {
+    if let r = self.range(of: str) {
+      return r.lowerBound.encodedOffset
+    }
+    return nil
+  }
 }
 
+str[3..<7]  // "lo, pla"
 
-"test here"[3..<5]
-// Outputs  "t her"
-
-
-if let (x,y) = "Test box".findstr(str: "box") {
-  print("Text box"[x..<y])        // box
-  print("x = \(x), y = \(y)")     // x = 5, y = 8
+if let (x,y) = "Test box".findBE("box") {
+  print("Text box"[x..<y])     // "box"
+  print("x = \(x), y = \(y)")  // x = 5, y =8
 }
+
+str.find("play")  // 7
+
 
 ```
 
