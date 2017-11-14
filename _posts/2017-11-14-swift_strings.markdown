@@ -58,6 +58,41 @@ str.find("play")  // 7
 
 ```
 
+## String with Regular Expressions
+
+
+```swift
+extension String {
+  func get_regex(_ pat: String) -> Int {
+    
+    let regex = try! NSRegularExpression(pattern: pat, options: [])
+    
+    let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
+    
+    let p = matches.map { result -> String in
+      let hrefRange = result.range(at: 1)
+      
+      let start = hrefRange.lowerBound
+      let end = hrefRange.upperBound
+      return  self[start..<end]
+    }
+    if p.count == 1 {
+      if let r = Int(p[0]) {
+        return r
+      }
+    }
+    return 0
+  }
+}
+
+"34 min".get_regex("([0-9]+)[ ]*min")   // 34
+
+
+
+```
+
+
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
