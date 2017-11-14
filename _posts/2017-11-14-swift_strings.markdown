@@ -6,10 +6,12 @@ comments: false
 categories: swift
 ---
 
-## Substring
+## Extending String -- subscript, findstr
+
+Below is an example of extending String, to include
+some of the common *Python* like functions.
 
 ```swift
-
 extension String {
   
   subscript (index: Int) -> Character {
@@ -21,16 +23,29 @@ extension String {
     let startIndex = self.index(self.startIndex, offsetBy:range.lowerBound)
     
     if self.count > range.upperBound {
-       let endIndex = self.index(startIndex, offsetBy:range.upperBound)
-       return String(self[startIndex..<endIndex])
+      let endIndex = self.index(startIndex, offsetBy:range.upperBound)
+      return String(self[startIndex..<endIndex])
     }
     return String(self[startIndex..<self.endIndex])
+  }
+  
+  func findstr(str: String) -> (Int,Int)? {
+    if let r = self.range(of: str) {
+      return (r.lowerBound.encodedOffset, r.upperBound.encodedOffset)
+    }
+    return nil
   }
 }
 
 
 "test here"[3..<5]
 // Outputs  "t her"
+
+
+if let (x,y) = "Test box".findstr(str: "box") {
+  print("Text box"[x..<y])        // box
+  print("x = \(x), y = \(y)")     // x = 5, y = 8
+}
 
 ```
 
