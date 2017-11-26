@@ -6,9 +6,6 @@ comments: false
 categories: law
 ---
 
-
-## Technology and Open Government
-
 This is a beautiful written law.
 
 > The objective of the Right to Know Law ... is to empower citizens by affording them
