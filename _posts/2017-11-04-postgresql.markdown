@@ -56,6 +56,13 @@ if __name__ == '__main__':
     main()
 ```
 
+## JSON
+
+Reference:
+[fieldlookup-hstorefield.contains](https://docs.djangoproject.com/en/1.11/ref/contrib/postgres/fields/#std:fieldlookup-hstorefield.contains)
+
+
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
