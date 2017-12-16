@@ -6,6 +6,18 @@ comments: false
 categories: Google Big VM
 ---
 
+```bash
+# Setup
+conda create --name tensorflow python=3.5
+source activate tensorflow
+pip install tensorflow
+
+# Now you can run your note books
+jupyter notebook
+
+
+```
+
 
 
 
