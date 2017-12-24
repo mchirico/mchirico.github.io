@@ -6,6 +6,9 @@ comments: false
 categories: Google Big VM
 ---
 
+My quick notes on setting up a large
+VM at Google.
+
 ```bash
 # Setup
 conda create --name tensorflow python=3.5
