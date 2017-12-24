@@ -38,11 +38,12 @@ class My_Callback(keras.callbacks.Callback):
 
 ## References
 
-1) [one](https://keunwoochoi.wordpress.com/2016/07/16/keras-callbacks/)
+1) [Blog with ideas](https://keunwoochoi.wordpress.com/2016/07/16/keras-callbacks/)
 
 2)
-[Sample code](https://youtu.be/-lx2shfA-5s?t=406)
+[Video -- pull out links](https://youtu.be/-lx2shfA-5s?t=406)
 
+3) [Deep Learning with Keras](https://github.com/PacktPublishing/Deep-Learning-with-Keras)
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
