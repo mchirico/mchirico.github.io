@@ -8,7 +8,26 @@ categories: Keras
 
 ## Start of my notes
 
-This seems interesting and seems to be built into Keras.
+Below is a current work-in-progress, using callbacks in Keras.  I
+think I'll combine these notes with LSTM.
+
+### Environment Setup
+
+Python 3.5 is needed for TensorFlow 1.4+
+
+```bash
+
+brew install pyenv
+pyenv install 3.5.4
+cd 
+virtualenv -p /Users/mchirico/.pyenv/versions/3.5.4/bin/python3.5 pbug
+. pbug/bin/activate
+
+pip install -r requirements.txt
+
+
+```
+
 
 ```python
 import keras
