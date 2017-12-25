@@ -6,14 +6,19 @@ comments: false
 categories: Keras
 ---
 
-## Start of my notes
+I'll look at using callbacks using LSTM networks...
 
-Below is a current work-in-progress, using callbacks in Keras.  I
-think I'll combine these notes with LSTM.
+
+<a href="https://mchirico.github.io/keras/2017/12/24/keras_call_backs.html">
+<img src="https://storage.googleapis.com/montco-stats/Peephole_Long_Short-Term_Memory.svg" width="400"></a>
+
+
+
 
 ### Environment Setup
 
-Python 3.5 is needed for TensorFlow 1.4+
+Python 3.5 is needed for TensorFlow 1.4+.  A link to the
+requirements.txt can be found <a href="https://raw.githubusercontent.com/mchirico/mchirico.github.io/master/p/requirements.txt">here</a>
 
 ```bash
 
