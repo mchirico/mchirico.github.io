@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "Google's CoLaboratory "
+date:   2018-01-01 07:32:36 -0400 
+comments: false
+categories: python
+---
+
+
+This is an excellent way to collaborate, especially since it’s possible to comment on each line of code with others.  Hence, very collaborative Jupyter notebooks.
+
+The start page is [here](https://colab.research.google.com)
+
+
+I ended up installing most of the packages at the start.
+
+```python
+
+import requests
+import pandas as pd
+import numpy as np 
+from datetime import datetime
+
+
+
+import warnings
+warnings.filterwarnings("ignore")
+
+try:
+  import seaborn as sns
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+  sns.set(style="white", color_codes=True)
+  from matplotlib_venn import venn2
+  import keras
+  import pydot
+  import libarchive
+except:
+  print("Will try to install software")
+  # Lines below .... Only need to be run once at the top of the notebook.
+  !pip install -q matplotlib-venn
+  !pip install -q keras
+  # #   https://pypi.python.org/pypi/pydot
+  !apt-get -qq install -y graphviz && pip install -q pydot
+  !apt-get -qq install -y libarchive-dev && pip install -q -U libarchive
+  !pip install -U -q PyDrive
+  !pip install --upgrade -q gspread
+  
+  import seaborn as sns
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+  sns.set(style="white", color_codes=True)
+  from matplotlib_venn import venn2
+  import keras
+  import pydot
+  import libarchive
+
+
+```
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
