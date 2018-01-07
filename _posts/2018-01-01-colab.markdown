@@ -15,7 +15,6 @@ The start page is [here](https://colab.research.google.com)
 I ended up installing most of the packages at the start.
 
 ```python
-
 import requests
 import pandas as pd
 import numpy as np 
@@ -46,6 +45,10 @@ except:
   !pip install -U -q PyDrive
   !pip install --upgrade -q gspread
   
+  # PyTorch 
+  !pip3 install http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl 
+  !pip3 install torchvision
+  
   import seaborn as sns
   import matplotlib.pyplot as plt
   import matplotlib.dates as mdates
@@ -54,6 +57,7 @@ except:
   import keras
   import pydot
   import libarchive
+
 
 
 ```
