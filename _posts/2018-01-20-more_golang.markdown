@@ -13,6 +13,8 @@ to be Go.
 [AWS Go](https://aws.amazon.com/blogs/compute/announcing-go-support-for-aws-lambda/)
 
 
+A good Go reference is the following [link](https://github.com/adonovan/gopl.io)
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
