@@ -6,7 +6,7 @@ comments: false
 categories: Karl Popper
 ---
 
-I've been reading  Professor Dienes...
+I've been reading  Professor [Dienes](http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/)...
 
 [Chapter 1](https://github.com/mchirico/mchirico.github.io/blob/master/p/9780230542310_sample.pdf)
 
