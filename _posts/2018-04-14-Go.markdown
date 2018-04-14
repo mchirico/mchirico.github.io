@@ -1,0 +1,134 @@
+---
+layout: post
+title:  "Go (GoLang) Testing"
+date:   2018-04-14 09:38:48 -0400 
+comments: false
+categories: Go, Testing, 
+---
+
+
+The following program prints out Hello World from
+the type of gopher, unless the gopher is dead.
+
+
+```bash
+$ go run hello.go -g 'small'
+Hello World from small gopher!
+
+# But if it's a dead gopher
+
+$ go run hello.go -g 'dead'
+2018/04/14 12:58:23 Fatal exit: ... cannot go on
+exit status 1	
+	
+```
+
+So note above, for dead type of gopher, we want an exit status of 1.
+
+
+```go
+
+package main
+
+import (
+	"log"
+	"flag"
+	"fmt"
+)
+
+var gopherType string
+
+func init() {
+	const (
+		defaultGopher = "pocket"
+		usage         = "the variety of gopher"
+	)
+	flag.StringVar(&gopherType, "gopher_type", defaultGopher, usage)
+	flag.StringVar(&gopherType, "g", defaultGopher, usage+" (shorthand)")
+}
+
+func fatalExit(s string) {
+	log.Fatalf("Fatal exit: %v", s)
+}
+
+func main() {
+
+	flag.Parse()
+
+	if gopherType == "dead" {
+		fatalExit("... cannot go on")
+	}
+
+	fmt.Printf("Hello World from %v gopher!\n\n",gopherType)
+
+}
+
+```
+
+
+## Testing
+
+
+We can use the following to test the program exit status 1, when the flag input is "dead"  -g "dead".
+
+```go
+package main
+
+import (
+	"testing"
+	"os"
+	"os/exec"
+	"flag"
+)
+
+func TestMain(m *testing.M) {
+	flag.Parse()
+	os.Exit(m.Run())
+}
+
+// Very cool... see
+//  https://talks.golang.org/2014/testing.slide#23
+func TestFatalExit(t *testing.T) {
+
+	if os.Getenv("BE_CRASHER") == "1" {
+
+		flag.Set("g", "dead")
+		main()
+		return
+	}
+
+	cmd := exec.Command(os.Args[0], "-test.run=TestFatalExit")
+	cmd.Env = append(os.Environ(), "BE_CRASHER=1")
+	err := cmd.Run()
+	if e, ok := err.(*exec.ExitError); ok && !e.Success() {
+		return
+	}
+	t.Fatalf("process ran with err %v, want exit status 1", err)
+}
+
+
+```
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
