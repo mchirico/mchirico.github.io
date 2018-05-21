@@ -8,7 +8,7 @@ categories: Angular
 
 Stackblitz makes it easy to share ideas...
 
-<iframe src="https://stackblitz.com/edit/angular-injectable?embed=1&file=src/app/app.component.ts" width="700" height="600"></iframe>
+<iframe src="https://stackblitz.com/edit/angular-injectable?embed=1&file=src/app/app.component.ts" width="800" height="600"></iframe>
 
 
 
