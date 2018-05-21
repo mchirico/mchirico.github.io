@@ -6,7 +6,7 @@ comments: false
 categories: Angular
 ---
 
-<iframe src="https://stackblitz.com/edit/angular-injectable?embed=1&file=src/main.ts" width="200"></iframe>
+<iframe src="https://stackblitz.com/edit/angular-injectable?embed=1&file=src/app/app.component.ts" width="700" height="600"></iframe>
 
 
 
