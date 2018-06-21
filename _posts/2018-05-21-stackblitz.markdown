@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "StackBlitz "
+title:  "StackBlitz"
 date:   2018-05-21 10:34:33 -0400 
 comments: false
 categories: Angular
