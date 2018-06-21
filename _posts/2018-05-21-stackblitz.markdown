@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Stackblitz "
+title:  "StackBlitz "
 date:   2018-05-21 10:34:33 -0400 
 comments: false
 categories: Angular
 ---
 
-Stackblitz makes it easy to share ideas...
+StackBlitz makes it easy to share ideas...
 
 The following cycles though the array ['initial', 'one', 'two', three'], when you click the button. It's
 a simple demonstration of using a service to separate 
@@ -14,7 +14,8 @@ the responsibility of providing the list of words.
 
 <iframe src="https://stackblitz.com/edit/angular-injectable?embed=1&file=src/app/data.service.ts" width="800" height="600"></iframe>
 
-The demo is interactive. You can make changes.
+The demo is interactive. You can make changes. For
+example add 'four' to the msgArray variable above.
 
 
 <div id="fb-root"></div>
