@@ -8,8 +8,13 @@ categories: Angular
 
 Stackblitz makes it easy to share ideas...
 
-<iframe src="https://stackblitz.com/edit/angular-injectable?embed=1&file=src/app/app.component.ts" width="800" height="600"></iframe>
+The following cycles though the array ['initial', 'one', 'two', three'], when you click the button. It's
+a simple demonstration of using a service to separate 
+the responsibility of providing the list of words.
 
+<iframe src="https://stackblitz.com/edit/angular-injectable?embed=1&file=src/app/data.service.ts" width="800" height="600"></iframe>
+
+The demo is interactive. You can make changes.
 
 
 <div id="fb-root"></div>
