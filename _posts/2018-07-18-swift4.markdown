@@ -38,6 +38,41 @@ You'll get the following result:
 </pre>
 
 
+<br><br>
+## Closures - Escaping
+
+
+Closures must be escaping when work is done asynchronously or stored.
+
+<pre>
+<code class="language-swift">
+    func getSumOf(array:[Int], handler: @escaping ((Int)->Void)) {
+      
+      var sum: Int = 0
+      for value in array {
+        sum += value
+      }
+      
+      DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+        handler(sum)
+      })
+    }
+
+
+
+    func doSomething() {
+      getSumOf(array: [16,756,442,6,23]) { (sum) in
+        print(sum)
+      }
+    }
+    
+    doSomething()
+    // Output 1243
+
+</code>
+</pre>
+
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
