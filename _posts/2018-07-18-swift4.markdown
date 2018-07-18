@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "Swift 4 Completion Handler "
+date:   2018-07-18 07:02:48 -0400 
+comments: false
+categories: python
+---
+
+Create a simple function ...
+
+<pre>
+<code class="language-swift">
+func f(input: String, completion:  (_ result: String) -> String ) -> String {
+  let a = completion("Inside completion \(input)")
+  return "Here is a: \(a)"
+}
+</code>
+</pre>
+
+Now call it as follows ...
+
+<pre>
+<code class="language-swift">
+let r = f(input: "command input ...") {
+        (result: String) in
+        return ("got back: \(result)")
+      }
+</code>
+</pre>
+
+You'll get the following result:
+
+
+<pre>
+<code class="language-swift">
+   Here is a: got back: Inside completion command input ...
+</code>
+</pre>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
