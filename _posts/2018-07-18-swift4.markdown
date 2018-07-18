@@ -57,9 +57,13 @@ Closures must be escaping when work is done asynchronously or stored.
         handler(sum)
       })
     }
+</code>
+</pre>
 
+Now calling this function ...
 
-
+<pre>
+<code class="language-swift">
     func doSomething() {
       getSumOf(array: [16,756,442,6,23]) { (sum) in
         print(sum)
