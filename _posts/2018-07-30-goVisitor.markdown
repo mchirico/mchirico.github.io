@@ -94,6 +94,59 @@ func main() {
 </pre>
 
 
+
+
+## [Facade Pattern](https://play.golang.org/p/nZtecznpici)
+
+
+
+
+<pre>
+<code class="language-go">
+package main
+
+import "fmt"
+
+
+type Circle struct {
+}
+
+func (c *Circle) draw() {
+	fmt.Printf("Drawing Circle\n")
+}
+
+type Square struct {
+}
+
+func (s *Square) Draw() {
+	fmt.Printf("Drawing Square\n")
+}
+
+type ShapeMaker struct {
+	circle *Circle
+	square *Square
+}
+
+func (s *ShapeMaker) DrawCircle() {
+	s.circle.draw()
+}
+
+func (s *ShapeMaker) DrawSquare() {
+	s.square.Draw()
+}
+
+func main() {
+	s := ShapeMaker{}
+	s.DrawCircle()
+	s.DrawSquare()
+
+}
+
+
+</code>
+</pre>
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
