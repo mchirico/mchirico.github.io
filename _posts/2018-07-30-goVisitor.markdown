@@ -147,6 +147,60 @@ func main() {
 </code>
 </pre>
 
+<br><br>
+
+## [Completion Handler Go](https://play.golang.org/p/KuRU7kgz5ar)
+
+
+
+
+<pre>
+<code class="language-go">
+
+package main
+
+import (
+	"fmt"
+)
+
+func AddNumberToString(i int, completion func(s string) string) string {
+
+	return fmt.Sprintf("%d %s\n", i, completion("one"))
+
+}
+
+func main() {
+
+	m := AddNumberToString(3, func(s string) string {
+
+		s = fmt.Sprintf(" %s %s %s\n", s, s, "test")
+
+		return s
+
+	})
+
+	fmt.Println(m)
+
+}
+
+
+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
