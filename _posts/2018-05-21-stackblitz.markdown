@@ -10,7 +10,8 @@ StackBlitz makes it easy to share ideas...
 
 The following cycles though the array ['initial', 'one', 'two', three'], when you click the button. It's
 a simple demonstration of using a service to separate 
-the responsibility of providing the list of words.
+the responsibility of providing the list of words.  Note, you
+have to click on the small "Next" button.
 
 <iframe src="https://stackblitz.com/edit/angular-injectable?embed=1&file=src/app/data.service.ts" width="800" height="600"></iframe>
 
