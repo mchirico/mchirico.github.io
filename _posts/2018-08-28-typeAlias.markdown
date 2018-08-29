@@ -70,6 +70,15 @@ func main() {
 
 
 
+References:
+
+[Google Groups](https://groups.google.com/forum/#!topic/golang-dev/LvvXAgJvFV0)
+[Abstract](https://github.com/golang/proposal/blob/master/design/18130-type-alias.md)
+
+
+
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
