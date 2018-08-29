@@ -13,7 +13,7 @@ Okay, so now take a look at `type Name1 []int`, which is a named type ...
 that's different.
 
 
-[Playground](https://play.golang.org/p/149GQMP4Jph)
+[Playground](2018-08-28-typeAlias.markdown)
 <pre>
 <code class="language-go">
 
@@ -26,7 +26,8 @@ import (
 
 type intList = []int
 
-func compare(a intList, b intList) bool {
+// Here, forced to same type
+func coerce(a intList, b intList) bool {
 	if reflect.DeepEqual(b, a) {
 		fmt.Printf("equal\n")
 		return true
@@ -48,16 +49,19 @@ func main() {
 	f := Name1{}
 	f = append(f, 3)
 
-	compare(f, b)
+	coerce(f, b)
+	// Above is equal
 
+	// Below we expect this to be equal, and it is.
 	if reflect.DeepEqual(b, a) {
-		fmt.Printf("yes..\n")
+		fmt.Printf("yes..equal\n")
 	} else {
 		fmt.Printf("not equal..\n")
 	}
 
+	// This is not equal
 	if reflect.DeepEqual(f, a) {
-		fmt.Printf("yes..\n")
+		fmt.Printf("Never get here ...\n")
 	} else {
 		fmt.Printf("not equal..\n")
 	}
@@ -67,12 +71,20 @@ func main() {
 </code>
 </pre>
 
+Output:
+
+<pre>
+equal
+yes..equal
+not equal..
+</pre>
 
 
 
 References:
 
 [Google Groups](https://groups.google.com/forum/#!topic/golang-dev/LvvXAgJvFV0)
+
 [Abstract](https://github.com/golang/proposal/blob/master/design/18130-type-alias.md)
 
 
