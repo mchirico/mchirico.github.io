@@ -31,6 +31,43 @@ Cool how you can edit embed code ...
 
 </div>
 
+
+
+Here's an example with tests.  Note, you can edit and change this example
+
+<div class="kotlin-playground" data-target-platform="junit">
+
+import org.junit.Test
+import org.junit.Assert
+
+data class Cat(val name: String, val age: Int=0)
+
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+class TestExtensionFunctions() {
+    @Test fun testSum() {
+        Assert.assertEquals(sum(2,5),7)
+    }
+    
+     @Test fun testCat() {
+        val cat = Cat("Sample Cat")
+		Assert.assertEquals(cat.name, "Sample Cat")
+    }
+}
+
+</div>
+
+
+
+
+
+
+
+
+
+
 ### Reference:
 
 [kotlin-playground/examples/](https://jetbrains.github.io/kotlin-playground/examples/)
