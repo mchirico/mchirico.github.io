@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "Kotlin "
+date:   2018-09-02 09:50:14 -0400 
+comments: false
+categories: Kotlin
+---
+
+
+<script src="https://unpkg.com/kotlin-playground@1"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  KotlinPlayground('.kotlin-playground');
+});
+</script>
+
+
+Cool how you can edit embed code ...
+
+
+<div class="kotlin-playground">
+
+  data class Cat(val name: String, val age: Int=0)
+  
+  fun sum(a: Int, b: Int): Int {
+    return a + b
+  }
+
+  fun main(args: Array<span class="hljs-tag">&lt;<span class="hljs-name">String</span>&gt;</span>) {
+
+      println(sum(2,3))  
+
+      val cat = Cat("Kitty")
+      println(cat.name)
+
+  }
+
+</div>
+
+### Reference:
+
+[kotlin-playground/examples/](https://jetbrains.github.io/kotlin-playground/examples/)
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
