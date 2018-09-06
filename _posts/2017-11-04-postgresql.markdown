@@ -18,8 +18,10 @@ import os
 Sample Connection string in /.google_psql/conn1
 
 
-host=37.194.2.14 dbname=pub 
-user=sparky password=P@SSwor8 
+host=37.194.2.14 
+dbname=pub 
+user=sparky 
+password=P@SSwor8 
 sslmode=require 
 sslcert=/Users/sparky/psql_certs/client-cert.pem 
 sslkey=/Users/sparky/psql_certs/client-key.pem 
