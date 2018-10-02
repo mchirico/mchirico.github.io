@@ -1,0 +1,133 @@
+---
+layout: post
+title:  "Dependency Inversion "
+date:   2018-10-01 21:55:51 -0400 
+comments: false
+categories: Go
+---
+
+An example of Dependency Inversion with Go. The program
+looks a little long and drawn out.  But, it's really simple.
+The button is separated from the Lamp/Fan by an abstraction. That
+abstraction is from the interface.
+
+
+Dependency Inversion utilizes Dependency Injection. What that means
+is button connects to anything with a "device interface."  Anything
+that has `status() bool`, `button(bool)` and `name() string`.
+
+As you can see at the bottom of the code, the butto can connect to
+a Lamp or a Fan. 
+
+
+
+[Playground](https://play.golang.org/p/8NqVLxoCCg3)
+```go
+package main
+
+import (
+	"fmt"
+)
+
+type device interface {
+	status() bool
+	button(bool)
+	name() string
+}
+
+type Lamp struct {
+	light bool
+}
+
+func (l *Lamp) button(s bool) {
+	fmt.Printf("turning on lamp: %v\n", s)
+	l.light = s
+}
+
+func (l *Lamp) status() bool {
+	return l.light
+}
+
+func (l *Lamp) name() string {
+	return "lamp"
+}
+
+type Fan struct {
+	on bool
+}
+
+func (f *Fan) button(s bool) {
+	fmt.Printf("turning on fan: %v\n", s)
+	f.on = s
+
+}
+
+func (f *Fan) status() bool {
+	return f.on
+}
+
+func (f *Fan) name() string {
+	return "Fan"
+}
+
+type Button struct {
+	d device
+}
+
+func (b *Button) connect(d device) {
+	b.d = d
+}
+
+func (b *Button) button(state bool) {
+	b.d.button(state)
+}
+
+func (b *Button) status() (bool, string) {
+	return b.d.status(), b.d.name()
+}
+
+func main() {
+
+	lamp := Lamp{}
+	button := Button{}
+	button.connect(&lamp)
+
+	button.button(true)
+	state, name := button.status()
+
+	fmt.Printf("Status: %v,%v\n", state, name)
+
+	fan := Fan{}
+	button.connect(&fan)
+	button.button(true)
+	fmt.Printf("Status: %v,%v\n", state, name)
+
+	button.button(false)
+	fmt.Printf("Status: %v,%v\n", state, name)
+
+}
+
+
+```
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
