@@ -11,6 +11,65 @@ permalink: /Notes/
 This is going to start out a being a little raw, but I'm
 going to start keeping my references here...
 
+### SOLID Design Principles Explained
+
+[SOLID](https://stackify.com/dependency-inversion-principle/)
+
+
+
+### Go interface{}
+
+The interface{} will accept any type. But once a function accepts the type
+you'll need to deconstruct it.
+
+[playground](https://play.golang.org/p/Xco-hh7xfl7)
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func timeMap(y interface{}) {
+	z, ok := y.(map[string]interface{})
+	if ok {
+		z["updated_at"] = time.Now()
+	} else {
+		fmt.Printf("No...%T\n", y)
+	}
+
+	zz, ok := y.(map[string]int)
+	if ok {
+		fmt.Println("\nstring:", zz)
+	}
+
+}
+
+func main() {
+
+	k := map[string]int{}
+	k["su"] = 3
+	fmt.Printf("k:%v\n", k)
+
+	foo := map[string]interface{}{
+		"Matt": 42,
+	}
+	timeMap(foo)
+	fmt.Println(foo)
+
+	timeMap(k)
+	timeMap("stuff")
+}
+
+
+```
+
+
+[Go Bootcamp](http://www.golangbootcamp.com/book/intro#cid1)
+
+
+
 
 [Learning Rates](http://sebastianruder.com/optimizing-gradient-descent/)
 
