@@ -8,6 +8,14 @@ permalink: /Notes/
 ---
 
 
+
+
+
+```bash
+brew tap johanhaleby/kubetail && brew install kubetail
+```
+
+
 This is going to start out a being a little raw, but I'm
 going to start keeping my references here...
 
