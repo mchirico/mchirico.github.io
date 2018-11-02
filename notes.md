@@ -7,8 +7,103 @@ categories: python references
 permalink: /Notes/
 ---
 
+## Building a very small image:
+
+
+Dockerfile
+
+```bash
+FROM       scratch
+
+MAINTAINER Mike Chirico (chico) <mchirico@gmail.com>
+ADD        my my
+
+ENTRYPOINT ["/my"]
+```
+
+My go file... `my.go`
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Printf("This is a test\n")
+}
+```
+
+
+
+
+Now, on mac you need to build for Linux
+
+```bash
+#!/bin/bash
+env GOOS=linux GOARCH=arm go build  my.go
+docker build --tag hello .
+docker run --rm hello
+```
+
+
+
+
+
+
+
+## Go Environment
+
+
+I need better instructions
+
+```bash
+
+cd
+mkdir reflect
+cd reflect
+wget https://gist.githubusercontent.com/mchirico/2f53d166647d3ce52b52d275f1f58129/raw/97511ad4f49f021639c142d91b1968bfa10daaea/setpath
+. setpath
+go install github.com/mchirico/reflect/...
+```
+
+
+
+
 
 This is so cool...
+
+```go
+// Ref: https://play.golang.org/p/oSvEk8QzTTL
+
+package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
+type Add func(int64, int64) int64
+
+func main() {
+	t := reflect.TypeOf(Add(nil))
+	mul := reflect.MakeFunc(t, func(args []reflect.Value) []reflect.Value {
+		a := args[0].Int()
+		b := args[1].Int()
+		return []reflect.Value{reflect.ValueOf(a + b)}
+	})
+	fn, ok := mul.Interface().(Add)
+	if !ok {
+		return
+	}
+	fmt.Println(fn(2, 3))
+}
+
+```
+
+
+
 
 ```go
 // Playground: https://play.golang.org/p/Gw0EzVKUZZn
