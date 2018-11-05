@@ -76,6 +76,22 @@ Now calling this function ...
 </code>
 </pre>
 
+Here's a way you could test the above function.
+
+```swift
+ 
+  func testGetSumOf() {
+    let expectation = self.expectation(description: "Sum up values")
+    getSumOf(array: [16,756,442,6,23]) { (sum) in
+      print(sum)
+      XCTAssert(sum == 1243, "Sum should equal 1243")
+      expectation.fulfill()
+    }
+    waitForExpectations(timeout: 5, handler: nil)
+  }
+
+```
+
 
 
 <div id="fb-root"></div>
