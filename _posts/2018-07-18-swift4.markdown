@@ -92,6 +92,42 @@ Here's a way you could test the above function.
 
 ```
 
+### Extending this example
+
+```swift
+func getSumMulOf(array:[Int],
+              handler: @escaping (([Int])->Int)) {
+  
+  var sum: Int = 0
+  var mul: Int = 1
+  for value in array {
+    sum += value
+    mul *= value
+  }
+  
+  DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+    print("sum+mul: \(handler([sum,mul]))")
+  })
+}
+
+```
+
+And now testing this...
+
+```swift
+ func testGetSumMulOf() {
+    let expectation = self.expectation(description: "Sum up values")
+    getSumMulOf(array: [16,756,442,6,23]) { (result) in
+      print(result)
+      XCTAssert(result[0] == 1243, "Sum should equal 1243")
+      XCTAssert(result[1] == 737807616, "Sum should equal 737807616")
+      expectation.fulfill()
+      return result[0]+result[1]
+    }
+    waitForExpectations(timeout: 3, handler: nil)
+  }
+```
+
 
 
 <div id="fb-root"></div>
