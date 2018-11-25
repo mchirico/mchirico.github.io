@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Go simple ssh client"
+title:  "Go SSH Client"
 date:   2018-11-13 12:34:14 -0400 
 comments: false
 categories: go ssh
