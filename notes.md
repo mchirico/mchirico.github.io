@@ -7,6 +7,17 @@ categories: python references
 permalink: /Notes/
 ---
 
+## Swift Debugging
+
+[Debugging in XCode](https://vimeo.com/264206749)
+
+
+## Excellent Video on TDD
+
+[Ian Cooper - TDD, Where Did It All Go Wrong](https://www.youtube.com/watch?time_continue=1594&v=EZ05e7EMOLM)
+
+
+
 ## Building a very small image:
 
 
