@@ -7,6 +7,19 @@ categories: python references
 permalink: /Notes/
 ---
 
+## Go Study Group
+
+[Go study-group](https://gophersource.com/study-group/)
+
+
+
+## Swift Closures
+
+
+
+[example text](https://media.pragprog.com/titles/esswift2/hygiene.pdf)
+
+
 ## Swift Debugging
 
 [Debugging in XCode](https://vimeo.com/264206749)
