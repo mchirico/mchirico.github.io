@@ -7,6 +7,12 @@ categories: python references
 permalink: /Notes/
 ---
 
+
+## Test Contra-variance
+
+[Clean Code Blog: Contra-variance](https://blog.cleancoder.com/uncle-bob/2017/10/03/TestContravariance.html)
+
+
 ## Go Study Group
 
 [Go study-group](https://gophersource.com/study-group/)
