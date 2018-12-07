@@ -9,6 +9,8 @@ permalink: /Notes/
 
 ## Reverse Proxy for Google
 
+[Ref Kevin-lxh](https://github.com/kevin-lxh/Reverse-Proxy-for-Google)
+
 ```bash
 server {
     listen 80;
