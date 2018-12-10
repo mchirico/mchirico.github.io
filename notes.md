@@ -7,6 +7,85 @@ categories: python references
 permalink: /Notes/
 ---
 
+
+## Facade vs Factory
+
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/f8847cae-dbd8-44a3-95d8-5aa77550e427" id="888zvWzehp7B"></iframe></div>
+
+
+## Nginx
+
+
+Example `nginx.conf` file to proxy ssh connection...
+
+```java
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+
+error_log /var/log/nginx/StreamError.log info;
+
+events {
+        worker_connections 768;
+        # multi_accept on;
+}
+
+stream {
+    upstream ssh {
+        server 45.55.125.83:22;
+    }
+        server {
+        listen        443;
+        proxy_pass    ssh;
+    }
+}
+```
+
+
+
+## Swift
+
+Note to self... develop this idea more. Can't this be
+used for design pattern shortcuts?
+
+```swift
+protocol  C {
+  var last: String {get set}
+  func A(s: String) -> String
+}
+
+class CC: C {
+  var last: String = ""
+  func A(s: String) -> String {
+    last = "\(last) \(s)"
+    return last
+  }
+}
+
+var h: [String: C] = [:]
+
+h["one"] = CC()
+
+
+if let c = h["one"] {
+  c.A(s: "test")
+}
+
+if let c = h["one"] {
+  c.A(s: "More")
+}
+
+```
+
+
+## Brave Clojure
+
+[Emacs](https://www.braveclojure.com/basic-emacs/)
+
+
+
 ## Reverse Proxy for Google
 
 [Ref Kevin-lxh](https://github.com/kevin-lxh/Reverse-Proxy-for-Google)
