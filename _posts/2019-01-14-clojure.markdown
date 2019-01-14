@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "Clojure "
+date:   2019-01-14 12:03:52 -0400 
+comments: true
+categories: clojure
+---
+
+Some quick Clojure scripts I'm collecting. Also, for
+something of this I'm looking at Bob Martin's Spacewars program.
+
+
+
+```clojure
+; Working with drop-while 
+(drop-while empty? ["" [] "foobar" nil])
+=> ("foobar" nil)
+
+; This works left to right...
+(drop-while empty? ["" [] nil "foobar"  ])
+=> ("foobar")
+
+
+
+(empty? [nil] )
+=> false
+
+
+(empty? nil)
+=> true
+
+```
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+

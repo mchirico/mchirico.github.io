@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  "Add Subject "
+title:  "Changing Java Version "
 date:   2019-01-11 18:38:03 -0400 
 comments: false
-categories: python
+categories: Java
 ---
 
-This is a sample post
+If you're running Clojure on Mac, you'll probably need
+to Java 1.8 and not 9 or 11.
+
+Here's how you can switch..
 
 
 ```bash
