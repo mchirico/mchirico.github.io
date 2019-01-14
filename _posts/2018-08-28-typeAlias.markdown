@@ -13,7 +13,7 @@ Okay, so now take a look at `type Name1 []int`, which is a named type ...
 that's different.
 
 
-[Playground](2018-08-28-typeAlias.markdown)
+[Playground](https://play.golang.org/p/bZ4nTh_RTsn)
 <pre>
 <code class="language-go">
 
