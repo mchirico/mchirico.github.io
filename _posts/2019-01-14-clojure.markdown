@@ -48,6 +48,23 @@ something of this I'm looking at Bob Martin's Spacewars program.
 => ([1 nil] [3 nil])
 
 
+(defprotocol MyProtocol
+  (-f0 [this args]))
+
+(defn f0 [this & args]
+  (-f0 this args))
+
+(defn -f0 [this & args]
+  (filter this (flatten args) )
+  )
+
+; (f0 odd? 1 2 3 4)
+;=> (1 3)
+;
+;
+
+
+
 ```
 
 
