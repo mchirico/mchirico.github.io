@@ -1,0 +1,130 @@
+---
+layout: post
+title:  "Go Engine Pattern "
+date:   2019-02-08 18:16:06 -0400 
+comments: false
+categories: go
+---
+
+Hmm... I need to come back to this
+idea of a design pattern that resembles a
+plugable motor function.
+
+
+[Playground](https://play.golang.org/p/yWAxoaJE0PJ)
+```go
+package main
+
+import (
+	"context"
+	"log"
+	"sync"
+	"time"
+)
+
+type AA func(context.Context, string, string, int) (int, error)
+
+func Varoom(ctx context.Context, s0 string, sE string, t int) (int, error) {
+
+	gen := func(ctx context.Context) <-chan string {
+		dst := make(chan string)
+		var output string
+		go func() {
+			for {
+				output += s0 + "," + sE
+
+				select {
+
+				case <-ctx.Done():
+					log.Printf("ctx.Done() in Loop")
+					dst <- "done"
+					return // returning not to leak the goroutine
+				case dst <- output:
+					time.Sleep(time.Duration(t) * time.Second)
+				}
+
+			}
+		}()
+		return dst
+	}
+
+	for output := range gen(ctx) {
+
+		log.Printf("output: %s\n", output)
+
+		if ctx.Err() != nil {
+			log.Printf("calling break")
+			break
+		}
+
+	}
+
+	return 1, nil
+
+}
+
+type A struct {
+	sync.Mutex
+	S  string
+	I  int
+	D  int
+	AA AA
+}
+
+func (a *A) PlugIn(aa AA) {
+	a.AA = aa
+}
+
+func (a *A) RunAA(s string) (int, error) {
+	a.Lock()
+	defer a.Unlock()
+
+	ctx, cancel := context.WithTimeout(context.Background(),
+		time.Duration(time.Duration(a.D)*time.Second))
+	defer cancel()
+
+	if a.AA == nil {
+		return -1, nil
+	}
+
+	return a.AA(ctx, a.S, s, a.I)
+}
+
+func main() {
+
+	a := A{}
+	a.S = "a"
+	a.I = 1
+	a.D = 5
+	a.PlugIn(Varoom)
+	a.RunAA("b")
+
+}
+
+
+```
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
