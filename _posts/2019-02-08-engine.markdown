@@ -12,6 +12,7 @@ plugable motor function.
 
 
 [Playground](https://play.golang.org/p/yWAxoaJE0PJ)
+
 ```go
 package main
 
@@ -101,8 +102,49 @@ func main() {
 
 }
 
+```
+
+
+Other examples..
+
+[playground](https://play.golang.org/p/dMVqgdcaZu8)
+
+```go
+package main
+
+import (
+	"bytes"
+	"fmt"
+	"os"
+)
+
+func main() {
+
+	var stdoutBuff bytes.Buffer
+	defer stdoutBuff.WriteTo(os.Stdout)
+
+	intStream := make(chan int, 5)
+
+	go func() {
+		defer close(intStream)
+		defer fmt.Fprintln(&stdoutBuff, "Producer Done.")
+
+		for i := 0; i < 5; i++ {
+			fmt.Fprintf(&stdoutBuff, "Sending: %d\n", i)
+			intStream <- i
+		}
+
+	}()
+
+	for i := range intStream {
+		fmt.Fprintf(&stdoutBuff, "Received %v\n", i)
+	}
+}
+
 
 ```
+
+
 
 
 
