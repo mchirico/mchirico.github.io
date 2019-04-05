@@ -76,6 +76,73 @@ func main() {
 
 ```
 
+Here's another example
+
+[playground](https://play.golang.org/p/mCIG5RME1C_O)
+```go
+package main
+
+import "fmt"
+
+func A(a ReturnType) (ReturnType, error) {
+	return a + " done", nil
+}
+
+type Query struct {
+	functionConfig FunctionConfig
+	returnType     ReturnType
+}
+
+func NewQuery(options ...func(*Query) error) (ReturnType, error) {
+	f := &Query{}
+
+	f.functionConfig = func(b ReturnType) (ReturnType, error) { return b + "  default", nil }
+	f.returnType = " ...some default..."
+
+	for _, op := range options {
+		err := op(f)
+		if err != nil {
+			return "", err
+		}
+	}
+	return f.functionConfig(f.returnType)
+}
+
+func OptionalFn(f *Query) error {
+	f.functionConfig = A
+	return nil
+}
+
+func OptionalReturnType(t ReturnType) func(f *Query) error {
+	return func(f *Query) error {
+		f.returnType = t
+		return nil
+	}
+}
+
+type ReturnType string
+type FunctionConfig func(ReturnType) (ReturnType, error)
+
+func main() {
+	f1, err := NewQuery()
+	fmt.Println(f1, err)
+
+	f2, err := NewQuery(OptionalReturnType("10"))
+	fmt.Println(f2, err)
+
+	f3, err := NewQuery(OptionalReturnType("20"), OptionalFn)
+	fmt.Println(f3, err)
+
+	f4, err := NewQuery(OptionalFn, OptionalReturnType("30"))
+	fmt.Println(f4, err)
+
+}
+
+
+
+```
+
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

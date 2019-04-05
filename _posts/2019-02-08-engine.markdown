@@ -11,7 +11,7 @@ idea of a design pattern that resembles a
 plugable motor function.
 
 
-[Playground](https://play.golang.org/p/yWAxoaJE0PJ)
+[Playground](https://play.golang.org/p/5Oe1in6ePt7)
 
 ```go
 package main
@@ -31,6 +31,8 @@ func Varoom(ctx context.Context, s0 string, sE string, t int) (int, error) {
 		dst := make(chan string)
 		var output string
 		go func() {
+		        // Important to close dst 
+		        defer close(dst)
 			for {
 				output += s0 + "," + sE
 
