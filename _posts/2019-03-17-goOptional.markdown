@@ -76,25 +76,28 @@ func main() {
 
 ```
 
-Here's another example
+## Here's another example
 
-[playground](https://play.golang.org/p/mCIG5RME1C_O)
+[playground](https://play.golang.org/p/1Hat45X_7ky)
 ```go
 package main
 
 import "fmt"
 
+type ReturnType string
+type FunctionConfig func(ReturnType) (ReturnType, error)
+
 func A(a ReturnType) (ReturnType, error) {
 	return a + " done", nil
 }
 
-type Query struct {
+type Thing struct {
 	functionConfig FunctionConfig
 	returnType     ReturnType
 }
 
-func NewQuery(options ...func(*Query) error) (ReturnType, error) {
-	f := &Query{}
+func NewThing(options ...func(*Thing) error) (ReturnType, error) {
+	f := &Thing{}
 
 	f.functionConfig = func(b ReturnType) (ReturnType, error) { return b + "  default", nil }
 	f.returnType = " ...some default..."
@@ -108,36 +111,32 @@ func NewQuery(options ...func(*Query) error) (ReturnType, error) {
 	return f.functionConfig(f.returnType)
 }
 
-func OptionalFn(f *Query) error {
+func OptionalFn(f *Thing) error {
 	f.functionConfig = A
 	return nil
 }
 
-func OptionalReturnType(t ReturnType) func(f *Query) error {
-	return func(f *Query) error {
+func OptionalReturnType(t ReturnType) func(f *Thing) error {
+	return func(f *Thing) error {
 		f.returnType = t
 		return nil
 	}
 }
 
-type ReturnType string
-type FunctionConfig func(ReturnType) (ReturnType, error)
-
 func main() {
-	f1, err := NewQuery()
+	f1, err := NewThing()
 	fmt.Println(f1, err)
 
-	f2, err := NewQuery(OptionalReturnType("10"))
+	f2, err := NewThing(OptionalReturnType("10"))
 	fmt.Println(f2, err)
 
-	f3, err := NewQuery(OptionalReturnType("20"), OptionalFn)
+	f3, err := NewThing(OptionalReturnType("20"), OptionalFn)
 	fmt.Println(f3, err)
 
-	f4, err := NewQuery(OptionalFn, OptionalReturnType("30"))
+	f4, err := NewThing(OptionalFn, OptionalReturnType("30"))
 	fmt.Println(f4, err)
 
 }
-
 
 
 ```
