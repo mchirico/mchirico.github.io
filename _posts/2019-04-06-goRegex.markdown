@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "Go Common Regex "
+date:   2019-04-06 16:59:17 -0400 
+comments: false
+categories: go
+---
+
+Common Go Regular Expressions
+
+
+[playground](https://play.golang.org/p/UcUxpJe34MV)
+```go
+package main
+
+import (
+	"fmt"
+	"regexp"
+)
+
+func main() {
+
+	content := []byte(`
+	# comment line
+   2 option1= value1
+	option2 = value2
+    optione30 = 3423
+
+	# another comment line
+	option3= value3
+`)
+
+	re := regexp.MustCompile(`(?m)(?P<key>\w+)\s*=\s+(?P<value>\w*)$`)
+	fmt.Printf("%q\n", re.FindAllSubmatch(content, -1))
+
+}
+
+
+```
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+

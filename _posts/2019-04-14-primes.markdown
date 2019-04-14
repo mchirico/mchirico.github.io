@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "Go Prime Sieve"
+date:   2019-04-14 16:18:25 -0400 
+comments: false
+categories: python
+---
+
+Go routine to calculate the first 1,000 primes.
+You should be able to run it in the [playground](https://play.golang.org/p/CksGo8_eY3i).
+
+
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func Generate(ch chan<- int) {
+	for i := 2; ; i++ {
+		ch <- i
+	}
+}
+
+func Filter(src <-chan int, dst chan<- int, prime int) {
+
+	for i := range src {
+		if i%prime != 0 {
+			dst <- i
+		}
+	}
+}
+
+func main() {
+	src := make(chan int)
+	go Generate(src)
+	for i := 0; i < 10000; i++ {
+		prime := <-src
+		println(prime)
+		dst := make(chan int)
+		go Filter(src, dst, prime)
+		src = dst
+	}
+	fmt.Println("done")
+}
+```
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
