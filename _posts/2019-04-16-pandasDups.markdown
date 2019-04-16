@@ -31,7 +31,7 @@ d=d[~d.index.duplicated(keep='last')]
 d
 
 ```
-<img src="drawing.jpg" alt="drawing" width="200"/>
+<img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups0.png" alt="drawing" width="270"/>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
