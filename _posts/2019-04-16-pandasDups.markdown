@@ -69,7 +69,8 @@ d
 
 # Drop Duplicates on Rows
 
-Note, this may not be what you want... same query as above; but, we're dropping duplicates.
+Note, this may not be what you want. Notice we list Quarters 2 and 3, because it had
+the duplicate value 50, which just happened to be the correct sales. It's the same query as above; but, we're dropping duplicates.
 
 ```python
 sales1 = [{'Quarter':1,'sales': 50},
