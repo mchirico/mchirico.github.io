@@ -22,7 +22,7 @@ sales2 = [
          {'idx':4,'account': 'Green Inc',  'Jan': 50,  'Feb': 90,  'Mar': 95 },
          {'idx':5,'account': 'Yellow Inc',  'Jan': 50,  'Feb': 90,  'Mar': 95 }]
 
-df = pd.DataFrame(sales)
+df = pd.DataFrame(sales1)
 df=df.set_index('idx')
 df2 = pd.DataFrame(sales2)
 df2=df2.set_index('idx')
@@ -30,8 +30,60 @@ d=pd.concat([df,df2],ignore_index=False)
 d=d[~d.index.duplicated(keep='last')]
 d
 
+
 ```
 <img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups0.png" alt="drawing" width="270"/>
+
+
+
+Here we also get the correct answer.
+
+```python
+sales1 = [{'Quarter':1,'sales': 50},
+         {'Quarter':2,'sales': 50},
+         {'Quarter':3,'sales': 46 }]
+
+sales2 = [{'Quarter':3,'sales': 50},
+         {'Quarter':4,'sales': 52},
+         {'Quarter':5,'sales': 46 }]
+
+df = pd.DataFrame(sales1)
+df=df.set_index('Quarter')
+df2 = pd.DataFrame(sales2)
+df2=df2.set_index('Quarter')
+d=pd.concat([df,df2],ignore_index=False)
+d=d[~d.index.duplicated(keep='last')]
+d
+
+```
+
+<img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups1.png" alt="drawing" width="270"/>
+
+
+
+# Drop Duplicates on Rows
+
+Note, this may not be what you want... same query as above; but, we're dropping duplicates.
+
+```python
+sales1 = [{'Quarter':1,'sales': 50},
+         {'Quarter':2,'sales': 50},
+         {'Quarter':3,'sales': 46 }]
+
+sales2 = [{'Quarter':3,'sales': 50},
+         {'Quarter':4,'sales': 52},
+         {'Quarter':5,'sales': 46 }]
+
+df = pd.DataFrame(sales1)
+df=df.set_index('Quarter')
+df2 = pd.DataFrame(sales2)
+df2=df2.set_index('Quarter')
+d=pd.concat([df,df2],ignore_index=False)
+d=d[~d.index.duplicated(keep='last')]
+d.drop_duplicates()
+
+```
+<img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups2.png" alt="drawing" width="270"/>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
