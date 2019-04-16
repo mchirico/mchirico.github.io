@@ -6,7 +6,7 @@ comments: false
 categories: python pandas
 ---
 
-Careful how you remove duplicate in pandas, when indexes are involved.
+Careful how you remove duplicate in pandas, when  indexes are involved.
 
 Below is probably how you want to do this... hence, you want to eliminate
 the duplicate index, talking the last one.
@@ -33,8 +33,12 @@ d
 
 ```
 <img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups0.png" alt="drawing" width="270"/>
+<br>
+<br>
+<br>
 
 
+# Duplicate Indexes (here we want to keep duplicate rows)
 
 Here we also get the correct answer.
 
@@ -57,8 +61,10 @@ d
 
 ```
 
-<img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups1.png" alt="drawing" width="270"/>
-
+<img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups1.png" alt="drawing" width="170"/>
+<br>
+<br>
+<br>
 
 
 # Drop Duplicates on Rows
@@ -83,7 +89,7 @@ d=d[~d.index.duplicated(keep='last')]
 d.drop_duplicates()
 
 ```
-<img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups2.png" alt="drawing" width="270"/>
+<img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups2.png" alt="drawing" width="170"/>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
