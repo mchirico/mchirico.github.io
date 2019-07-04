@@ -1,0 +1,118 @@
+---
+layout: post
+title:  "Go Concurrency "
+date:   2019-05-19 13:17:05 -0400 
+comments: false
+categories: go
+---
+
+"Concurrency in Go: Tools and Techniques for Developers", by
+Katherine Cox-Buday is a very good book.
+
+
+
+
+
+
+[Go Playground](https://play.golang.org/p/u21S0p9EDlH)
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+type TakeType func(context.Context, <-chan interface{}, int) <-chan interface{}
+
+func Take() TakeType {
+
+	take := func(
+		ctx context.Context,
+		valueStream <-chan interface{},
+		num int,
+	) <-chan interface{} {
+		takeStream := make(chan interface{})
+		go func() {
+			defer close(takeStream)
+			for i := 0; i < num; i++ {
+				select {
+				case <-ctx.Done():
+					return
+				case takeStream <- <-valueStream:
+				}
+			}
+		}()
+		return takeStream
+	}
+
+	return take
+}
+
+type RepeatType func(context.Context, func() interface{}) <-chan interface{}
+
+func RepeatFn() RepeatType {
+
+	repeatFn := func(
+		ctx context.Context,
+		fn func() interface{},
+	) <-chan interface{} {
+		valueStream := make(chan interface{})
+		go func() {
+			defer close(valueStream)
+			for {
+				select {
+				case <-ctx.Done():
+					return
+				case valueStream <- fn():
+
+				}
+			}
+		}()
+		return valueStream
+	}
+
+	return repeatFn
+}
+
+func main() {
+
+	ctx, cancel := context.WithTimeout(context.Background(),
+		time.Duration(2*time.Second))
+	defer cancel()
+
+	rand := func() interface{} { return rand.Int() }
+	repeatFn := RepeatFn()
+	take := Take()
+
+	for num := range take(ctx, repeatFn(ctx, rand), 10) {
+		fmt.Println(num)
+	}
+
+}
+
+```
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
