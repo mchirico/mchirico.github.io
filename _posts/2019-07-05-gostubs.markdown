@@ -1,0 +1,112 @@
+---
+layout: post
+title:  "Go Stubs: Interface "
+date:   2019-07-05 06:48:24 -0400 
+comments: false
+categories: Go
+---
+
+Interfaces for testing in Go.  Ways to create
+stubs, without having to have a lot of exported interfaces
+in the application code. Instead, the developer using the
+package can create the necessary stubs.
+
+
+References:
+
+[rakyll](https://rakyll.org/interface-pollution/)
+
+
+[playground](https://play.golang.org/p/8uKhaRXjdgC)
+```go
+package main
+
+import "fmt"
+
+type acknowledger interface {
+	Ack(sub string, id ...string) error
+}
+
+func Ack(sub string, id ...string) error {
+	fmt.Printf("sub: %s\n",sub)
+	for _,v := range id {
+		fmt.Printf("i %s\n",v)
+	}
+	return nil
+}
+
+type P struct {}
+
+func (p P) Ack(sub string, id ...string) error {
+	fmt.Printf("sub: %s\n",sub)
+	for _,v := range id {
+		fmt.Printf("i %s\n",v)
+	}
+	return nil
+}
+
+func A(a acknowledger) {
+	a.Ack("one","a","b")
+}
+
+func myNew() acknowledger {
+	p := P{}
+	return p
+}
+
+var acker acknowledger = myNew()
+
+
+type mockClient struct{
+	count int
+}
+
+func (c *mockClient) Ack(sub string, id ...string) error {
+	c.count += 1
+	return nil
+}
+func (c *mockClient) Count() int {
+	return c.count
+}
+
+func main() {
+
+	acker.Ack("a")
+
+	c := mockClient{}
+	acker = &c
+
+	A(acker)
+	A(acker)
+	fmt.Printf(" %d\n",c.count)
+	
+}
+
+
+```
+
+This thought needs further development...
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
