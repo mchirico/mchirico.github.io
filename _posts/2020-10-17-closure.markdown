@@ -1,0 +1,84 @@
+---
+layout: post
+title:  "Swift Closure 5.3 "
+date:   2020-10-17 11:16:17 -0400 
+comments: false
+categories: Swift
+---
+
+Here's an example function in a struct, that makes use
+of an escaping closure.
+
+
+```swift
+
+import UIKit
+
+struct Session {
+    var url: String
+    
+    
+    func Get(completion: @escaping  (_ result: String)  -> Void, onFailure: () -> Void)  {
+        let configuraion = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuraion)
+        guard let _url = URL(string: url) else { fatalError()}
+        
+        let task = session.dataTask(with: _url) { data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200..<300).contains(httpResponse.statusCode) else {
+                return
+            }
+            guard let data = data else {
+                return
+            }
+            if let result = String(data: data, encoding:. utf8) {
+                print(result)
+                completion(result)
+            }
+        }
+        task.resume()
+    }
+}
+
+
+```
+
+Below is how you can call it
+
+```swift
+
+ let sess = Session(url: "https://aibot.cwxstat.io/")
+ sess.Get(){ result in
+       print(result)
+       self.label0 = result
+            } onFailure: {
+                            print("Couldn't download the result")
+           }
+
+
+```
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
