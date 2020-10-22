@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "Go json Marshal"
+date:   2020-10-22 16:53:20 -0400 
+comments: false
+categories: go
+---
+
+Simple example of a Go json `Unmarshal` and `Marshal`, because
+I keep needing this...
+
+[playground](https://play.golang.org/p/hxCPDO63sY4)
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+)
+
+func main() {
+	type ColorGroup struct {
+		ID     int
+		Name   string
+		Colors []string
+	}
+	group := ColorGroup{
+		ID:     1,
+		Name:   "Reds",
+		Colors: []string{"Crimson", "Red", "Ruby", "Maroon"},
+	}
+	b, err := json.Marshal(group)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	os.Stdout.Write(b)
+
+	var groupResult ColorGroup
+	err = json.Unmarshal(b, &groupResult)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	fmt.Printf("%+v", groupResult)
+
+}
+
+
+```
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=671657696349259";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  Enter text below, if you want -->
+
+
+<div class="fb-comments"  data-numposts="5"></div>
+
+
+
+
+
+
