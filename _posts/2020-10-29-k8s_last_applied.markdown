@@ -36,6 +36,23 @@ spec:
 
 ```
 
+## Deployment
+
+```bash
+
+k get deployment
+
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+eventer-server   1/1     1            1           7m58s
+
+# Example..
+
+kubectl apply view-last-applied deployment/eventer-server -o yaml
+
+```
+
+
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
