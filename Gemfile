@@ -3,3 +3,4 @@ gem 'github-pages', group: :jekyll_plugins
 gem 'jekyll-gist'
 gem 'jekyll-seo-tag'
 gem "minima"
+gem "webrick"
