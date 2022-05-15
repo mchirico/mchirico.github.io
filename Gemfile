@@ -9,3 +9,4 @@ gem "webrick"
 gem 'kramdown-math-katex'
 gem 'jekyll-seo-tag'
 gem 'jekyll-gist'
+gem 'jekyll-coffeescript'
