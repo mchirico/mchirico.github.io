@@ -1,0 +1,14 @@
+#!/bin/bash
+# bundle exec jekyll serve
+clean 1
+git add _posts/*
+git commit -a -m ' ... auto update'
+git push
+
+echo -e "
+You should run the following command:
+
+  bundle exec jekyll serve
+
+
+"
