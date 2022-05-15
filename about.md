@@ -15,7 +15,7 @@ img {
 
 
 
-<br> Shoot me a line at any of the links below if you feel like it.
+<br> LinkedIn is open to chat for anyone... 
 
 <body>
 <a href="https://www.linkedin.com/in/mikechirico/">
