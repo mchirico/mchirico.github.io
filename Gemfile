@@ -1,6 +1,11 @@
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-gem 'jekyll-gist'
-gem 'jekyll-seo-tag'
-gem "minima"
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+gemspec
+
+gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
+gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
 gem "webrick"
+gem 'kramdown-math-katex'
+gem 'jekyll-seo-tag'
+gem 'jekyll-gist'

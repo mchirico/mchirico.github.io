@@ -4,11 +4,24 @@ title: About
 permalink: /about/
 ---
 
-You can find information about me at [stackoverflow.com/cv/mchirico](http://stackoverflow.com/cv/mchirico) and
-[www.kaggle.com/mchirico](https://www.kaggle.com/mchirico).
+<style>
+img {
+  float: left;
+  border-radius: 50%;
+  margin-right:15px;
+}
+</style>
+<img src="/assets/avatar.jpg" alt="Avatar" style="width:200px">
 
 
-If you're contacting me about technical stuff, use
-my gmail account.
 
+<br> Shoot me a line at any of the links below if you feel like it.
 
+<body>
+<a href="https://www.linkedin.com/in/mikechirico/">
+<img src="/assets/linkedin.png" width="45" height="45">
+</a>
+<a href="https://twitter.com/mchirico">
+<img src="/assets/twitter.png" width="45" height="45">
+</a>
+</body>
