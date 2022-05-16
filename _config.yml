@@ -12,7 +12,8 @@ minima:
   skin: dark
 
 kramdown:
-  math_engine: katex
+  syntax_highlighter_opts:
+    disable : true
 
 theme: minima
 
