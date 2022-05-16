@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Example Postgresql Connections"
-date:   2017-11-04 15:29:00 -0400 
+title: "Example Postgresql Connections"
+date: 2017-11-04 15:29:00 -0400
 comments: false
 categories: python postgresql
 ---
@@ -18,13 +18,13 @@ import os
 Sample Connection string in /.google_psql/conn1
 
 
-host=37.194.2.14 
-dbname=pub 
-user=sparky 
-password=P@SSwor8 
-sslmode=require 
-sslcert=/Users/sparky/psql_certs/client-cert.pem 
-sslkey=/Users/sparky/psql_certs/client-key.pem 
+host=37.194.2.14
+dbname=pub
+user=sparky
+password=P@SSwor8
+sslmode=require
+sslcert=/Users/sparky/psql_certs/client-cert.pem
+sslkey=/Users/sparky/psql_certs/client-key.pem
 sslrootcert=/Users/sparky/psql_certs/server-ca.pem
 
 
@@ -63,9 +63,7 @@ if __name__ == '__main__':
 Reference:
 [fieldlookup-hstorefield.contains](https://docs.djangoproject.com/en/1.11/ref/contrib/postgres/fields/#std:fieldlookup-hstorefield.contains)
 
-
 ## Example in Go
-
 
 ```go
 /*
@@ -154,17 +152,6 @@ func main() {
 
 ```
 
-
-
-
-
-
-
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -173,14 +160,4 @@ func main() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Swift 4 Strings "
-date:   2017-11-14 06:00:29 -0400 
+title: "Swift 4 Strings "
+date: 2017-11-14 06:00:29 -0400
 comments: false
 categories: swift
 ---
@@ -9,28 +9,28 @@ categories: swift
 ## Extending String -- subscript, findstr
 
 Below is an example of extending String, to include
-some of the common *Python* like functions.
+some of the common _Python_ like functions.
 
 ```swift
 var str = "Hello, playground"
 
 extension String {
-  
+
   subscript (index: Int) -> Character {
     let charIndex = self.index(self.startIndex, offsetBy:index)
     return self[charIndex]
   }
-  
+
   subscript (range: Range<Int>) -> String {
     let startIndex = self.index(self.startIndex, offsetBy:range.lowerBound)
-    
+
     if self.count > range.upperBound {
       let endIndex = self.index(startIndex, offsetBy:range.upperBound)
       return String(self[startIndex..<endIndex])
     }
     return String(self[startIndex..<self.endIndex])
   }
-  
+
   // BE  Begin End
   func findBE(_ str: String) -> (Int,Int)? {
     if let r = self.range(of: str) {
@@ -60,18 +60,17 @@ str.find("play")  // 7
 
 ## String with Regular Expressions
 
-
 ```swift
 extension String {
   func get_regex(_ pat: String) -> Int {
-    
+
     let regex = try! NSRegularExpression(pattern: pat, options: [])
-    
+
     let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
-    
+
     let p = matches.map { result -> String in
       let hrefRange = result.range(at: 1)
-      
+
       let start = hrefRange.lowerBound
       let end = hrefRange.upperBound
       return  self[start..<end]
@@ -93,7 +92,7 @@ extension String {
 
 ## Podfile
 
-Below is a Podfile for Alamofile, Firebase etc. that haven't converted to Swift 4.  The code
+Below is a Podfile for Alamofile, Firebase etc. that haven't converted to Swift 4. The code
 I'm writing in the application is Swift 4.
 
 ```bash
@@ -139,8 +138,6 @@ target 'Bug' do
 end
 ```
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -149,14 +146,4 @@ end
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

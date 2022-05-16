@@ -1,19 +1,13 @@
 ---
 layout: post
-title:  "ExtraTreesClassifier on sklearn"
-date:   2017-03-15 19:43:33 -0400 
+title: "ExtraTreesClassifier on sklearn"
+date: 2017-03-15 19:43:33 -0400
 comments: false
 categories: ExtraTreesClassifier
 ---
 
-
 Hmm... need to get my thoughts down on this... I'll have to come back to this
 
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -22,14 +16,4 @@ Hmm... need to get my thoughts down on this... I'll have to come back to this
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

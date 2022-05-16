@@ -1,15 +1,13 @@
 ---
 layout: post
-title:  "Go (GoLang) Testing"
-date:   2018-04-14 09:38:48 -0400 
+title: "Go (GoLang) Testing"
+date: 2018-04-14 09:38:48 -0400
 comments: false
-categories: Go, Testing, 
+categories: Go, Testing,
 ---
-
 
 The following program prints out Hello World from
 the type of gopher, unless the gopher is dead.
-
 
 ```bash
 $ go run hello.go -g 'small'
@@ -19,12 +17,11 @@ Hello World from small gopher!
 
 $ go run hello.go -g 'dead'
 2018/04/14 12:58:23 Fatal exit: ... cannot go on
-exit status 1	
-	
+exit status 1
+
 ```
 
 So note above, for dead type of gopher, we want an exit status of 1.
-
 
 ```go
 
@@ -65,9 +62,7 @@ func main() {
 
 ```
 
-
 ## Testing
-
 
 We can use the following to test the program exit status 1, when the flag input is "dead" with the command -g "dead".
 
@@ -107,10 +102,6 @@ func TestFatalExit(t *testing.T) {
 }
 ```
 
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -119,14 +110,4 @@ func TestFatalExit(t *testing.T) {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

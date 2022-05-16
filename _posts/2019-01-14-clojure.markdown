@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Clojure "
-date:   2019-01-14 12:03:52 -0400 
+title: "Clojure "
+date: 2019-01-14 12:03:52 -0400
 comments: true
 categories: clojure
 ---
@@ -9,10 +9,8 @@ categories: clojure
 Some quick Clojure scripts I'm collecting. Also, for
 something of this I'm looking at Bob Martin's Spacewars program.
 
-
-
 ```clojure
-; Working with drop-while 
+; Working with drop-while
 (drop-while empty? ["" [] "foobar" nil])
 => ("foobar" nil)
 
@@ -67,8 +65,6 @@ something of this I'm looking at Bob Martin's Spacewars program.
 
 ```
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -77,14 +73,4 @@ something of this I'm looking at Bob Martin's Spacewars program.
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

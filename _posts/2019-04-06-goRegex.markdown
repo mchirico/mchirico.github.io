@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Go Common Regex "
-date:   2019-04-06 16:59:17 -0400 
+title: "Go Common Regex "
+date: 2019-04-06 16:59:17 -0400
 comments: false
 categories: go
 ---
 
 Common Go Regular Expressions
 
-
 [playground](https://play.golang.org/p/UcUxpJe34MV)
+
 ```go
 package main
 
@@ -38,8 +38,6 @@ func main() {
 
 ```
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -48,14 +46,4 @@ func main() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

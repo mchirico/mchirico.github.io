@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Python Stuff... not finished "
-date:   2017-07-02 16:00:00 -0400 
+title: "Python Stuff... not finished "
+date: 2017-07-02 16:00:00 -0400
 comments: false
 categories: python
 ---
@@ -15,15 +15,14 @@ Note below how **x** changed from a **method** to a **property**.
 class A:
     def __init__(self):
         self._x = 0
-	    
+
     def x(self):
         return self._x
 
 
 A().x() # <-- This is a method
 
-```        
-
+```
 
 Above it's defined as a method... now make it a property.
 
@@ -38,15 +37,13 @@ class A:
         return self._x
 
 
-A().x # <-- Now properity 
+A().x # <-- Now properity
 
-```        
-    
+```
 
 ### Now the complete call with setter and deleter
 
 Note the getter gets everytime when making an assignment.
-
 
 ```python
 class A:
@@ -86,11 +83,7 @@ Here's the output:
 
 ```
 
-
-
-
 # Python Exceptions
-
 
 ```python
 
@@ -116,9 +109,6 @@ except Exception as e:
 
 ```
 
-
-
-
 # Python debugging
 
 ```python
@@ -127,15 +117,6 @@ import pdb; pdb.set_trace()
 
 Some commone commands:
 
-
-
-
-
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -144,14 +125,4 @@ Some commone commands:
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

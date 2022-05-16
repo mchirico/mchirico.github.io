@@ -1,39 +1,33 @@
 ---
 layout: post
-title:  "Kotlin "
-date:   2018-09-02 09:50:14 -0400 
+title: "Kotlin "
+date: 2018-09-02 09:50:14 -0400
 comments: false
 categories: Kotlin
 ---
 
-
-
-
 Cool how you can edit embed code ...
-
 
 <div class="kotlin-playground">
 
-  data class Cat(val name: String, val age: Int=0)
-  
-  fun sum(a: Int, b: Int): Int {
-    return a + b
-  }
+data class Cat(val name: String, val age: Int=0)
 
-  fun main(args: Array<span class="hljs-tag">&lt;<span class="hljs-name">String</span>&gt;</span>) {
+fun sum(a: Int, b: Int): Int {
+return a + b
+}
 
-      println(sum(2,3))  
+fun main(args: Array<span class="hljs-tag">&lt;<span class="hljs-name">String</span>&gt;</span>) {
+
+      println(sum(2,3))
 
       val cat = Cat("Kitty")
       println(cat.name)
 
-  }
+}
 
 </div>
 
-
-
-Here's an example with tests.  Note, you can edit and change this example
+Here's an example with tests. Note, you can edit and change this example
 
 <div class="kotlin-playground" data-target-platform="junit">
 
@@ -43,39 +37,27 @@ import org.junit.Assert
 data class Cat(val name: String, val age: Int=0)
 
 fun sum(a: Int, b: Int): Int {
-    return a + b
+return a + b
 }
 
 class TestExtensionFunctions() {
-    @Test fun testSum() {
-        Assert.assertEquals(sum(2,5),7)
-    }
-    
+@Test fun testSum() {
+Assert.assertEquals(sum(2,5),7)
+}
+
      @Test fun testCat() {
         val cat = Cat("Sample Cat")
-		Assert.assertEquals(cat.name, "Sample Cat")
+    	Assert.assertEquals(cat.name, "Sample Cat")
     }
+
 }
 
 </div>
-
-
-
-
-
-
-
-
-
 
 ### Reference:
 
 [kotlin-playground/examples/](https://jetbrains.github.io/kotlin-playground/examples/)
 
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -84,14 +66,4 @@ class TestExtensionFunctions() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

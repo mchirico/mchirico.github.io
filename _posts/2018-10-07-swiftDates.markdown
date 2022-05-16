@@ -1,15 +1,13 @@
 ---
 layout: post
-title:  "Swift 4 Dates "
-date:   2018-10-07 16:35:51 -0400 
+title: "Swift 4 Dates "
+date: 2018-10-07 16:35:51 -0400
 comments: false
 categories: swift
 ---
 
 Hacking swift 4.2 date-time, converting between local time, string
 and other methods.
-
-
 
 ```swift
 import UIKit
@@ -41,7 +39,7 @@ func UTCToLocal(UTCDateString: String) -> String {
   dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ssa" //Input Format
   dateFormatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
   let UTCDate = dateFormatter.date(from: UTCDateString)
-  
+
   dateFormatter.dateFormat = "yyyy-MMM-dd hh:mm:ssa" // Output Format
   dateFormatter.timeZone = TimeZone.current
   let UTCToCurrentFormat = dateFormatter.string(from: UTCDate!)
@@ -53,7 +51,7 @@ func LocalToUTC(dateString: String) -> String {
   dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ssa" //Input Format
   dateFormatter.timeZone = TimeZone.current
   let localDate = dateFormatter.date(from: dateString)
-  
+
   dateFormatter.dateFormat = "yyyy-MMM-dd hh:mm:ssa" // Output Format
   dateFormatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
 
@@ -72,8 +70,6 @@ print( UTCToLocal(UTCDateString: dateString))
 
 ```
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -82,14 +78,4 @@ print( UTCToLocal(UTCDateString: dateString))
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

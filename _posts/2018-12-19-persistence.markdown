@@ -1,22 +1,21 @@
 ---
 layout: post
-title:  "Persistence Store "
-date:   2018-12-19 18:13:21 -0400 
+title: "Persistence Store "
+date: 2018-12-19 18:13:21 -0400
 comments: false
 categories: swift
 ---
 
-Make a `struct` *Codable* so that
+Make a `struct` _Codable_ so that
 data can be json encoded for persistence storage.
-
 
 ```swift
 struct Employee: Codable {
-  
+
   let name: String
   let age: Int
   let role: Role
-  
+
   enum Role: String, Codable {
     case manager
     case developer
@@ -25,7 +24,7 @@ struct Employee: Codable {
 }
 
 struct Company : Codable {
-  
+
   let name: String
   let officeLocation: Location?
   let employees: [Employee]
@@ -55,8 +54,6 @@ print("Result: \(String(describing: result))")
 
 ```
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -65,14 +62,4 @@ print("Result: \(String(describing: result))")
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "New P2 Instance: Amazon EC2 "
-date:   2016-12-31 17:08:20 -0400 
+title: "New P2 Instance: Amazon EC2 "
+date: 2016-12-31 17:08:20 -0400
 comments: false
 categories: python
 ---
@@ -11,16 +11,16 @@ includes MXNet, Caffe, Tensorflow, Theano, and Torch.
 
 Here's a getting started with mxnet
 
-``` bash
-# This seems to have the latest image...    
+```bash
+# This seems to have the latest image...
 docker run -it kaixhin/mxnet
 ```
+
 
 
 Cool example..
 
-
-``` python
+```python
 import mxnet as mx
 a = mx.sym.Variable('a')
 b = mx.sym.Variable('b')
@@ -31,13 +31,13 @@ assert b.name == "b", "Symbol name incorrect."
 
 
 # elemental wise times
-d = a * b  
+d = a * b
 # matrix multiplication
-e = mx.sym.dot(a, b)   
+e = mx.sym.dot(a, b)
 # reshape
-f = mx.sym.Reshape(a, shape=(2,6))  
+f = mx.sym.Reshape(a, shape=(2,6))
 # broadcast
-g = mx.sym.broadcast_to(f, shape=(3,2,6))  
+g = mx.sym.broadcast_to(f, shape=(3,2,6))
 
 # Output may vary
 net = mx.sym.Variable('data')
@@ -52,13 +52,6 @@ mx.viz.plot_network(net, shape={'data':(100,200)})
 
 ![img](https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2016-12-3118.23.01.png)
 
-
-
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -67,14 +60,4 @@ mx.viz.plot_network(net, shape={'data':(100,200)})
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

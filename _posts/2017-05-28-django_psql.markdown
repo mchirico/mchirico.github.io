@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Django: Summary of  Database Calls "
-date:   2017-05-28 13:43:31 -0400 
+title: "Django: Summary of  Database Calls "
+date: 2017-05-28 13:43:31 -0400
 comments: false
 categories: python
 ---
@@ -12,8 +12,7 @@ categories: python
 Assume you have a very simple model setup as follows:
 </p>
 
-
-``` python
+```python
 from django.db import models
 
 # Create your models here.
@@ -38,10 +37,9 @@ from polls.models import B
 
 ```
 
-
 <h2>Create</h2>
 
-``` python
+```python
 # Immediate create
 result=B.objects.create(b="Joe")
 # or
@@ -103,19 +101,13 @@ r=B.objects.filter(b='aslk').update(c='mo')
 r = B.objects.filter(b='stuff')
 if r.count() > 0:
    print(r[0].c)
-   
+
 
 ```
-
-
 
 <a href='https://docs.djangoproject.com/en/1.11/ref/models/querysets/#django.db.models.query.QuerySet.exists'>
 <img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-05-2813.42.46.png" width="740">
 </a>
-
-
-
-
 
 ```python
 t = TemperatureData.objects.get(id=1)
@@ -123,8 +115,8 @@ t.value = 999
 t.save(['value'])
 
 ```
-https://stackoverflow.com/questions/3681627/how-to-update-fields-in-a-model-without-creating-a-new-record-in-django
 
+https://stackoverflow.com/questions/3681627/how-to-update-fields-in-a-model-without-creating-a-new-record-in-django
 
 <br>
 <h3>Some References</h3>
@@ -133,8 +125,6 @@ https://stackoverflow.com/questions/3681627/how-to-update-fields-in-a-model-with
 
 <a href='
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -143,14 +133,4 @@ https://stackoverflow.com/questions/3681627/how-to-update-fields-in-a-model-with
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

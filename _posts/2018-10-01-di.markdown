@@ -1,27 +1,25 @@
 ---
 layout: post
-title:  "Dependency Inversion "
-date:   2018-10-01 21:55:51 -0400 
+title: "Dependency Inversion "
+date: 2018-10-01 21:55:51 -0400
 comments: false
 categories: Go
 ---
 
 An example of Dependency Inversion with Go. The program
-looks a little long and drawn out.  But, it's really simple.
+looks a little long and drawn out. But, it's really simple.
 The button is separated from the Lamp/Fan by an abstraction. That
 abstraction is from the interface.
 
-
 Dependency Inversion utilizes Dependency Injection. What that means
-is the  button connects to anything with a "device interface."  Anything
+is the button connects to anything with a "device interface." Anything
 that has `status() bool`, `button(bool)` and `name() string`.
 
 As you can see at the bottom of the code, the butto can connect to
-a Lamp or a Fan. 
-
-
+a Lamp or a Fan.
 
 [Playground](https://play.golang.org/p/8NqVLxoCCg3)
+
 ```go
 package main
 
@@ -114,22 +112,18 @@ func main() {
 
 There are 3 goals.
 
-* Avoid Rigidity: The software should be easy change. If the software
-is built with independent components, that change should
-work by only affecting the intended parts.
+- Avoid Rigidity: The software should be easy change. If the software
+  is built with independent components, that change should
+  work by only affecting the intended parts.
 
-* Avoid Fragility: The change shouldn't break unexpected parts.
+- Avoid Fragility: The change shouldn't break unexpected parts.
 
-* Avoid Immobility: Reuse. Parts can be disentangled from the current
-application.
-
+- Avoid Immobility: Reuse. Parts can be disentangled from the current
+  application.
 
 ### Protocol/Interface
 
 Protocol in Swift and Interface in Go provide a way to separate the button from the device.
-
-
-
 
 ```swift
 protocol Device {
@@ -145,7 +139,7 @@ class Lamp: Device {
   func state() -> Bool {
     return light
   }
-  
+
   func changeState(setting: Bool) {
     light = setting
   }
@@ -153,29 +147,26 @@ class Lamp: Device {
 
 class Button {
   var device:Device
-  
+
   init(device: Device) {
     self.device = device
   }
-  
+
   func setState(setState: Bool) {
     device.changeState(setting: setState)
   }
-  
+
   func getState() -> Bool {
     return device.state()
-    
+
   }
-  
+
 }
 
 
 
 ```
 
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -184,14 +175,4 @@ class Button {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

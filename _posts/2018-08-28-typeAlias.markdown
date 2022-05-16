@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "Go Type Alias "
-date:   2018-08-28 19:57:23 -0400 
+title: "Go Type Alias "
+date: 2018-08-28 19:57:23 -0400
 comments: true
 categories: go
 ---
 
 Take a look at `type intList = []int` in the code below. That's an
-example of a Type Alias.  Specifically, it's a Type Alias for `[]int`.
+example of a Type Alias. Specifically, it's a Type Alias for `[]int`.
 
 Okay, so now take a look at `type Name1 []int`, which is a named type ...
 that's different.
 
-
 [Playground](https://play.golang.org/p/bZ4nTh_RTsn)
+
 <pre>
 <code class="language-go">
 
@@ -79,19 +79,12 @@ yes..equal
 not equal..
 </pre>
 
-
-
 References:
 
 [Google Groups](https://groups.google.com/forum/#!topic/golang-dev/LvvXAgJvFV0)
 
 [Abstract](https://github.com/golang/proposal/blob/master/design/18130-type-alias.md)
 
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -100,14 +93,4 @@ References:
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

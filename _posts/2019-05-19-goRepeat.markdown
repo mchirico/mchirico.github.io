@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Go Concurrency "
-date:   2019-05-19 13:17:05 -0400 
+title: "Go Concurrency "
+date: 2019-05-19 13:17:05 -0400
 comments: false
 categories: go
 ---
@@ -9,12 +9,8 @@ categories: go
 "Concurrency in Go: Tools and Techniques for Developers", by
 Katherine Cox-Buday is a very good book.
 
-
-
-
-
-
 [Go Playground](https://play.golang.org/p/u21S0p9EDlH)
+
 ```go
 package main
 
@@ -95,8 +91,6 @@ func main() {
 
 ```
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -105,14 +99,4 @@ func main() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

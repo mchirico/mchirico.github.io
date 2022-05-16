@@ -1,16 +1,15 @@
 ---
 layout: post
-title:  "Pandas Duplicates "
-date:   2019-04-16 16:20:59 -0400 
+title: "Pandas Duplicates "
+date: 2019-04-16 16:20:59 -0400
 comments: false
 categories: python pandas
 ---
 
-Careful how you remove duplicate in pandas, when  indexes are involved.
+Careful how you remove duplicate in pandas, when indexes are involved.
 
 Below is probably how you want to do this... hence, you want to eliminate
 the duplicate index, talking the last one.
-
 
 ```python
 sales1 = [{'idx':1,'account': 'Jones LLC', 'Jan': 150, 'Feb': 200, 'Mar': 140},
@@ -32,11 +31,11 @@ d
 
 
 ```
+
 <img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups0.png" alt="drawing" width="270"/>
 <br>
 <br>
 <br>
-
 
 # Duplicate Indexes (here we want to keep duplicate rows)
 
@@ -66,7 +65,6 @@ d
 <br>
 <br>
 
-
 # Drop Duplicates on Rows
 
 Note, this may not be what you want. Notice we list Quarters 2 and 3, because it had
@@ -90,9 +88,9 @@ d=d[~d.index.duplicated(keep='last')]
 d.drop_duplicates()
 
 ```
+
 <img src="https://github.com/mchirico/mchirico.github.io/raw/master/p/images/pandasDups2.png" alt="drawing" width="170"/>
 
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -101,14 +99,4 @@ d.drop_duplicates()
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

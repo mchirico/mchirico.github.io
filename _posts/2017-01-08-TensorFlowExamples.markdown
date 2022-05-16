@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "TensorFlow Examples "
-date:   2017-01-08 10:48:23 -0400 
+title: "TensorFlow Examples "
+date: 2017-01-08 10:48:23 -0400
 comments: false
 categories: python
 ---
@@ -13,9 +13,6 @@ place. I guess I'll use gist?
 
 <script src="https://gist.github.com/mchirico/4c648421f74d0f447f7a7ea79b7f2e1b.js"></script>
 
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -24,14 +21,4 @@ place. I guess I'll use gist?
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

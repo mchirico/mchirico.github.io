@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Panda Notes "
-date:   2017-01-09 21:45:38 -0400 
+title: "Panda Notes "
+date: 2017-01-09 21:45:38 -0400
 comments: false
 categories: python
 ---
@@ -9,7 +9,7 @@ categories: python
 I need to start keeping notes...here's an example
 of how to dstack.
 
-``` python
+```python
 
 import pandas as pd
 c=np.dstack((['a','b'],[2,3]))
@@ -21,8 +21,6 @@ d.head()
 
 <img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-0921.46.53.png" width="g00">
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -31,14 +29,4 @@ d.head()
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

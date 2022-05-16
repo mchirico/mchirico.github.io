@@ -1,23 +1,22 @@
 ---
 layout: post
-title:  "Go Stubs: Interface "
-date:   2019-07-05 06:48:24 -0400 
+title: "Go Stubs: Interface "
+date: 2019-07-05 06:48:24 -0400
 comments: false
 categories: Go
 ---
 
-Interfaces for testing in Go.  Ways to create
+Interfaces for testing in Go. Ways to create
 stubs, without having to have a lot of exported interfaces
 in the application code. Instead, the developer using the
 package can create the necessary stubs.
-
 
 References:
 
 [rakyll](https://rakyll.org/interface-pollution/)
 
-
 [playground](https://play.golang.org/p/8uKhaRXjdgC)
+
 ```go
 package main
 
@@ -79,7 +78,7 @@ func main() {
 	A(acker)
 	A(acker)
 	fmt.Printf(" %d\n",c.count)
-	
+
 }
 
 
@@ -87,10 +86,6 @@ func main() {
 
 This thought needs further development...
 
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -99,14 +94,4 @@ This thought needs further development...
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

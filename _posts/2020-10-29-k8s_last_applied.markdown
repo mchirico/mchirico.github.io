@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "k8s view-last-applied "
-date:   2020-10-29 14:13:31 -0400 
+title: "k8s view-last-applied "
+date: 2020-10-29 14:13:31 -0400
 comments: false
 categories: k8s
 ---
 
-Suppose you want to view the `whatever.yaml` you applied.  Is there
+Suppose you want to view the `whatever.yaml` you applied. Is there
 a way to generate this file?
 
 Note: `kubectl describe crd foos.samplecontroller.k8s.io` would give
-a lot of extra information.  There's a better way **view-last-applied**
+a lot of extra information. There's a better way **view-last-applied**
 
 Here's an example, for a CRD.
 
@@ -51,10 +51,6 @@ kubectl apply view-last-applied deployment/eventer-server -o yaml
 
 ```
 
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -63,14 +59,4 @@ kubectl apply view-last-applied deployment/eventer-server -o yaml
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

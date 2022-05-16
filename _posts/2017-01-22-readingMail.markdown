@@ -1,16 +1,15 @@
 ---
 layout: post
-title:  "Python reading mail from /var/mail/<files> "
-date:   2017-01-22 23:26:41 -0400 
+title: "Python reading mail from /var/mail/<files> "
+date: 2017-01-22 23:26:41 -0400
 comments: false
 categories: python
 ---
 
 Suppose you want to read and parse all of spock's email
-stored in /var/mail/spock.  
+stored in /var/mail/spock.
 
-
-``` python
+```python
 import mailbox
 
 def getbody(message):
@@ -37,10 +36,6 @@ for i in a:
 
 ```
 
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -49,14 +44,4 @@ for i in a:
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

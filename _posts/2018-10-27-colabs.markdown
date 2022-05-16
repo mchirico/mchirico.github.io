@@ -1,21 +1,19 @@
 ---
 layout: post
-title:  "More Google Colabs"
-date:   2018-10-27 08:45:23 -0400 
+title: "More Google Colabs"
+date: 2018-10-27 08:45:23 -0400
 comments: false
 categories: python ml
 ---
 
 Google Colabs. Adding turicreate.
 
-
 [Colabs](https://colab.research.google.com/drive/1skc-Ug7xnpz0HGZVoXrqo0tVW0FjUcoN)
-
 
 ```python
 import requests
 import pandas as pd
-import numpy as np 
+import numpy as np
 from datetime import datetime
 
 
@@ -33,7 +31,7 @@ try:
   import pydot
   import libarchive
   import torch
-  import turicreate 
+  import turicreate
 except:
   print("Will try to install software")
   # Lines below .... Only need to be run once at the top of the notebook.
@@ -44,12 +42,12 @@ except:
   !apt-get -qq install -y libarchive-dev && pip install -q -U libarchive
   !pip install -U -q PyDrive
   !pip install --upgrade -q gspread
-  
-  !pip3 install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-linux_x86_64.whl 
+
+  !pip3 install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-linux_x86_64.whl
   !pip3 install torchvision
-  
+
   !pip3 install -U turicreate
-  
+
   import seaborn as sns
   import matplotlib.pyplot as plt
   import matplotlib.dates as mdates
@@ -64,11 +62,6 @@ except:
 
 ```
 
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -77,14 +70,4 @@ except:
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

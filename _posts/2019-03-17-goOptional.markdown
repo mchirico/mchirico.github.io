@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Go Default Values "
-date:   2019-03-17 09:04:44 -0400 
+title: "Go Default Values "
+date: 2019-03-17 09:04:44 -0400
 comments: false
 categories: go
 ---
@@ -11,8 +11,8 @@ Default values in Go functions.
 The language doesn't directly
 support default values, so you have to build a workaround.
 
-
 [playground](https://play.golang.org/p/gE9Ma8jPrVN)
+
 ```go
 package main
 
@@ -79,6 +79,7 @@ func main() {
 ## Here's another example
 
 [playground](https://play.golang.org/p/1Hat45X_7ky)
+
 ```go
 package main
 
@@ -141,9 +142,6 @@ func main() {
 
 ```
 
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -152,14 +150,4 @@ func main() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

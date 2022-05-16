@@ -1,17 +1,13 @@
 ---
 layout: post
-title:  "Working with virtualenvwrapper "
-date:   2017-06-06 20:05:02 -0400 
+title: "Working with virtualenvwrapper "
+date: 2017-06-06 20:05:02 -0400
 comments: false
 categories: python
 ---
 
 https://virtualenvwrapper.readthedocs.io/en/latest/
 
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -20,14 +16,4 @@ https://virtualenvwrapper.readthedocs.io/en/latest/
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

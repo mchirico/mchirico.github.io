@@ -1,17 +1,16 @@
 ---
 layout: post
-title:  "Numpy Referency "
-date:   2017-01-11 18:21:06 -0400 
+title: "Numpy Referency "
+date: 2017-01-11 18:21:06 -0400
 comments: false
 categories: python numpy
 ---
 
 Starting my numpy reference...
 
+```python
 
-``` python
-
-# Options...left over plus any 1 
+# Options...left over plus any 1
 x[0]+leftOver
 # will it increase the score?
 
@@ -43,14 +42,14 @@ def buildArrayFromScore():
         if a.size==0:
             a=np.fromstring(k[1:-1], dtype=int, sep=' ')
         else:
-            a=np.vstack((a,np.fromstring(k[1:-1], dtype=int, sep=' '))  ) 
+            a=np.vstack((a,np.fromstring(k[1:-1], dtype=int, sep=' '))  )
     return a
 
 
 
 
 def ifFoundReplace(x,b,c):
-    idx=np.where(np.all(x==b,axis=1)) 
+    idx=np.where(np.all(x==b,axis=1))
     if idx[0].size != 0:
         print("Replace",x[(idx[0][0],)]," with",np.array(c))
         x[(idx[0][0],)]=np.array(c) # Increment, not all replace
@@ -82,7 +81,7 @@ def isOption(n):
             return False
     else:
         return False
- 
+
 
 def buildTable():
     o=options().copy()
@@ -112,7 +111,7 @@ def allPossibleCombs():
         else:
             z=np.vstack((z,b.copy()))
     return z
-    
+
 #Score([allPossibleCombs()[0]])
 
 
@@ -169,22 +168,12 @@ def tryReplace(c):
 
 ```
 
-
-
-
-
-
-
-
-
 <img src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-01-1121.51.25.png" width="500">
 
-
-
-This sorting stuff is pretty cool.  I'll have to
+This sorting stuff is pretty cool. I'll have to
 come back to it...
 
-``` python
+```python
 
 # Needs to be sorted
 def getFirstAbv(maxV=32):
@@ -209,16 +198,6 @@ def getFirstAbv(maxV=32):
 
 ```
 
-
-
-
-
-
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -227,14 +206,4 @@ def getFirstAbv(maxV=32):
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

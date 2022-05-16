@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Concourse Docker "
-date:   2019-06-24 11:14:26 -0400 
+title: "Concourse Docker "
+date: 2019-06-24 11:14:26 -0400
 comments: false
 categories: concourse
 ---
@@ -11,10 +11,8 @@ Setting up Concourse Docker.
 Reference the website [Concourse Docker](https://github.com/concourse/concourse-docker)
 and [vault-integration](https://github.com/pivotalservices/concourse-pipeline-samples/tree/master/concourse-pipeline-patterns/vault-integration)
 
-
-You'll want to modify *docker-compose.yml*. An example is listed below where
+You'll want to modify _docker-compose.yml_. An example is listed below where
 the default port has been modified to 8281
-
 
 ```bash
 cat docker-compose.yml
@@ -73,9 +71,6 @@ vault write concourse/main/mongo_database value=$MONGO_DATABASE
 # vault secrets disable concourse/
 ```
 
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -84,14 +79,4 @@ vault write concourse/main/mongo_database value=$MONGO_DATABASE
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

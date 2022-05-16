@@ -1,15 +1,13 @@
 ---
 layout: post
-title:  "Clean Go Code"
-date:   2021-10-30 09:24:15 -0400 
+title: "Clean Go Code"
+date: 2021-10-30 09:24:15 -0400
 comments: false
 categories: Go
 ---
 
 Good article on [Clean Go Code](https://github.com/Pungyeon/clean-go-article)...
 
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -18,14 +16,4 @@ Good article on [Clean Go Code](https://github.com/Pungyeon/clean-go-article)...
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

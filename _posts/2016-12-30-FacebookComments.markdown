@@ -1,21 +1,15 @@
 ---
 layout: post
-title:  "Site Update: Facebook comments, Code Formatting "
-date:   2016-12-30 13:07:50 -0400 
+title: "Site Update: Facebook comments, Code Formatting "
+date: 2016-12-30 13:07:50 -0400
 comments: false
 categories: Facebook comments
 ---
 
-
 I started making updates to my Jekyll github page. What I really
-only wanted to do was update the code formatting.  Agreed. Jekyll
+only wanted to do was update the code formatting. Agreed. Jekyll
 offers a lot of options...
 
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -24,37 +18,24 @@ offers a lot of options...
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
-
-Hmmm...okay, I'm big on communication.  Maybe Facebook has additional
-options that could make it better?  Who knows... Below is an example
+Hmmm...okay, I'm big on communication. Maybe Facebook has additional
+options that could make it better? Who knows... Below is an example
 that allows for threaded conversations.
 
-<div class="fb-comments"  data-numposts="5"></div>
+So if \_sass/\_base.scss
 
-
-So if _sass/_base.scss
-
-``` css
-
+```css
 code {
-    font-size: 13px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #ffff;
-   }
-
-
+  font-size: 13px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #ffff;
+}
 ```
 
-
-``` html
-<a hfre="#">Hello world</a>
-<a hfre="#">Hello world</a>
-
+```html
+<a hfre="#">Hello world</a> <a hfre="#">Hello world</a>
 ```
-
-
 
 ```R
 library(tidyverse)
@@ -67,4 +48,3 @@ library(glmnet)
 library(formattable)
 
 ```
-

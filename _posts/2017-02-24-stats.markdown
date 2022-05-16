@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Creating Stats Notes.. "
-date:   2017-02-24 23:22:34 -0400 
+title: "Creating Stats Notes.. "
+date: 2017-02-24 23:22:34 -0400
 comments: false
 categories: stats
 ---
@@ -10,14 +10,11 @@ categories: stats
 
 <a href="http://www.excel-easy.com/examples/f-test.html">Quick Excel Examples</a>
 
-
 ## PCA
+
 <a href="http://www.real-statistics.com/multivariate-statistics/factor-analysis/principal-component-analysis/">
 <img  src="https://storage.googleapis.com/montco-stats/imagesUploaded/Screenshot2017-02-2508.17.53.png" width="450"></a>
 
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -26,14 +23,4 @@ categories: stats
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

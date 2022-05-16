@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Go Engine Pattern "
-date:   2019-02-08 18:16:06 -0400 
+title: "Go Engine Pattern "
+date: 2019-02-08 18:16:06 -0400
 comments: false
 categories: go
 ---
@@ -9,7 +9,6 @@ categories: go
 Hmm... I need to come back to this
 idea of a design pattern that resembles a
 plugable motor function.
-
 
 [Playground](https://play.golang.org/p/5Oe1in6ePt7)
 
@@ -31,7 +30,7 @@ func Varoom(ctx context.Context, s0 string, sE string, t int) (int, error) {
 		dst := make(chan string)
 		var output string
 		go func() {
-		        // Important to close dst 
+		        // Important to close dst
 		        defer close(dst)
 			for {
 				output += s0 + "," + sE
@@ -106,7 +105,6 @@ func main() {
 
 ```
 
-
 Other examples..
 
 [playground](https://play.golang.org/p/dMVqgdcaZu8)
@@ -146,13 +144,6 @@ func main() {
 
 ```
 
-
-
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -161,14 +152,4 @@ func main() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

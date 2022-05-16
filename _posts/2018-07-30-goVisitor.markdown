@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Go Visitor Pattern "
-date:   2018-07-30 20:50:46 -0400 
+title: "Go Visitor Pattern "
+date: 2018-07-30 20:50:46 -0400
 comments: true
 categories: Go
 ---
@@ -93,14 +93,9 @@ func main() {
 </code>
 </pre>
 
-
 <br><br>
 
-
 ## [Facade Pattern](https://play.golang.org/p/nZtecznpici)
-
-
-
 
 <pre>
 <code class="language-go">
@@ -151,9 +146,6 @@ func main() {
 
 ## [Completion Handler Go](https://play.golang.org/p/KuRU7kgz5ar)
 
-
-
-
 <pre>
 <code class="language-go">
 
@@ -189,20 +181,6 @@ func main() {
 </code>
 </pre>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -211,14 +189,4 @@ func main() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

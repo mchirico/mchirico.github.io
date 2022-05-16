@@ -1,30 +1,30 @@
 ---
 layout: post
-title:  "Install sysstat "
-date:   2017-01-15 22:28:26 -0400 
+title: "Install sysstat "
+date: 2017-01-15 22:28:26 -0400
 comments: false
 categories: python
 ---
 
+#### Step 1. Install sysstat
 
-#### Step 1.  Install sysstat
-
-``` bash
+```bash
 sudo apt-get install sysstat
 ```
 
 #### Step 2. Enable stat collection
 
-``` bash
+```bash
 sudo vi /etc/default/sysstat
 #change ENABLED=”false” to ENABLED=”true”
 #save the file
 ```
 
 #### Step 3. Change the collection interval.
+
 Change from every 10 minutes to every 2 minutes.
 
-``` bash
+```bash
 sudo vi /etc/cron.d/sysstat
 
 #   Change
@@ -36,20 +36,16 @@ sudo vi /etc/cron.d/sysstat
 
 #### Step 4. Restart sysstat
 
-``` bash
+```bash
 sudo service sysstat restart
 ```
 
 #### Step 5. If you want to see all statistics you can type:
 
-``` bash
+```bash
 sar -A
 ```
 
-
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -58,14 +54,4 @@ sar -A
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-

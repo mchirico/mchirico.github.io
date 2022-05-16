@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Swift 4 Completion Handler "
-date:   2018-07-18 07:02:48 -0400 
+title: "Swift 4 Completion Handler "
+date: 2018-07-18 07:02:48 -0400
 comments: false
 categories: python
 ---
@@ -30,17 +30,15 @@ let r = f(input: "command input ...") {
 
 You'll get the following result:
 
-
 <pre>
 <code class="language-swift">
    Here is a: got back: Inside completion command input ...
 </code>
 </pre>
 
-
 <br><br>
-## Closures - Escaping
 
+## Closures - Escaping
 
 Closures must be escaping when work is done asynchronously or stored.
 
@@ -79,7 +77,7 @@ Now calling this function ...
 Here's a way you could test the above function.
 
 ```swift
- 
+
   func testGetSumOf() {
     let expectation = self.expectation(description: "Sum up values")
     getSumOf(array: [16,756,442,6,23]) { (sum) in
@@ -97,14 +95,14 @@ Here's a way you could test the above function.
 ```swift
 func getSumMulOf(array:[Int],
               handler: @escaping (([Int])->Int)) {
-  
+
   var sum: Int = 0
   var mul: Int = 1
   for value in array {
     sum += value
     mul *= value
   }
-  
+
   DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
     print("sum+mul: \(handler([sum,mul]))")
   })
@@ -128,9 +126,6 @@ And now testing this...
   }
 ```
 
-
-
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -139,14 +134,4 @@ And now testing this...
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <!--  Enter text below, if you want -->
-
-
-<div class="fb-comments"  data-numposts="5"></div>
-
-
-
-
-
-
