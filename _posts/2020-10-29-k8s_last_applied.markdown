@@ -14,7 +14,7 @@ a lot of extra information.  There's a better way **view-last-applied**
 
 Here's an example, for a CRD.
 
-```code
+```bash
 
 kubectl apply view-last-applied crd foos.samplecontroller.k8s.io -o yaml
 
