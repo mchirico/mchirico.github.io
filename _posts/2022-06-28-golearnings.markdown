@@ -37,5 +37,65 @@ type Closer interface {
 
 ```
 
+## 3) Select -- Hate this about Go
 
+The two programs below produce different results, based on where
+the "{" is placed in the select.
 
+### Always `false` 
+```go
+package main
+
+func False() bool {
+	return false
+}
+
+func main() {
+	switch False() {
+	case false: println("False")
+	case true: println("True")
+	}
+}
+// Returns false
+```
+The [above program](https://go.dev/play/p/9X9PmyGEOnM) will always return false. It does what you expect it to do.
+
+### Always `true` 
+
+```go
+package main
+
+func False() bool {
+	return false
+}
+
+func main() {
+	switch False() // <<== Note "{" is no longer on this line
+	{
+	case false: println("False")
+	case true: println("True")
+	}
+}
+// returns true
+```
+
+But, the above program returns `true`, because it's really
+formatted to be the [following](https://go.dev/play/p/fmMPSm5OuEz)...
+
+```go
+package main
+
+func False() bool {
+	return false
+}
+
+func main() {
+	switch False(); {
+	case false:
+		println("False")
+	case true:
+		println("True")
+	}
+}
+
+```
