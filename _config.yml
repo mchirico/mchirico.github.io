@@ -3,7 +3,8 @@ author:
   name: Mike Chirico
   email: mchirico@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  Thoughts and ideas that I had at one time... which may no longer be relevant.
+  Go (Golang), Kubernetes, AWS, Argo Workflows, iOS/Swift development... that sort of thing.
+  
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
