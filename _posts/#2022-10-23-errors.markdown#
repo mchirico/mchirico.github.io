@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Go Custom Errors "
+date:   2022-10-23 09:53:06 -0400 
+comments: false
+categories: go
+---
+
+```go
+
+FooError
+func main() {
+     if err := ErrorCreator(); err != nil {
+     	    var fooError *FooError
+	    		 if errors.As(err, &fooError) {
+			    		   	      fmt.Println("Explain failure thing...:", fooError.Thing())
+						      			   	   } else {
+												fmt.Println(err)
+														}
+															}
+
+}
+~
+
+```
+
+
+
+
+

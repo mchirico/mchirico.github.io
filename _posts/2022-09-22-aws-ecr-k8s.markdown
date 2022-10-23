@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "AWS ECT with Kubernetes KinD"
+date:   2022-09-22 15:18:33 -0400 
+comments: false
+categories: AWS
+---
+
+```bash 
+
+
+TOKEN=$(aws ecr get-login-password --region us-east-1)
+SERVER=$(aws ecr describe-repositories|jq '.repositories[0].repositoryUri'|sed  's/\/.*//'|sed -r 's/\"//g')
+NAMESPACE="dev"
+
+
+kubectl create namespace $NAMESPACE
+kubectl create secret docker-registry regcred \
+--docker-server=${SERVER} \
+--docker-username=AWS --docker-password=${TOKEN} -n ${NAMESPACE}
+
+kubectl patch serviceaccount default -p "{\"imagePullSecrets\": [{\"name\": \"regcred\"}]}" -n ${NAMESPACE}
+
+
+
+```
+
+# Try pulling image 
+
+Note, you'll need to replace `1111.xxx.ecr.us-east-1.amazonaws.com/repodev:latest` with your own image.
+
+
+
+```bash
+kubectl create deployment --image=1111.xxx.ecr.us-east-1.amazonaws.com/repodev:latest dev-dep
+
+```
+
+
+
