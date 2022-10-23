@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "AWS Sessions "
+date:   2022-10-23 10:32:49 -0400 
+comments: false
+categories: aws
+---
+
+Simple way to generate and jump into new AWS temp session. 
+The session expires after 15 minutes.
+
+```bash
+#!/bin/bash
+set -e
+
+sts=( $(
+    aws sts get-session-token --duration-seconds 900  \
+    --query 'Credentials.[AccessKeyId,SecretAccessKey,SessionToken]' \
+    --output text
+) )
+export TMP_AWS_ACCESS_KEY_ID=${sts[0]}
+export TMP_AWS_SECRET_ACCESS_KEY=${sts[1]}
+export TMP_AWS_SESSION_TOKEN=${sts[2]}
+
+```
+
+
+
+
