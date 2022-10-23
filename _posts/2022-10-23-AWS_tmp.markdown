@@ -6,8 +6,8 @@ comments: false
 categories: aws
 ---
 
-Simple way to generate and jump into new AWS temp session. 
-The session expires after 15 minutes.
+Simple way to generate and jump into a new AWS temp session. 
+The session here expires after 15 minutes.
 
 ```bash
 #!/bin/bash
